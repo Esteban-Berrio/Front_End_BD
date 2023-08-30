@@ -1,0 +1,90 @@
+
+#EditDateOfBirth {
+    height: 30px;
+    border:1px solid rgba(239,143,0,1);
+    padding:5px;
+    border-radius: 15px;
+}
+
+.btn {
+    width: 218px;
+    height: 30px;
+    
+    border-radius: 15px;
+    /* Bordes redondeados */
+    padding: 5px;
+    /* Espacio interno dentro del input */
+
+    background: linear-gradient(0deg, #EF8F00, #EF8F00),
+        linear-gradient(0deg, #F2F0F0, #F2F0F0);
+    border: 1px solid rgb(#EF8F00);
+    /* Estilos del Botón */
+}
+
+.container {
+    border-radius: 100px;
+    
+}
+.logo2{
+ margin-left: 0px;
+ margin-right: 40px;
+ min-block-size: 30px;
+ display:flex;
+justify-content: center;
+}
+
+
+.form-label{
+    padding: 5px;
+}
+
+.sc{
+
+    border-radius: 25px;
+}
+
+#Editphoto{
+    width: 147px;
+    height: 30px;
+    
+    border-radius: 15px;
+    /* Bordes redondeados */
+    padding: 5px;
+    /* Espacio interno dentro del input */
+
+    background: linear-gradient(0deg, #EF8F00, #EF8F00);
+        /* linear-gradient(0deg, #F2F0F0, #F2F0F0); */
+    border: 1px solid rgb(#EF8F00);
+    /* Estilos del Botón */
+
+}
+.container img{
+    width: 200px;
+    height: 200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+    border-radius: 50%;
+ 
+    overflow:hidden;
+    position:relative;
+    border:2px solid #ccc;
+    
+}
+.form-control{
+    height: 30px;
+    border:1px solid rgba(239,143,0,1);
+    padding:5px;
+    border-radius: 15px;
+
+}
+.form-select{
+
+
+    height: 30px;
+    border:1px solid rgba(239,143,0,1);
+    padding:5px;
+    border-radius: 15px;
+    
+}

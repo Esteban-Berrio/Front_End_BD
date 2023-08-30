@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #e6e6e6;
+}
+
+.HeaderLittle{
+  display: none;
+}
+
+/* Cambiar el cursor a una manita (cursor de tipo "pointer") al pasar el mouse sobre el campo de búsqueda */
+.searchImg:hover {
+  cursor: pointer;
+}
+
+
+/* Ocultar el botón de "borrar" en el campo de búsqueda para navegadores basados en WebKit */
+#search-form input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* Ocultar el botón de "borrar" en el campo de búsqueda para Internet Explorer */
+#search-form input[type="search"]::-ms-clear {
+  display: none;
+}
+
+.containerlogo{
+  margin-left: 10px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+/* Headers */
+
+.BgBlack {
+  background-color: #000000;
+  min-width: 100vh !important;
+}
+
+.containerlogo {
+  max-height: 50px;
+  max-width: 300px;
+  overflow: hidden;
+}
+.logo {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+.searchImg{
+  width:40px;
+  height:40px; 
+  
+}
+.searchImg :hover{
+  cursor: pointer;
+}
+
+#search-form {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500; /* Semi bold */
+}
+#search-form input {
+  width: 100%;
+  padding: 0 30px;
+  border-radius: 50px;
+  border: none;
+  position: relative;
+  height: 40px;
+  border-color: #ed7133;
+}
+#search-form a {
+  position: absolute;
+  right: 6px;
+  height: 25px;
+  border: none;
+  border-radius: 52px;
+  color: #fff;
+}
+#logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.nav-link {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500; /* Semi bold */
+}
+
+/* Estilos personalizados */
+
+/* Cambiar el color */
+.color-icon {
+  color: rgb(255, 255, 255); /* Cambia "blue" por el color que desees */
+}
+
+/* Cambiar el tamaño */
+.tamano-icono {
+  font-size: 2rem; /* Cambia "2rem" al tamaño deseado */
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+/* Estilos personalizados */
+.image-container {
+  /* Establece el ancho máximo del contenedor de la imagen */
+  max-width: 800px; /* Ajusta el valor según el ancho deseado */
+  /* Centra la imagen dentro del contenedor */
+  margin: 0 auto;
+}
+
+.custom-image {
+  /* Establece el ancho de la imagen */
+  width: 100%; /* Ajusta el valor según el ancho deseado */
+  /* Hace que la imagen sea responsive y se ajuste al contenedor */
+  height: auto;
+}
+
+.img-padding {
+  padding: 5px; /* Puedes ajustar el valor según el espaciado que desees */
+}
+
+.specialLink {
+  border: 1px solid white;
+  border-radius: 20px; /* Puedes ajustar el valor para redondear más o menos los bordes */
+ 
+  width: 55x;
+  height: 39px;
+}
+
+
+.categoyHeader {
+   margin: 0px 8px ; /* Puedes ajustar el valor según el espacio deseado */
+}
+
+
+/* Agrega espacio vertical entre el formulario de búsqueda y el enlace con el ícono de usuario */
+#search-form, a .bi-person-circle {
+  margin: 0px 7px; /* Puedes ajustar el valor según el espacio deseado */
+}
+
+/* Agrega espacio vertical entre el enlace con el ícono de usuario y el enlace con el ícono de carrito */
+a .bi-person-circle, a .bi-cart {
+  margin: 0px 7px; /* Puedes ajustar el valor según el espacio deseado */
+}
+
+
+
+
+
+.img-biggest {
+  width: 200px; 
+  
+  height: 150px;
+}
+.text-white{
+  text-decoration: none;
+}
+
+.decoration:hover{
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width: 1000px){
+
+
+  .HeaderBig{
+    display: none !important;
+  }
+
+  .HeaderLittle{
+    display: inline;
+  }
+
+}
+
+footer{
+  min-width: 100vh;
+}

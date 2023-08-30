@@ -1,0 +1,62 @@
+.card-title{
+    height: 55px;
+}
+
+/* Define the gap between child elements within the 'container-titles' container */
+.container-titles {
+    gap: 6.3rem;
+}
+
+.card-title-2{
+    margin-top: 1.15em;
+}
+
+/* Set dimensions for product images */
+.img-product {
+    width: 96px;
+    height: 96px;
+}
+
+/* Apply styles to an icon when it's hovered over */
+.icon-hover-danger:hover {
+    border-color: #000000 !important;
+    background-color: white !important;
+    color: black;
+}
+
+/* Define styles for a calculation input field */
+.input-calculo {
+    width: 100px;
+}
+
+/* Change the color of an icon inside an element with the 'icon-hover-danger' class when hovered over */
+.icon-hover-danger:hover i {
+    color: #000000 !important;
+}
+
+/* Apply styles to buttons when hovered over */
+.btn:hover {
+    border-color: black;
+}
+
+/* Apply specific background color to a type of button */
+.btn-1 {
+    background-color: #f59300;
+}
+
+/* Apply styles to a specific button when hovered over */
+.btn-2:hover {
+    border-color: black;
+}
+
+.product-link{
+    text-decoration: none;
+    color: #000000;
+    font-size: large;
+    font-weight: 500;
+}
+
+.product-link:hover{
+    font-size: x-large;
+    text-shadow: 0px 0px 5px #000000;
+}

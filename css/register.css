@@ -9,6 +9,7 @@
 }
 
 
+
 /*  Estilo Input  */
 
 .form-control {
@@ -23,6 +24,7 @@
     border: 1px solid rgba(239, 143, 0, 1);
     padding: 5px;
     border-radius: 15px;
+    
 }
 
 .btn {
@@ -36,6 +38,76 @@
     border: 1px solid rgba(242, 240, 240, 1);
     /* Estilos del Botón */
 }
-.form-check-input:hover{
-    cursor: pointer;
+
+.ocultar {
+    display: none;
 }
+ 
+.mostrar {
+
+    display: block;
+}
+
+
+/* campo contraseña
+    stylos css para que se acomode la imagen de compo contraeña 
+
+*/
+.input-wrapper {
+    position: relative;
+    width: 400px;
+    margin: 0;
+ }
+
+ #eye{
+    color: #191919;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 370px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+ }
+ #eye2{
+    color: #191919;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 370px;
+    top: 50%;
+    transform: translateY(-50%);
+ }
+
+
+
+
+
+
+.formulario__grupo.error input{
+    border: #d40e0ec7;
+}
+
+.formulario__grupo small{
+    color: red;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.formulario__grupo.success input{
+    color: rgb(0, 255, 13);
+    border: greenyellow;
+}
+
+.formulario__grupo.error small{
+    visibility: visible;
+    
+}
+
+
+
+
+
+
+

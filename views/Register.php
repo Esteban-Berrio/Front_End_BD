@@ -13,111 +13,175 @@ require_once('resources/header-basico.php')
 </div>
 
 <!-- comienza contenedor y formulario de registro de nuevo usuario -->
-<div class="con1 container border border-warning p-4">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
+<!-- onsubmit="validarEmail(); return false" -->
+<form action="" method="POST" id="formulario">
+    <div class="con1 container border border-warning p-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
 
-            <div class="container d-flex flex-column align-items-center">
+                <div class="container d-flex flex-column align-items-center">
 
-                <div class="Name col-8 ">
-                    <label for="inputName" class="form-label">Nombre</label>
-                    <input type="text" class="form-control allBorder" id="inputName">
-                </div>
-                <div class="Last_name col-8">
-                    <label for="inputLastName" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="inputLastName">
-                </div>
+                    <div class="formulario__grupo col-8 " <label for="inputName" class="form-label">Primer Nombre</label>
+                        <input type="text" class="form-control" id="inputName" name="inputName">
+                        <small>Error message</small>
+                    </div>
 
-                <div class="DateofBirth col-8">
-                    <label for="dateOfBirth" class="form-label">Fecha de Nacimiento</label>
-                    <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth">
-                </div>
 
-                <div class="country col-8">
-                    <label for="inputcountry" class="form-label">Pais</label>
-                    <select class="form-select " aria-label="Default select example" id="inputcountry">
-                        <option selected></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="2">Three</option>
 
-                    </select>
-                </div>
-                <div class="department col-8">
-                    <label for="inputDepartment" class="form-label">Departamento</label>
-                    <select class="form-select  " aria-label="Default select example" id="inputDepartment">
-                        <option selected></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="2">Three</option>
+                    <div class="formulario__grupo col-8">
+                        <label for="inputLastName" class="form-label">Primer Apellido</label>
+                        <input type="text" class="form-control" id="inputLastName" name="inputLastName">
+                        <small>Error message</small>
+                    </div>
 
-                    </select>
-                </div>
-                <div class="municipality col-8">
-                    <label for="inputMunicipality" class="form-label">Municipio</label>
-                    <select class="form-select " aria-label="Default select example" id="inputMunicipality">
-                        <option selected></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="2">Three</option>
 
-                    </select>
-                </div>
 
-                <div class="address col-8">
-                    <label for="inputAddress" class="form-label">Dirección</label>
-                    <input type="text" class="form-control" id="inputAddress">
+
+
+                    <div class="formulario__grupo col-8" id="grupo_date">
+                        <label for="dateOfBirth" class="form-label">Fecha de Nacimiento</label>
+                        <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth">
+                    </div>
+
+
+
+                    <div class="formulario__grupo col-8" id="grupo_country">
+                        <label for="inputcountry" class="form-label">Pais</label>
+                        <select class="form-select " aria-label="Default select example" id="inputcountry" name="">
+                            <option selected></option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="2">Three</option>
+
+                        </select>
+                    </div>
+                    <div class="formulario__grupo col-8" id="grupo_department">
+                        <label for="inputDepartment" class="form-label">Departamento</label>
+                        <select class="form-select  " aria-label="Default select example" id="inputDepartment">
+                            <option selected></option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="2">Three</option>
+
+                        </select>
+                    </div>
+                    <div class="formulario__grupo col-8" id="grupo_municipality">
+                        <label for="inputMunicipality" class="form-label">Ciudades/Municipios</label>
+                        <select class="form-select " aria-label="Default select example" id="inputMunicipality">
+                            <option selected></option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="2">Three</option>
+
+                        </select>
+                    </div>
+
+                    <div class="formulario__grupo col-8" id="grupo_address">
+                        <label for="inputAddress" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="inputAddress" name="inputAddress">
+                        <small>Error mensaje</small>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-md-6">
-            <!-- formulario parte derecha  -->
-            <div class="container d-flex flex-column align-items-center">
+            <div class="col-md-6">
+                <!-- formulario parte derecha  -->
+                <div class="container d-flex flex-column align-items-center">
 
-                <div class="sex col-8">
-                    <label for="inputSex" class="form-label">Sexo</label>
-                    <select class="form-select " aria-label="Default select example" id="inputMunicipality">
-                        <option selected></option>
-                        <option value="1">Masculino</option>
-                        <option value="2">Femenino</option>
-                        <option value="2">Otros</option>
+                    <div class="formulario__grupo col-8" id="grupo_sex">
+                        <label for="inputSex" class="form-label">Genero</label>
+                        <select class="form-select " aria-label="Default select example" id="inputSex">
+                            <option selected></option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="2">Otros</option>
 
-                    </select>
-                </div>
-                <div class="Email col-8">
-                    <label for="inputEmail" class="form-label">Correo</label>
-                    <input type="email" class="form-control" id="inputEmail" name="inputEmail">
-                </div>
-                <div class="VerEmail col-8">
-                    <label for="inputEmailVerification" class="form-label">Verificar Correo:</label>
-                    <input type="email" class="form-control" id="inputEmailVerification" name="inputEmailVerification">
-                </div>
-                <div class="password col-8">
-                    <label for="inputPassword" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="inputPassword">
-                </div>
-                <div class="veriPassword col-8">
-                    <label for="inputPassword2" class="form-label">Verificar Contraseña</label>
-                    <input type="password" class="form-control" id="inputPassword2">
-                </div>
+                        </select>
+                    </div>
+
+                    <div class="formulario__grupo col-8" id="grupo_email">
+                        <label for="inputEmail" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="inputEmail" name="inputEmail">
+                        <small>Error message</small>
+                    </div>
+                    <div class="formulario__grupo col-8" id="grupo_vemail">
+                        <label for="inputEmailVerification" class="form-label">Verificar Correo:</label>
+                        <input type="email" class="form-control" id="inputEmailVerification" name="inputEmailVerification">
+                        <small>Error message</small>
+                    </div>
 
 
-                <div class="mb-3 form-check" style="padding: 20px;">
-                    <input type="checkbox" class="form-check-input" id="terminos" name="terminos">
-                    <label class="form-check-label" for="terminos">
-                        Aceptar <a id="abrirVentana" href="terms.php" target="_blank">términos y condiciones</a>
-                    </label>
+                    <!-- Mensajes de Verificación -->
+                    <div id="msg" class="mt-2">
+                        <div id="error" class="alert alert-danger ocultar" role="alert">
+                            EL correo electronico no coinciden!
+                        </div>
+                    </div>
+
+
+
+                    <!--  colocar el icono en el input para ver contraseña  -->
+
+
+
+
+                    <div class="formulario__grupo col-8" id="grupo_password">
+                        <label for="inputPassword" class="form-label">Contraseña</label>
+                        <div class="input-wrapper">
+
+                            <input type="password" class="form-control" id="inputPassword" name="inputPassword">
+                            <i class="fa-solid fa-eye" style="color: #ffa200;" id=eye></i>
+                        </div>
+                        <small>Error solo se acepta contraseñas</small>
+                    </div>
+
+
+                    <div class="formulario__grupo col-8" id="grupo_password2">
+                        <label for="inputPassword2" class="form-label">Verificar Contraseña</label>
+                        <div class="input-wrapper">
+
+                            <input type="password" class="form-control" id="inputPassword2" name="inputPassword2">
+                            <i class="fa-solid fa-eye" style="color: #ffa200;" id=eye2></i>
+                        </div>
+                        <small>Error solo se acepta contraseñas</small>
+                    </div>
+
+                    <div id="msg"></div>
+
+                    <!-- Mensajes de Verificación -->
+                    <div id="error_password" class="alert alert-danger ocultar" role="alert">
+                        La contraseña no coinciden!
+                    </div>
+
+                    <div class="mb-3 form-check">
+    
+                        <input type="checkbox" class="form-check-input" id="terminos" name="terminos_c">
+                        <div class="form-check-label">
+                            Aceptar <a id="abrirVentana" href="terms.php" target="_blank">términos y condiciones</a>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="container d-flex flex-column align-items-center" style="padding: 10px;">
+
+
+                <div class="container d-flex flex-column align-items-center">
                     <!-- boton crear cuenta -->
-                    <button type="button" class="btn"> Crear Cuenta </button>
+                    <button type="submit" class="btn" id="enviar"> Crear Cuenta </button>
+
                 </div>
 
             </div>
         </div>
     </div>
-</div>
+    </div>
+</form>
+
+<script src="../js/register.js"></script>
+
+
+
+
+
 
 <?php
 require_once('resources/footer.php')

@@ -157,6 +157,10 @@
   padding-top: 7%;
   padding-bottom: 8%;
 }
+.img-slider-up{
+  max-height: 100%;
+  box-shadow: 0 0 20px #000000;
+}
 
 .texto-titulo {
   padding-right: 7%;
@@ -185,6 +189,19 @@
 .precio-actual {
   font-weight: 1000;
 }
+.carrito-in{
+    border: none;
+    background-color: #00000000;
+    background-image: url(../img/listo.png);
+    background-repeat: none;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    position: relative;
+    top: -20px;
+    border-radius: 5px;
+  }
 
 @media (min-width: 300px) and (max-width: 900px) {
   .card {
@@ -217,17 +234,5 @@
     border-radius: 5px;
   }
 
-  .ocultar {
-    border: none;
-    background-color: #00000000;
-    background-image: url(../img/listo.png);
-    background-repeat: none;
-    background-size: cover;
-    height: 50px;
-    width: 50px;
-    overflow: hidden;
-    position: relative;
-    top: -20px;
-    border-radius: 5px;
-  }
+  
 }

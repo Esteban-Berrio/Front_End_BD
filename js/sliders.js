@@ -13,7 +13,14 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        adaptiveHeight:true,
+        autoplaySpeed: 2000,
+    });
+
+    $('.autoplayes-up').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrow:false,
         autoplaySpeed: 2000,
     });
 });

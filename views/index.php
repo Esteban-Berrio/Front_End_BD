@@ -12,17 +12,19 @@ require_once('resources/header-1.php')
 ?>
 
 
-
-
-
-
 <div class="collection">
-    <div class="autoplay  slider2mar" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
-        <img src="../img/fondo.png" alt="">
-        <img src="../img/fondo2.png" alt="">
-        <img src="../img/fondo3.png" alt="">
+        <div class="autoplayes-up  slider2mar" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
+            <img class="img-slider-up" src="../img/ban5.png" alt="">
+            <img  class="img-slider-up" src="../img/ban4.png" alt="">
+            <img  class="img-slider-up" src="../img/ban3.jpg" alt="">
+            <img  class="img-slider-up" src="../img/ban2.png" alt="">
+            <img  class="img-slider-up" src="../img/ban1.png" alt="">
+        </div>
     </div>
-</div>
+
+<div class="conten-index">
+
+
 
 <div class="category-title">
     <h6>CATEGORIAS</h6>
@@ -128,7 +130,7 @@ require_once('resources/header-1.php')
         </a>
     </div>
 </div>
-
+</div>
 <?php
 require_once('resources/footer.php')
 ?>

@@ -14,16 +14,13 @@ require_once('resources/header-1.php')
 
 
 <body>
-
-
-
     <div class="collection">
-        <div class="autoplay  slider2mar" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
-            <img src="../img/ban5.png" alt="">
-            <img src="../img/ba4.png" alt="">
-            <img src="../img/ban3.jpg" alt="">
-            <img src="../img/ban2.png" alt="">
-            <img src="../img/ban1.png" alt="">
+    <div class="autoplayes-up  slider2mar" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
+            <img class="img-slider-up" src="../img/ban5.png" alt="">
+            
+            <img  class="img-slider-up" src="../img/ban3.jpg" alt="">
+            <img  class="img-slider-up" src="../img/ban2.png" alt="">
+            <img  class="img-slider-up" src="../img/ban1.png" alt="">
         </div>
     </div>
 
@@ -217,68 +214,91 @@ require_once('resources/header-1.php')
                 <h2 class="text-center texto-titulo">PRODUCTOS</h2>
                 <div class="row">
                     <!-- Producto 1 -->
-                    
-                    <div class="col-md-4 mb-4 card">
-                        <a href="#" class="">
-                            <img src="../img/carru3.jpg " class="card-img-top" alt="Producto 3">
-                        </a>
-                        <div class="card-body ">
-                            <a class="card-title hov">Producto awawawa wawa asdasdasdasd2</a>
-                            <p class="precio-antes">$ 400.000</p>
-                            <p class="descuento">DESCUENTO  50%</p>
-                            <p class="card-text d-flex justify-content-between precio-actual">Precio: $200.000
-                                <input type="button" class="ms-autos img-fluid" id="b-compra"> </input>
-                            </p>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col-md-4 mb-4 card">
-                        <a href="#" class="">
-                            <img src="../img/carru3.jpg " class="card-img-top" alt="Producto 3">
-                        </a>
-                        <div class="card-body ">
-                            <a class="card-title hov">Producto awawawa wawa asdasdasdasd2</a>
-                            <p class="precio-antes">$ 400.000</p>
-                            <p class="descuento">DESCUENTO  50%</p>
-                            <p class="card-text d-flex justify-content-between precio-actual">Precio: $200.000
-                                <input type="button" class="ms-autos img-fluid" id="b-compra"> </input>
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4 mb-4 card">
-                        <a href="#" class="">
-                            <img src="../img/carru3.jpg " class="card-img-top" alt="Producto 3">
-                        </a>
-                        <div class="card-body ">
-                            <a class="card-title hov">Producto awawawa wawa asdasdasdasd2</a>
-                            <p class="precio-antes">$ 400.000</p>
-                            <p class="descuento">DESCUENTO  50%</p>
-                            <p class="card-text d-flex justify-content-between precio-actual">Precio: $200.000
-                                <input type="button" class="ms-autos img-fluid" id="b-compra"> </input>
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4 mb-4 card">
-                        <a href="#" class="">
-                            <img src="../img/carru3.jpg " class="card-img-top" alt="Producto 3">
-                        </a>
-                        <div class="card-body ">
-                            <a class="card-title hov">Producto awawawa wawa asdasdasdasd2</a><br>
-                            <p class="precio-antes">$ 400.000</p>
-                            <p class="descuento">DESCUENTO  50%</p>
-                            <p class="card-text d-flex justify-content-between precio-actual">Precio: $200.000
-                                <input type="button" class="ms-autos img-fluid" id="b-compra"> </input>
-                            </p>
-                        </div>
-                    </div>
 
+                    <div class="col-md-4 mb-4 card">
+                        <a href="#" class="">
+                            <img src="../img/carru3.jpg " class="card-img-top" alt="Producto 3">
+                        </a>
+                        <div class="card-body ">
+                            <a class="card-title hov">Producto awawawa wawa asdasdasdasd2</a>
+                            <p class="precio-antes">$ 400.000</p>
+                            <p class="descuento">DESCUENTO 50%</p>
+                            <p class="card-text d-flex justify-content-between precio-actual">Precio: $200.000
+                                <input type="button" class="ms-autos img-fluid btn-pro-cat boton-compra" >
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 card">
+                        <a href="#" class="">
+                            <img src="../img/carru3.jpg " class="card-img-top" alt="Producto 3">
+                        </a>
+                        <div class="card-body ">
+                            <a class="card-title hov">Producto awawawa wawa asdasdasdasd2</a>
+                            <p class="precio-antes">$ 400.000</p>
+                            <p class="descuento">DESCUENTO 50%</p>
+                            <p class="card-text d-flex justify-content-between precio-actual">Precio: $200.000
+                                <input type="button" class="ms-autos img-fluid btn-pro-cat boton-compra" >
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 card">
+                        <a href="#" class="">
+                            <img src="../img/carru3.jpg " class="card-img-top" alt="Producto 3">
+                        </a>
+                        <div class="card-body ">
+                            <a class="card-title hov">Producto awawawa wawa asdasdasdasd2</a>
+                            <p class="precio-antes">$ 400.000</p>
+                            <p class="descuento">DESCUENTO 50%</p>
+                            <p class="card-text d-flex justify-content-between precio-actual">Precio: $200.000
+                                <input type="button" class="ms-autos img-fluid btn-pro-cat boton-compra" >
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 card">
+                        <a href="#" class="">
+                            <img src="../img/carru3.jpg " class="card-img-top" alt="Producto 3">
+                        </a>
+                        <div class="card-body ">
+                            <a class="card-title hov">Producto awawawa wawa asdasdasdasd2</a>
+                            <p class="precio-antes">$ 400.000</p>
+                            <p class="descuento">DESCUENTO 50%</p>
+                            <p class="card-text d-flex justify-content-between precio-actual">Precio: $200.000
+                                <input type="button" class="ms-autos img-fluid btn-pro-cat boton-compra" >
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 card">
+                        <a href="#" class="">
+                            <img src="../img/carru3.jpg " class="card-img-top" alt="Producto 3">
+                        </a>
+                        <div class="card-body ">
+                            <a class="card-title hov">Producto awawawa wawa asdasdasdasd2</a>
+                            <p class="precio-antes">$ 400.000</p>
+                            <p class="descuento">DESCUENTO 50%</p>
+                            <p class="card-text d-flex justify-content-between precio-actual">Precio: $200.000
+                                <input type="button" class="ms-autos img-fluid btn-pro-cat boton-compra" >
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 card">
+                        <a href="#" class="">
+                            <img src="../img/carru3.jpg " class="card-img-top" alt="Producto 3">
+                        </a>
+                        <div class="card-body ">
+                            <a class="card-title hov">Producto awawawa wawa asdasdasdasd2</a>
+                            <p class="precio-antes">$ 400.000</p>
+                            <p class="descuento">DESCUENTO 50%</p>
+                            <p class="card-text d-flex justify-content-between precio-actual">Precio: $200.000
+                                <input type="button" class="ms-autos img-fluid btn-pro-cat boton-compra" >
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
+
         </div>
+    </div>
     </div>
 
 

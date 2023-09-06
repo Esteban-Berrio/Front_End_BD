@@ -52,5 +52,5 @@ require_once('initiator.php');
         </div>
 
 
-        </div>
+        
     </header>

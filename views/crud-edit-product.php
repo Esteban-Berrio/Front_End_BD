@@ -23,7 +23,7 @@ require_once('resources/template-crud.php')
     </div>
     <div class="container-crud">
 
-        <form method="post" class=" br container p-4 mb-5">
+        <form id="productForm" method="POST" class="br container p-4 mb-5">
 
             <div class="row">
                 <div class="col-md-6">
@@ -32,7 +32,8 @@ require_once('resources/template-crud.php')
                         <div class=" image-container">
                             <div class=" space-slider2marc">
 
-                                <div class="single-item  slider3mar" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
+                                <div class="single-item  slider3mar"
+                                    data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
 
                                     <div class="card-slider-mar" href="#">
                                         <div class="d-flex justify-content-center">
@@ -83,17 +84,22 @@ require_once('resources/template-crud.php')
 
                         <div class="col-8">
                             <label for="EditReference" class="form-label"> Referencia</label>
-                            <input type="text" class="form-control" id="EditReference" name="reference" required>
+                            <input type="text" class="form-control" id="EditReference" name="reference">
+                            <div class="error-message" id="reference-error"></div>
+
                         </div>
 
                         <div class="col-8">
                             <label for="EditName" class="form-label">Nombre del Producto</label>
-                            <input type="text" class="form-control" id="EditName" name="name" required>
+                            <input type="text" class="form-control" id="EditName" name="name">
+                            <div class="error-message" id="name-error"></div>
                         </div>
 
                         <div class="col-8">
                             <label for="EditDescription" class="form-label "> Descripción</label>
-                            <input type="text" class="form-control descripcion-product" id="EditDescription" name="description" required>
+                            <input type="text" class="form-control descripcion-product" id="EditDescription"
+                                name="description">
+                            <div class="error-message" id="description-error"></div>
                         </div>
 
                     </div>
@@ -111,91 +117,106 @@ require_once('resources/template-crud.php')
 
                         <div class="col-8">
                             <label for="EditStock" class="form-label"> Existencias</label>
-                            <input type="text" class="form-control" id="EditStock" name="stock" oninput="validarNumeroPositivo(this)" required>
+                            <input type="text" class="form-control" id="EditStock" name="stock">
+                            <div class="error-message" id="stock-error"></div>
                         </div>
 
                         <div class="col-8">
                             <label for="EditPrice" class="form-label"> Precio</label>
-                            <input type="text" class="form-control" id="EditPrice" name="price" oninput="validarNumeroPositivo(this)" required>
+                            <input type="text" class="form-control" id="EditPrice" name="price">
+                            <div class="error-message" id="price-error"></div>
                         </div>
+
+
 
                         <div class="col-8">
                             <label for="EditDiscount" class="form-label"> Descuento</label>
-                            <input type="text" class="form-control" id="EditDiscount" name="discount" oninput="validarNumeroPositivo(this)">
+                            <input type="text" class="form-control" id="EditDiscount" name="discount">
+                            <div class="error-message" id="discount-error"></div>
                         </div>
 
                         <div class="col-8">
                             <label for="EditTax" class="form-label"> Impuesto</label>
-                            <input type="text" class="form-control" id="EditTax" name="tax" oninput="validarNumeroPositivo(this)">
+                            <input type="text" class="form-control" id="EditTax" name="tax">
+                            <div class="error-message" id="tax-error"></div>
                         </div>
 
                         <div class="col-8">
                             <label for="EditSize" class="form-label">Talla</label>
-
-                            <select class="form-select " id="EditSize" name="param_size" required>
+                            <select class="form-select " id="EditSize" name="param_size">
                                 <option selected></option>
                                 <option value="1">Talla 1</option>
                                 <option value="2">Talla 2</option>
                                 <option value="2">Talla 3</option>
                             </select>
-
+                            <div class="error-message" id="size-error"></div>
                         </div>
 
 
                         <div class="col-8">
                             <label for="EditGender" class="form-label">Genero</label>
-                            <select class="form-select " id="EditGender" name="param_gender" required>
+                            <select class="form-select " id="EditGender" name="param_gender">
                                 <option selected></option>
                                 <option value="1">Masculino</option>
                                 <option value="2">Femenino</option>
 
                             </select>
+                            <div class="error-message" id="gender-error"></div>
+
                         </div>
 
                         <div class="col-8">
                             <label for="EditSubcategory" class="form-label">Subcategoria</label>
-                            <select class="form-select" id="EditSubcategory" name="param_subcategory" required>
+                            <select class="form-select" id="EditSubcategory" name="param_subcategory">
                                 <option selected></option>
                                 <option value="1">---</option>
                                 <option value="2">---</option>
 
                             </select>
+                            <div class="error-message" id="subcategory-error"></div>
+
                         </div>
 
                         <div class="col-8">
                             <label for="EditMark" class="form-label">Marca</label>
-                            <select class="form-select" id="EditMark" name="param_mark" required>
+                            <select class="form-select" id="EditMark" name="param_mark">
                                 <option selected></option>
                                 <option value="1">---</option>
                                 <option value="2">---</option>
 
                             </select>
+                            <div class="error-message" id="mark-error"></div>
+
                         </div>
 
                         <div class="col-8">
                             <label for="EditColor" class="form-label">Color</label>
-                            <select class="form-select" id="EditColor" name="param_color" required>
+                            <select class="form-select" id="EditColor" name="param_color">
                                 <option selected></option>
                                 <option value="1">---</option>
                                 <option value="2">---</option>
 
                             </select>
+                            <div class="error-message" id="color-error"></div>
+
                         </div>
 
                         <div class="col-8">
                             <label for="EditState" class="form-label">Estado</label>
-                            <select class="form-select" id="EditState" name="param_state" required>
+                            <select class="form-select" id="EditState" name="param_state">
                                 <option selected></option>
                                 <option value="1">Activo</option>
                                 <option value="2">Inactivo</option>
 
                             </select>
+                            <div class="error-message" id="state-error"></div>
+
                         </div>
 
 
 
 
-                        <div class="container d-flex flex-column align-items-center mt-4" style="padding: 10px;">
+                        <div class="container d-flex flex-column align-items-center mt-4">
                             <button type="submit" class="btn botones-crud">Guardar</button>
                         </div>
                     </div>
@@ -212,7 +233,7 @@ require_once('resources/footer.php')
 
 <script src="../js/sliders.js"></script>
 <script src="../js/fetch.js"></script>
-<script src="../js/index.js"></script>
+<script src="../js/edit-product.js"></script>
 </body>
 
 </html>

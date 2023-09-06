@@ -23,6 +23,7 @@
 
 .container {
     border-radius: 100px;
+
     
 }
 .logo2{
@@ -41,10 +42,13 @@ justify-content: center;
 }
 
 .sc{
-
-    border-radius: 25px;
     background-color: #ffffff74;
-
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    
 }
 
 #Editphoto{
@@ -63,7 +67,12 @@ justify-content: center;
     justify-content: center;
     align-items: center;
 }
-
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
 .contenedorImagen img{
     width: 200px;
     height: 200px;
@@ -83,7 +92,6 @@ justify-content: center;
     border:1px solid rgba(239,143,0,1);
     padding:5px;
     border-radius: 15px;
-
 
 }
 .form-select{

@@ -5,9 +5,19 @@
     align-items: center;
     height: 350px;
     min-width: 100vh;
-    background-color: #0000008f;
+  
+    
+}
+
+.conten-index{
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    min-width: 100vw;
     overflow: hidden;
-    box-shadow: 0 0 10px #000000;
+
 }
 
 .bestSeller{
@@ -15,7 +25,7 @@
     margin:15px 0px ;
     box-shadow:  0 0 10px #835003;
     padding: 30px;
-    min-width: 100vh;
+    min-width: 100vw;
 }
 .center{
     display: flex;
@@ -76,10 +86,13 @@
 }
 
 .space-slider2marc{
+    max-width: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 280px;
+    
+    
 }
 
 .card-slider-mar{
@@ -99,12 +112,14 @@
     color: #160e01;
 }
 .slider2mar{
-    min-width: 100vh;
+    min-width: 99vh;
     height: 350px;
+
   }
 
   .slider3mar{
     width: 1000px;
+    max-width: 100vh;
     max-width: max-content;
     height: 350px;
   }
@@ -120,3 +135,9 @@
 .cont-img-best{
     margin: 0.01px;
 }
+@media (max-width: 1010px) {
+    .imgbestIndex{
+        display: none;
+    }
+    
+  }

@@ -18,7 +18,7 @@ require_once('resources/header-2.php')
 </div>
 
 <!-- comienza contenedor y formulario de editar perfil -->
-<form class=" sc container border border-warning  p-4 ">
+<form  method="post"   class=" sc container border border-warning  p-4 mb-5" enctype="multipart/form-data">
   <div class="row">
 
     <div class="col-md-6">
@@ -27,17 +27,26 @@ require_once('resources/header-2.php')
 
         <!-- div logo pato -->
         <div class="Logo2">
-          <div class="containerimg">
+          <div class="contenedorImagen">
 
-            <img src="../img/logo_pato.png" alt="Logo pato">
+          <img src="../img/person-circle.svg" alt="avatar" id="img" />
 
+          <input type="file" name="foto" id="foto" accept="image/*" />
+
+            <div class="container d-flex flex-column align-items-center ">
+            <label class="mt-3"type="button" id="Editphoto" for="foto">Cambiar foto</label>
+
+            </div>
+            <!-- <div class="container d-flex flex-column align-items-center ">
+          <button  for ="foto"type="button" id="Editphoto" class=" btn ">Editar Perfil</button>
+        </div> -->
 
           </div>
         </div>
         <br>
-        <div class="container d-flex flex-column align-items-center ">
+        <!-- <div class="container d-flex flex-column align-items-center ">
           <button type="button" id="Editphoto" class=" btn ">Editar Perfil</button>
-        </div>
+        </div> -->
 
         <div class="Edit_name col-8">
           <label for="EditName" class="form-label">Editar nombre</label>
@@ -124,11 +133,7 @@ require_once('resources/header-2.php')
     </div>
   </div>
 </form>
-
+<script src="../js/edit-user.js"></script>
 <?php
 require_once('resources/footer.php')
 ?>
-
-
-</body>
-</html>

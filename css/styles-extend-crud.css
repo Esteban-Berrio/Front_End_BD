@@ -1,0 +1,161 @@
+/* Set margins and paddings to zero for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+  }
+
+/* Set a default width for the logo image */
+img {
+    width: 200px;
+}
+.header-admin{
+    background-color: #b46c00;
+    box-shadow: 0 0 10px #000000;
+}
+/* Styles for the logout button */
+.btn-logout {
+    background-color: #F16464;
+    font-weight: bold;
+    color: black;
+}
+
+/* Styles for the logout button when hovered */
+.btn-logout:hover {
+    background-color: #F16464;
+    color: black;
+}
+
+/* Styles for the navigation menu icon (burger) */
+.nav-burger {
+    color: #ffffff;
+    display: none;
+}
+
+/* Styles for the aside container */
+.aside-container {
+    background-color: #a1a1a1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 0 10px #000000;
+    font-weight: bold;
+}
+
+.logout-crud{
+    background-color: #000000;
+    color: #ffffff;
+    
+}
+/* Ensure the <ul> fills the container vertically */
+.aside-item {
+    height: 100%;
+    list-style: none; 
+    padding: 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-table{
+    height: 100vh;
+}
+
+
+
+/* Styles for navigation links within the aside container */
+.nav-aside {
+    color: black;
+    width: auto;
+}
+
+/* Styles for navigation links within the aside container when hovered */
+.nav-aside:hover {
+    transition: all 0.5s;
+    background-color: #D98405;
+    color: #ffffff;
+    box-shadow: 0 0 10px #7a4100;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+/* Styles for the "New" button */
+.btn-new {
+    background-color: #D98405;
+    font-weight: bold;
+    color: black;
+    width: 110px;
+}
+
+/* Styles for the "New" button when hovered */
+.btn-new:hover {
+    background-color: #D98405;
+}
+
+/* Styles for the select form element */
+.form-select {
+    width: 220px;
+}
+
+/* Styles for the edit button */
+.btn-edit {
+    background-color: #279CDE;
+}
+
+/* Styles for the edit button when hovered */
+.btn-edit:hover {
+    background-color: #279CDE;
+}
+
+/* Styles for the delete button */
+.btn-delete {
+    background-color: #F16464;
+}
+
+/* Styles for the delete button when hovered */
+.btn-delete:hover {
+    background-color: #F16464;
+}
+
+.btn-view{
+    background-color: #D98405;
+}
+
+.btn-view:hover{
+    background-color: #D98405;
+}
+
+/* General styles for icon tags */
+i {
+    color: black;
+}
+.botones-crud{
+    background-color: #e08804;
+    border-color: #b46c00;
+}
+.botones-crud:hover{
+    background-color: #eda73d;
+    color: #000000;
+}
+
+
+/* Styles for small screens (up to 768px) */
+@media screen and (max-width: 768px) {
+
+    /* Display the navigation menu icon (burger) */
+    .nav-burger {
+        display: block;
+    }
+
+    /* Hide the aside container */
+    .aside-container {
+        display: none;
+    }
+}

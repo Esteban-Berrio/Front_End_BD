@@ -1,0 +1,26 @@
+/* Set margins and paddings to zero for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a default width for the logo image */
+img {
+    width: 200px;
+}
+
+/* Styles for the logout button */
+.btn-logout {
+    background-color: #F16464;
+    font-weight: bold;
+    color: black;
+}
+
+/* Styles for the logout button when hovered */
+.btn-logout:hover {
+    background-color: #F16464;
+    color: black;
+}
+.header-admin{
+    background-color: #c77700;
+}

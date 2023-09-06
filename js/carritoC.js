@@ -13,3 +13,5 @@ document.getElementById('showAlertBtn-payment').addEventListener('click', functi
       confirmButtonText: 'CONFIRMAR'
   });
 });
+
+

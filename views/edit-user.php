@@ -128,3 +128,7 @@ require_once('resources/header-2.php')
 <?php
 require_once('resources/footer.php')
 ?>
+
+
+</body>
+</html>

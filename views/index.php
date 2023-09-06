@@ -7,14 +7,13 @@ require_once('resources/initiator.php')
 <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
 <link rel="stylesheet" href="../css/index.css" />
 
-
 <?php
 require_once('resources/header-1.php')
 ?>
-   
 
 
-   
+
+
 
 
 <div class="collection">
@@ -81,7 +80,7 @@ require_once('resources/header-1.php')
         <div class="row">
             <!-- Lado izquierdo -->
             <div class="col-md-4 cont-img-best">
-                <img  class="imgbestIndex" src="../img/bestsale1.png" alt="Imagen 1" class="img-fluid img-padding ">
+                <img class="imgbestIndex" src="../img/bestsale1.png" alt="Imagen 1" class="img-fluid img-padding ">
             </div>
             <!-- En medio -->
             <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
@@ -133,3 +132,9 @@ require_once('resources/header-1.php')
 <?php
 require_once('resources/footer.php')
 ?>
+
+<script src="../js/sliders.js"></script>
+<script src="../js/fetch.js"></script>
+<script src="../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+* Estilos adicionales */ .accordion-button:not(.collapsed) {
+  color: var(--bs-accordion-active-color);
+  background-color: #f7890b;
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 #08192b;
+}
+
+.category-item {
+  background-color: #f19f33;
+  /* Color de fondo diferente */
+  border: 1px solid #eff0fa;
+  border-radius: 1px;
+  margin: -1px 5px;
+  padding: 10px;
+  text-align: center;
+  width: 190px;
+}
+
+.container {
+  padding: 1px;
+}
+
+.colorh5 {
+  color: #ffffff;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px #f19f33;
+}
+
+.card:hover .card-text {
+  color: rgb(255, 153, 0);
+  font-size: x-large;
+  transition: all 0.5s;
+  text-shadow: 0px 0px 5px #ffcb5a;
+}
+
+.card {
+  margin: 5px;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+.titulo {
+  text-align: center;
+  color: #ffffff;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--bs-accordion-active-color);
+  background-color: #f19f33;
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 #5990c6;
+}
+
+.accordion-button {
+  position: relative;
+  display: unset;
+  align-items: center;
+  width: 100%;
+  padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+  font-size: 1rem;
+  color: var(--bs-accordion-btn-color);
+  text-align: center;
+  background-color: #db8719;
+  border: 1;
+  border-color: #b16d14;
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: var(--bs-accordion-transition);
+}
+
+.accordion {
+  padding-bottom: 1px;
+  --bs-accordion-border-color: #b16d14;
+}
+
+.btn-danger {
+  --bs-btn-color: #ffffff;
+  --bs-btn-bg: #f79f2c;
+  --bs-btn-border-color: #ffffff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #f79f2c;
+  --bs-btn-hover-border-color: #ffffff;
+  --bs-btn-focus-shadow-rgb: 225, 83, 97;
+  --bs-btn-active-color: #f79f2c;
+  --bs-btn-active-bg: #f79f2c;
+  --bs-btn-active-border-color: #ffffff;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #dc3545;
+  --bs-btn-disabled-border-color: #dc3545;
+}
+
+.cardimg {
+  text-decoration: none;
+}
+
+.contimg {
+  border: solid 1px;
+  border-color: #000000;
+  border-radius: 15px;
+  padding: 5px 0px;
+  overflow: hidden;
+}
+
+.card-title {
+  color: #000000;
+}
+
+.precio-product-cat {
+  color: #000000;
+}
+
+.conten-text-product {
+  padding: 10px;
+}
+
+.ms-autos {
+  border: none;
+  background-color: #00000000;
+  background-image: url(../img/car.png);
+  background-repeat: none;
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  position: relative;
+  top: -19px;
+  border-radius: 5px;
+}
+
+.ms-autos:hover {
+  transition: all 0.5s;
+  background-color: #000000e1;
+  background-image: url(../img/car-agre.png);
+  border-radius: 100%;
+}
+
+.carrito {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.title {
+  position: relative;
+  top: 10px;
+}
+
+.hov {
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.texto {
+  padding-top: 7%;
+  padding-bottom: 8%;
+}
+
+.texto-titulo {
+  padding-right: 7%;
+  padding-bottom: 2%;
+}
+
+.card {
+  padding: 0%;
+  width: 30%;
+  margin: 1%;
+}
+
+.precio-antes{
+  text-decoration: line-through;
+  font-weight: 400;
+  color: #3f3d3d;
+  margin: 10px 0px 0px 0px;
+
+}
+
+.descuento {
+  color: #ff0019;
+  font-weight: 800;
+  margin: 0px 0px 10px 0px;
+}
+.precio-actual {
+  font-weight: 1000;
+}
+
+@media (min-width: 300px) and (max-width: 900px) {
+  .card {
+    width: 90%;
+    margin-left: 19px;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px #f19f33;
+  }
+
+  .card:hover .card-text {
+    color: rgb(80, 236, 60);
+    font-size: larger;
+    transition: all 0.5s;
+  }
+
+  .ms-autos {
+    border: none;
+    background-color: #00000000;
+    background-image: url(../img/car.png);
+    background-repeat: none;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    position: relative;
+    top: -1px;
+    border-radius: 5px;
+  }
+
+  .ocultar {
+    border: none;
+    background-color: #00000000;
+    background-image: url(../img/listo.png);
+    background-repeat: none;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    position: relative;
+    top: -20px;
+    border-radius: 5px;
+  }
+}

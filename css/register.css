@@ -1,5 +1,7 @@
 .con1 {
     border-radius: 25px;
+    background-color: #ffffff74;
+    margin-bottom: 30px;
 }
 
 .form-label {
@@ -33,4 +35,7 @@
     background: linear-gradient(0deg, #EF8F00, #EF8F00), linear-gradient(0deg, #F2F0F0, #F2F0F0);
     border: 1px solid rgba(242, 240, 240, 1);
     /* Estilos del Botón */
+}
+.form-check-input:hover{
+    cursor: pointer;
 }

@@ -1,14 +1,3 @@
-$(document).ready(function(){
-    $('.autoplay').slick({
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        autoplay: true,
-        autoplaySpeed: 4000,
-      });
-
-  });
-
-
 
 let downloadbutton = document.getElementById('downloads');
 
@@ -24,4 +13,3 @@ downloadbutton.addEventListener('click', function(){
           footer: '<p style="text-align: center; font-weight: bold; font-size: 25px;">Descarga nuestra app!</p>',
       })
 })
-    

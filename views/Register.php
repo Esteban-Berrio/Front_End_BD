@@ -139,7 +139,6 @@ require_once('resources/header-basico.php')
                     <div class="formulario__grupo col-8" id="grupo_password2">
                         <label for="inputPassword2" class="form-label">Verificar Contraseña</label>
                         <div class="input-wrapper">
-
                             <input type="password" class="form-control" id="inputPassword2" name="inputPassword2">
                             <i class="fa-solid fa-eye" style="color: #ffa200;" id=eye2></i>
                         </div>

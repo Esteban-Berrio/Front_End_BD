@@ -106,7 +106,7 @@ formulario.addEventListener("submit", function (event) {
     
         municipError.style.display = "none";
   
-      }if (EditAddress.value === ""||lastname.value.length > longitudMaxima) {
+      }if (EditAddress.value === ""||EditAddress.value.length > longitudMaxima) {
         addressError.textContent = "Este campo es obligatorio (Debe tener menos de 45 caracteres)";
         addressError.style.display = "block";
         valid = false;

@@ -77,7 +77,7 @@ require_once('resources/template-crud.php')
                         <!-- Botón de agregar imágenes abajo -->
 
                         <input type="file" id="foto" accept="image/*">
-                        <button class="btn btn-success botones-crud" id="agregar-img-produc">Agregar Imagen</button>
+                        <button class="btn  botones-crud" id="agregar-img-produc">Agregar Imagen</button>
 
 
                         <br>

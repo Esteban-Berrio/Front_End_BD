@@ -55,33 +55,32 @@
 */
 .input-wrapper {
     position: relative;
-    width: 400px;
+    display: flex;
     margin: 0;
  }
 
  #eye{
     color: #191919;
-    position: absolute;
+    margin-top: 7px;
+    margin-left:-35px ;
     width: 20px;
     height: 20px;
-    left: 370px;
-    top: 50%;
-    transform: translateY(-50%);
+   
     
  }
  #eye2{
     color: #191919;
-    position: absolute;
+    margin-top: 7px;
+    margin-left:-35px ;
     width: 20px;
     height: 20px;
-    left: 370px;
-    top: 50%;
-    transform: translateY(-50%);
  }
 
 
 
-
+.form-check-input{
+    border: solid 2px #c97900;
+ }
 
 
 .formulario__grupo.error input{

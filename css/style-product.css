@@ -1,0 +1,131 @@
+.img-product {
+  width: 100%;
+}
+.nombre-producto {
+  font-weight: 800;
+  font-size: x-large;
+}
+
+.detalles-producto {
+  font-weight: 500;
+  font-size: large;
+}
+.form-select {
+  height: 30px;
+  border: 1px solid rgba(239, 143, 0, 1);
+  padding: 5px;
+  border-radius: 15px;
+  width: 50%;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.btn-tallas-product {
+  padding: 15px;
+  width: 25px;
+  max-width: 40px;
+  max-height: 25px;
+  background-color: #ff9203;
+  border: solid 1px #985600;
+  background-image: url("../img/btntalla.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-left: 25px;
+}
+.btn-tallas-product:hover {
+  background-color: #f09c2e;
+  padding: 20px;
+}
+
+.precio-product {
+  color: rgb(194, 117, 2);
+  font-size: x-large;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+.titulos-targeta {
+  font-size: x-large;
+  font-weight: 600;
+}
+.foto-user-coment {
+  background-color: rgba(208, 142, 0, 0.577);
+  max-width: 100%;
+}
+.conter-foto-user {
+  overflow: hidden;
+  max-width: 40px;
+  max-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.targeta-comentario {
+  border: solid 1px #f09c2e;
+  padding: 10px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.nombre-user-coment {
+  font-weight: 500;
+  font-size: large;
+}
+
+.space-slider2marc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+}
+
+.slider3mar {
+  width: 400px;
+  max-width: max-content;
+  height: 350px;
+}
+.card-slider-mar {
+  display: flex;
+  margin: 0px 30px;
+  justify-content: center;
+}
+
+.card-slider-mar img {
+  width: 300px;
+  height: 270px;
+  background-color: rgba(183, 119, 1, 0.492);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #160e01;
+}
+.card-coment {
+  border: none;
+}
+.calificaciones-product {
+  height: 40px;
+  padding: 5px;
+  width: 50%;
+  background-image: url("../img/diamantes/3-5.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

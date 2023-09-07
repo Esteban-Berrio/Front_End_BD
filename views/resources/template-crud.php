@@ -11,7 +11,7 @@
     <nav class="navbar navbar-expand-lg  header-admin">
         <div class="container-fluid">
             <!-- Brand Logo -->
-            <a class="navbar-brand" href="#" target="_blank"><img src="../img/Logo2.png" alt="logo"></a>
+            <a class="navbar-brand" href="home.php"><img src="../img/Logo2.png" alt="logo"></a>
             <!-- Mobile Navigation Toggle Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -21,22 +21,22 @@
                 <ul class="navbar-nav">
                     <!-- Navigation Links -->
                     <li class="nav-item">
-                        <a class="nav-burger link nav-link" href="../VIEWS/crud-ratings.php">Calificaciones</a>
+                        <a class="nav-burger link nav-link" href="../views/home.php">Calificaciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-burger link nav-link" href="../VIEWS/crud-order.php">Factura</a>
+                        <a class="nav-burger link nav-link" href="../views/home.php">Factura</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-burger link nav-link" href="../VIEWS/crud-order-details.php">Factura detalle</a>
+                        <a class="nav-burger link nav-link" href="../views/home.php">Usuarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-burger link nav-link" href="../VIEWS/crud-parameters.php">Parámetros</a>
+                        <a class="nav-burger link nav-link" href="../views/home.php">Parámetros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-burger link nav-link" href="../VIEWS/crud-product.php">Productos</a>
+                        <a class="nav-burger link nav-link" href="../views/chome.php">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-burger link nav-link" href="../VIEWS/crud-parameter-types.php">Tipos de
+                        <a class="nav-burger link nav-link" href="../views/home.php">Tipos de
                             Parámetros</a>
                     </li>
                     <li class="nav-item">
@@ -63,22 +63,22 @@
                 <ul class="aside-item nav flex-column pt-3">
                     <!-- Navigation Links -->
                     <li class="nav-item">
-                        <a class="nav-aside link nav-link" href="../VIEWS/crud-ratings.php">Calificaciones</a>
+                        <a class="nav-aside link nav-link" href="../views/crud-ratings.php">Calificaciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-aside link nav-link" href="../VIEWS/crud-order.php">Factura</a>
+                        <a class="nav-aside link nav-link" href="../views/crud-order.php">Factura</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-aside link nav-link" href="../VIEWS/crud-order-details.php">Factura detalle</a>
+                        <a class="nav-aside link nav-link" href="../views/crud-order-details.php">Usuarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-aside link nav-link" href="../VIEWS/crud-parameters.php">Parámetros</a>
+                        <a class="nav-aside link nav-link" href="../views/crud-parameters.php">Parámetros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-aside link nav-link" href="../VIEWS/crud-product.php">Productos</a>
+                        <a class="nav-aside link nav-link" href="../views/crud-product.php">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-aside link nav-link" href="../VIEWS/crud-parameter-types.php">Tipos de
+                        <a class="nav-aside link nav-link" href="../views/crud-parameter-types.php">Tipos de
                             Parámetros</a>
                     </li>
                     <li class="nav-item">

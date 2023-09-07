@@ -21,9 +21,10 @@ require_once('resources/header-basico.php')
 
                 <div class="container d-flex flex-column align-items-center">
 
-                    <div class="formulario__grupo col-8 " <label for="inputName" class="form-label">Primer Nombre</label>
+                    <div class="formulario__grupo col-8 " >
+                    <label for="inputName" class="form-label">Primer Nombre</label>
                         <input type="text" class="form-control" id="inputName" name="inputName">
-                        <small>Error message</small>
+                        <div id="inputnombreError" class="error"></div>
                     </div>
 
 
@@ -31,7 +32,7 @@ require_once('resources/header-basico.php')
                     <div class="formulario__grupo col-8">
                         <label for="inputLastName" class="form-label">Primer Apellido</label>
                         <input type="text" class="form-control" id="inputLastName" name="inputLastName">
-                        <small>Error message</small>
+                        <div id="inputLastnameError" class="error"></div>
                     </div>
 
 
@@ -41,6 +42,7 @@ require_once('resources/header-basico.php')
                     <div class="formulario__grupo col-8" id="grupo_date">
                         <label for="dateOfBirth" class="form-label">Fecha de Nacimiento</label>
                         <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth">
+                            <div id="inputbirthdayError" class="error"></div>
                     </div>
 
 
@@ -52,8 +54,9 @@ require_once('resources/header-basico.php')
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="2">Three</option>
-
+                            
                         </select>
+                        <div id="inputcountryError" class="error"></div>
                     </div>
                     <div class="formulario__grupo col-8" id="grupo_department">
                         <label for="inputDepartment" class="form-label">Departamento</label>
@@ -62,8 +65,9 @@ require_once('resources/header-basico.php')
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="2">Three</option>
-
+                            
                         </select>
+                         <div id="inputDepartmentError" class="error"></div>
                     </div>
                     <div class="formulario__grupo col-8" id="grupo_municipality">
                         <label for="inputMunicipality" class="form-label">Ciudades/Municipios</label>
@@ -72,14 +76,15 @@ require_once('resources/header-basico.php')
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="2">Three</option>
-
+                            
                         </select>
+                        <div id="inputMunicipalityError" class="error"></div>
                     </div>
-
+                    
                     <div class="formulario__grupo col-8" id="grupo_address">
                         <label for="inputAddress" class="form-label">Dirección</label>
                         <input type="text" class="form-control" id="inputAddress" name="inputAddress">
-                        <small>Error mensaje</small>
+                        <div id="inputAddressError" class="error"></div>
                     </div>
                 </div>
             </div>
@@ -97,26 +102,31 @@ require_once('resources/header-basico.php')
                             <option value="2">Otros</option>
 
                         </select>
+                        <div id="inputSexError" class="error"></div>
                     </div>
-
+                    
                     <div class="formulario__grupo col-8" id="grupo_email">
                         <label for="inputEmail" class="form-label">Correo</label>
                         <input type="email" class="form-control" id="inputEmail" name="inputEmail">
-                        <small>Error message</small>
+                        <!-- <small>Error message</small> -->
+                        <!-- <div id="inputEmailError" class="error"></div> -->
                     </div>
+                    
                     <div class="formulario__grupo col-8" id="grupo_vemail">
                         <label for="inputEmailVerification" class="form-label">Verificar Correo:</label>
                         <input type="email" class="form-control" id="inputEmailVerification" name="inputEmailVerification">
-                        <small>Error message</small>
+                        <!-- <div id="inputpassError" class="error"></div> -->
+                        <div id="inputEmailError" class="error"></div>
+                        <!-- <p id="inputEmailError" style="display: none; color: red;"></p> -->
                     </div>
 
 
                     <!-- Mensajes de Verificación -->
-                    <div id="msg" class="mt-2">
+                    <!-- <div id="msg" class="mt-2">
                         <div id="error" class="alert alert-danger ocultar" role="alert">
-                            EL correo electronico no coinciden!
+                          
                         </div>
-                    </div>
+                    </div> -->
 
 
 
@@ -130,20 +140,26 @@ require_once('resources/header-basico.php')
                         <div class="input-wrapper">
 
                             <input type="password" class="form-control" id="inputPassword" name="inputPassword">
-                            <i class="fa-solid fa-eye" style="color: #ffa200;" id=eye></i>
+                            <i class="fa-solid fa-eye"  id=eye></i>
                         </div>
-                        <small>Error solo se acepta contraseñas</small>
+                        <div id="inputEmailError" class="error"></div>
                     </div>
 
 
                     <div class="formulario__grupo col-8" id="grupo_password2">
                         <label for="inputPassword2" class="form-label">Verificar Contraseña</label>
+                        
                         <div class="input-wrapper">
+
                             <input type="password" class="form-control" id="inputPassword2" name="inputPassword2">
-                            <i class="fa-solid fa-eye" style="color: #ffa200;" id=eye2></i>
+                            <i class="fa-solid fa-eye" id=eye2></i>
+                            <!-- <div id="inputPassError" class="error"></div> -->
+
                         </div>
-                        <small>Error solo se acepta contraseñas</small>
+                        <div id="inputPassError" class="error"></div>
+                        
                     </div>
+                   
 
                     <div id="msg"></div>
 

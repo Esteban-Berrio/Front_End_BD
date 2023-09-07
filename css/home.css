@@ -1,0 +1,25 @@
+.home-welcome{
+    background-color: #ffffffa1;
+    align-items: center;
+    padding: 15%;
+    box-shadow: 0px 0px 20px #ffffff;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+.contener-home{
+    min-height: 90vh;
+
+}
+.welcome{
+    font-size: xxx-large;
+    font-weight: 1000;
+    color: #e78300;
+    text-shadow: 0px 0px 20px #ff9100;
+}
+.name-admin{
+    font-size: x-large;
+    font-weight: 500;
+}

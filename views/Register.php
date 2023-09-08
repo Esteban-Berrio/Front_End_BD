@@ -140,7 +140,7 @@ require_once('resources/header-basico.php')
                         <div class="input-wrapper">
 
                             <input type="password" class="form-control" id="inputPassword" name="inputPassword">
-                            <i class="fa-solid fa-eye"  id=eye></i>
+                            <i class="fa-solid fa-eye"  id="eye"></i>
                         </div>
                         <div id="inputEmailError" class="error"></div>
                     </div>
@@ -151,8 +151,8 @@ require_once('resources/header-basico.php')
                         
                         <div class="input-wrapper">
 
-                            <input type="password" class="form-control" id="inputPassword2" name="inputPassword2">
-                            <i class="fa-solid fa-eye" id=eye2></i>
+                            <input type="password" class="form-control " id="inputPassword2" name="inputPassword2">
+                            <i class="fa-solid fa-eye " id="eye2"></i>
                             <!-- <div id="inputPassError" class="error"></div> -->
 
                         </div>
@@ -168,10 +168,10 @@ require_once('resources/header-basico.php')
                         La contraseña no coinciden!
                     </div>
 
-                    <div class="mb-3 form-check">
+                    <div class="mb-3 form-check mt-3">
     
-                        <input type="checkbox" class="form-check-input" id="terminos" name="terminos_c">
-                        <div class="form-check-label">
+                        <input type="checkbox" class="form-check-input chck " id="terminos" name="terminos_c">
+                        <div class="form-check-label ">
                             Aceptar <a id="abrirVentana" href="terms.php" target="_blank">términos y condiciones</a>
                         </div>
                     </div>
@@ -179,9 +179,9 @@ require_once('resources/header-basico.php')
                 </div>
 
 
-                <div class="container d-flex flex-column align-items-center">
+                <div class="container d-flex flex-column align-items-center ">
                     <!-- boton crear cuenta -->
-                    <button type="submit" class="btn" id="enviar"> Crear Cuenta </button>
+                    <button type="submit" class="btn mt-3" id="enviar"> Crear Cuenta </button>
 
                 </div>
 

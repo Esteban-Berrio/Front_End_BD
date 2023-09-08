@@ -20,13 +20,13 @@ require_once('initiator.php');
             <div class="navbar-collapse collapse" id="navbarScroll">
                 <ul class="navbar-nav mx-auto my-2 my-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link categoyHeader" href="#">HOMBRE</a>
+                        <a class="nav-link categoyHeader" href="categorias.php">HOMBRE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link categoyHeader" href="#">MUJER</a>
+                        <a class="nav-link categoyHeader" href="categorias.php">MUJER</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link categoyHeader" href="#">ZAPATOS</a>
+                        <a class="nav-link categoyHeader" href="categorias.php">ZAPATOS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link categoyHeader" href="#">MARCAS</a>

@@ -56,6 +56,7 @@
 .input-wrapper {
     position: relative;
     /* width: 200px; */
+    display: flex;
     margin: 0;
  }
 
@@ -105,6 +106,16 @@
 .formulario__grupo.error small{
     visibility: visible;
     
+}
+.chck{
+    border: solid 2px #EF8F00;
+}
+.chck:hover{
+    background-color: #f3ac41;
+    cursor: pointer;
+}
+.fa-eye:hover{
+    cursor: pointer;
 }
 
 

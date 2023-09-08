@@ -12,12 +12,12 @@ require_once('resources/header-basico.php')
 <title>Terminos y condiciones</title>
 
 
-<div class="br d-flex flex-column align-items-center justify-content-center">
+<div class="br d-flex flex-column align-items-center justify-content-center m-4">
     <h2>Terminos y condiciones de Black Diamond</h2>
 </div>
 
 
-<div id="sc" class=" container mt-3 border border-warning p-4 ">
+<div id="sc" class=" container mt-3 border border-warning p-4 mb-4">
     <p>Black Diamond es una plataforma de comercio electrónico especializada en la venta de ropa, con un enfoque principal en servicios relacionados con el comercio electrónico y los pagos digitales.</p>
 
     <p>Al acceder y utilizar nuestro sitio web, y/o al realizar compras a través de él, aceptas los siguientes términos y condiciones que rigen nuestra relación con los usuarios. Te recomendamos que leas detenidamente esta información antes de realizar cualquier transacción en nuestro sitio web.</p>

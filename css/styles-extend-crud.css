@@ -148,6 +148,10 @@ i {
     min-height: 100vh;
     max-width: 100%;
 }
+.l-left2{
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
 
 /* Styles for small screens (up to 768px) */
 @media screen and (max-width: 768px) {

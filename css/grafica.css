@@ -1,0 +1,36 @@
+
+
+.btn-grafi {
+    background-color:#fb9510;
+    color:black;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.btn-grafi:hover{
+    background-color:#faa83d;
+}
+
+
+
+#graficaline,
+#graficabar {
+
+    margin-left: 11;
+    display: flex;
+    width: 900px;
+    height: 500px;
+   
+}
+
+
+
+
+
+.pregunta {
+    background-color: rgb(8, 8, 8);
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    border-color: white;
+    color: white;
+}

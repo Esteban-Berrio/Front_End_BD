@@ -1,0 +1,23 @@
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.tds {  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;  
+    padding: 20px;
+}
+
+.lbl {
+    align-items: center;
+    background-color: #D98405;
+    color: rgb(0, 0, 0);
+    width: 20px;
+
+}

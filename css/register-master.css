@@ -22,16 +22,26 @@
     padding: 5px;
     border-radius: 15px;
 }
-
+.container-crud {
+    margin: 20px;
+    border: solid 2px #ef8f00;
+    background-color: #ffffff74;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+  }
 .btn {
-    width: 170px;
+    /* width: 130px;
     height: 30px;
-    border-radius: 15px;
+    border-radius: 10px; */
     /* Bordes redondeados */
-    padding: 5px;
+    /* padding: 5px;
+    position:relative; */
     /* Espacio interno dentro del input */
     background: linear-gradient(0deg, #EF8F00, #EF8F00), linear-gradient(0deg, #F2F0F0, #F2F0F0);
-    border: 1px solid rgba(242, 240, 240, 1);
+    /* border: 1px solid rgba(242, 240, 240, 1); */
     /* Estilos del Botón */
 }
 
@@ -42,14 +52,11 @@
 .mostrar {
     display: block;
 }
-.Buttons{
-    /* left:10% */
-    right: 200px;
-}
+
 
 .sc{
 
-    border-radius: 25px;
+    border-radius: 5px;
 
 }
 /* campo contraseña
@@ -85,4 +92,9 @@
     font-size: 14px;
     margin-top: 5px;
     display: none;
+}
+
+.container {
+    border-radius: 100px;
+    
 }

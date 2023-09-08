@@ -33,7 +33,7 @@
                         <a class="nav-burger link nav-link" href="../views/home.php">Parámetros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-burger link nav-link" href="../views/chome.php">Productos</a>
+                        <a class="nav-burger link nav-link" href="crud-product.php">Productos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-burger link nav-link" href="../views/home.php">Tipos de

@@ -2,7 +2,6 @@
 $(document).ready(function() {
     $('#table-responsive').DataTable({
         language: {
-
             url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-CO.json',
             lengthMenu: "Mostrar _MENU_ registros por página",
             zeroRecords: "No se encontraron resultados - lo siento",

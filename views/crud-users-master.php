@@ -26,7 +26,7 @@ require_once('resources/template-crud.php')
         </div>
         <div class="container pt-4">
             <!-- Table for Invoice Details -->
-            <table id="table-responsive" class="table display responsive wrap table-hover">
+            <table id="tablam" class="table display responsive wrap table-hover">
                 <thead class="text-center">
                     <!-- Table Headers -->
                     <tr>
@@ -44,9 +44,9 @@ require_once('resources/template-crud.php')
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- Placeholder Row (Template for Dynamic Data) -->
-                    <tr>
+                <tbody id="body-user-mater-crud">
+                    
+                    <!-- <tr>
                         <th scope="row"></th>
                         <td></td>
                         <td></td>
@@ -59,12 +59,13 @@ require_once('resources/template-crud.php')
                         <td></td>
                         <td></td>
                         <td>
-                            <!-- Edit and Delete Buttons -->
+                        
                             <button class="btn-view btn"><i class="f fa-solid fa-eye"></i></button>
                             <a class="btn-edit btn" href="edit-user-master.php" ><i class="f fa-solid fa-pen-to-square"></i></a>
                             <button class="btn-delete btn"><i class="f fa-solid fa-trash"></i></button>
                         </td>
-                    </tr>
+                    </tr> -->
+
                 </tbody>
             </table>
         </div>
@@ -81,8 +82,8 @@ require_once('resources/footer.php')
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+<script src="../js/fetchs/crud-user-m.js"></script>
 <script src="../js/data-table.js"></script>
-
 </body>
 
 </html>

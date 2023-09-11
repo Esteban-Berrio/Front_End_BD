@@ -1,50 +1,105 @@
 // Function for GET request 
-function fetchDataFromAPI(url) {
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            // Here you can do anything with the data 
-            console.log(data); // For now is showing the data in the console
-        })
-        .catch(error => {
-            // Here shows and error when fetching fails.
-            console.error('Error fetching data ', error);
-        });
+async function fetchDataFromAPI(url, apiKey, id  ) {
+    let Url = url + '?key=' + apiKey;
+
+    if (id) {
+        Url = url + id + '?key=' + apiKey;
+    }
+
+    const response = await fetch(Url);
+
+    if (!response.ok) {
+        const message = 'Error al traer los datos de API';
+        throw new Error(message);
+    }
+
+    const data = await response.json();
+
+    return data;
 }
+
 
 
 // Function for POST request
-function sendDataToAPI(url, data) {
-    fetch(url, {
+function sendDataToAPI(url, apiKey, data) {
+    fetch(url + '?key=' + apiKey, {
         method: 'POST',
+        body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data)
+    }).then((response) => {
+        return response.json();
+    }).then((data) => {
+        console.log(data);
+    }).catch((error) => {
+        console.log(error);
     })
-        .then(response => response.json())
-        .then(responseData => {
-
-            // Here you can do anything with the response data, for example, show it in the console
-            console.log('Data sent successfully:', responseData);
-        })
-        .catch(error => {
-            // Here shows and error when fetching fails.
-            console.error('Error sending data:', error);
-        });
 }
 
-// Data that will be sent in an example:
-// const newData = {
-//     nombre: 'Ejemplo',
-//     edad: 25
-// };
+// Function to UPDATE request
+    function updateDataToAPI(url, id, apiKey, data,) {
+        fetch(url + id + '?key=' + apiKey, {
+            method: 'PUT',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        }).then((response) => {
+            return response.json();
+        }).then((data) => {
+            console.log(data);
+        }).catch((error) => {
+            console.log(error);
+        })
+    }   
 
+//  Function for DELETE request
+function deleteDataFromAPI(url, id, apiKey ) {
 
+    return fetch(url + id + '?key=' + apiKey, {
+        method: 'DELETE',
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('La solicitud DELETE no se completó con éxito.');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+        return data;
+    })
+    .catch(error => {
+        console.error('Error al eliminar datos:', error);
+        throw error;
+    });
+}
+
+    /* try {
+        const response = await fetch(url + '?key=' + apiKey, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+            throw new Error('Error en la solicitud');
+        }
+
+        const responseData = await response.json();
+        console.log('Data sent successfully:', responseData);
+        return responseData;
+    } catch (error) {
+        console.error('Error al enviar datos:', error);
+        throw error;
+    } */
 
 
 // POST request example
-// sendDataToAPI('http://black-diamond.com.co/back-end/public/api/', newData);
+// sendDataToAPI('http://black-diamond.com.co/back-end/public/api/', apiKey, newData);
 
 // GET request example
-// fetchDataFromAPI('http://black-diamond.com.co/back-end/public/api/');
+// fetchDataFromAPI('http://black-diamond.com.co/back-end/public/api/', apiKey);

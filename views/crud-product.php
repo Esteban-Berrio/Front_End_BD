@@ -2,9 +2,6 @@
 require_once('resources/initiator.php')
 ?>
 
-
-<link rel="stylesheet" type="text/css" href="../slick/slick.css" />
-<link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
 <link rel="stylesheet" href="../CSS/styles-extend-crud.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
@@ -13,35 +10,23 @@ require_once('resources/initiator.php')
 <?php
 require_once('resources/template-crud.php')
 ?>
-
 <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10 pt-2 con-izq">
     <div class="card-header p-3">
         <div class="card-title">
-            <!-- Title -->
+
             <h1>PRODUCTOS</h1>
         </div>
         <div class="content d-flex pt-4 gap-3">
-            <!-- New Button and Select -->
-            <a class="btn-new btn" href="new-product.php" >Nuevo</a>
-            
 
-            <select class="border-warning-subtle border-2 rounded-4 ms-auto" aria-label="Categorias">
-                <option selected disabled>Categorias</option>
-                <option value="1">One</option>
-            </select>
-
-            <select class="border-warning-subtle border-2 rounded-4" aria-label="Opciones">
-                <option selected disabled>Opciones</option>
-                <option value="1">One</option>
-            </select>
+            <a class="btn-new btn" href="Register-master.php">Nuevo</a>
         </div>
         <div class="container pt-4">
-            <!-- Table for Invoice Details -->
-            <table id="table-responsive tablam" class="table display responsive wrap table-hover">
+
+            <table id="tablam" class="table display responsive wrap table-hover">
                 <thead class="text-center">
-                    <!-- Table Headers -->
+
                     <tr>
-                        <th scope="col">ID</th>
+                    <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Proveedor</th>
                         <th scope="col">Referencia</th>
@@ -49,30 +34,13 @@ require_once('resources/template-crud.php')
                         <th scope="col">Descuento</th>
                         <th scope="col">Talla</th>
                         <th scope="col">Marca</th>
-                        <th scope="col">Género</th>
+                        <th scope="col">Genero</th>
                         <th scope="col">Color</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
-                <tbody id="table-body">
-                    <!-- Placeholder Row (Template for Dynamic Data) -->
-                    <tr>
-                        <th scope="row"></th>
-                        <td ></td>
-                        
-                        <td ></td>
-                        <td ></td>
-                        <td ></td>
-                        <td ></td>
-                        <td ></td>
-                        <td ></td>
-                        <td ></td>
-                        <td ></td>
-                        <td>
-                            <!-- Edit and Delete Buttons -->
-                            
-                        </td>
-                    </tr>
+                <tbody id="body-user-mater-crud">
+
                 </tbody>
             </table>
         </div>
@@ -80,6 +48,7 @@ require_once('resources/template-crud.php')
 </div>
 </div>
 </div>
+
 <?php
 require_once('resources/footer.php')
 ?>
@@ -90,7 +59,7 @@ require_once('resources/footer.php')
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
-<script src="../js/data-table.js"></script>
+<script src="../js/fetchs/crud-product.js"></script>
 
 </body>
 

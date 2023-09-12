@@ -1,8 +1,8 @@
 $(document).ready(function () {
     var apiKey = "EXaR0JoKIirohPwbRPIHc3s73Oygi0XV";
-    var apiUrl = "http://localhost/api/public/api/users/";
-    var urlParams = "http://localhost/api/public/api/params/";
+    var apiUrl = "http://localhost/api/public/api/users";
     var tablam = $("#tablam");
+
 
     function tablas() {
         tablam.DataTable({
@@ -16,9 +16,9 @@ $(document).ready(function () {
             }
         });
     }
-    
 
-   fetchDataFromAPI(apiUrl, apiKey)
+
+    fetchDataFromAPI(apiUrl, apiKey)
         .then(data => {
             let contenido = '';
             for (let i = 0; i < data.data.length; i++) {

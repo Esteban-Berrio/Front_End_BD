@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var apiKey = "EXaR0JoKIirohPwbRPIHc3s73Oygi0XV";
-    var apiUrl = "http://localhost/api/public/api/products/";
+    var apiUrl = "http://localhost/api/public/api/users";
     var tablam = $("#tablam");
 
 
@@ -20,25 +20,19 @@ $(document).ready(function () {
 
     fetchDataFromAPI(apiUrl, apiKey)
         .then(data => {
-            if (data.length>0){console.log("data length")}
             let contenido = '';
-            console.log(data)
-
-
-
             for (let i = 0; i < data.data.length; i++) {
                 contenido += `
                     <tr>    
                         <td>${data.data[i].id}</td>
-                        <td>${data.data[i].name}</td>
-                        <td>${data.data[i].provider_id}</td>
-                        <td>${data.data[i].reference}</td>
-                        <td>${data.data[i].price}</td>
-                        <td>${data.data[i].discount}</td>
-                        <td>${data.data[i].param_size}</td>
-                        <td>${data.data[i].param_mark}</td>
-                        <td>${data.data[i].param_gender}</td>
-                        <td>${data.data[i].param_color}</td>
+                        <td>${data.data[i].user_id}</td>
+                        <td>${data.data[i].code}</td>
+                        <td>${data.data[i].date}</td>
+                        <td>${data.data[i].total}</td>
+                        <td>${data.data[i].param_paymenthod}</td>
+                        <td>${data.data[i].param_status}</td>
+                        <td>${data.data[i].param_state}</td>
+
                         <td>
                             <button class="btn-view btn"><i class="f fa-solid fa-eye"></i></button>
                             <a class="btn-edit btn" href="edit-user-master.php?id=${data.data[i].id}" ><i class="f fa-solid fa-pen-to-square"></i></a>
@@ -54,7 +48,7 @@ $(document).ready(function () {
             return data;
         })
         .catch(error => {
-            console.log("hola");
+            console.error('Error al obtener datos de la API:', error);
         });
 
     function fetchDataFromAPI(apiUrl, apiKey) {

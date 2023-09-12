@@ -14,46 +14,36 @@ require_once('resources/initiator.php')
 require_once('resources/template-crud.php')
 ?>
 
+
 <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10 pt-2 con-izq">
     <div class="card-header p-3">
         <div class="card-title">
-            <!-- Title -->
-            <h1>FACTURA</h1>
+
+            <h1>facturas</h1>
         </div>
-        <div class="container-fluid pt-4">
-            <!-- Table for Invoice Details -->
-            <table id="table-responsive" class="table display responsive wrap table-hover">
+        <div class="content d-flex pt-4 gap-3">
+
+            <a class="btn-new btn" href="Register-master.php">Nuevo</a>
+        </div>
+        <div class="container pt-4">
+
+            <table id="tablam" class="table display responsive wrap table-hover">
                 <thead class="text-center">
-                    <!-- Table Headers -->
+
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Usuario</th>
                         <th scope="col">Codigo de referencia</th>
                         <th scope="col">Fecha</th>
                         <th scope="col">Total</th>
-                        <th scope="col">Metodo de pago</th>
+                        <th scope="col">Metodo de pago </th>
                         <th scope="col">Estado de compra</th>
                         <th scope="col">Estado</th>
-                        <th class="text-center" scope="col">Ver detalle </th>
+                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- Placeholder Row (Template for Dynamic Data) -->
-                    <tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="d-flex justify-content-center gap-1">
-                            <!-- View Button -->
-                            <a class="btn-edit btn" href="#" ><i class="f fa-solid fa-pen-to-square"></i></a>
-                            <button class="btn-view btn"><i class="f fa-solid fa-eye"></i></button>
-                        </td>
-                    </tr>
+                <tbody id="body-user-mater-crud">
+
                 </tbody>
             </table>
         </div>
@@ -65,12 +55,11 @@ require_once('resources/template-crud.php')
 require_once('resources/footer.php')
 ?>
 
-<script src="../js/sliders.js"></script>
 <script src="../js/fetch.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
-<script src="../js/data-table.js"></script>
+<script src="../js/fetchs/crud-order.js"></script>
 
 </body>
 

@@ -18,7 +18,7 @@ require_once('resources/template-crud.php')
     <div class="card-header p-3">
         <div class="card-title">
             <!-- Title -->
-            <h1>CALIFICACIONES</h1>
+            <h1>COMENTARIOS</h1>
         </div>
         <div class="container-fluid pt-4">
             <!-- Table for Invoice Details -->

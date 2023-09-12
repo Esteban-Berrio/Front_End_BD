@@ -37,7 +37,7 @@ require_once('resources/template-crud.php')
         </div>
         <div class="container pt-4">
             <!-- Table for Invoice Details -->
-            <table id="table-responsive" class="table display responsive wrap table-hover">
+            <table id="table-responsive tablam" class="table display responsive wrap table-hover">
                 <thead class="text-center">
                     <!-- Table Headers -->
                     <tr>
@@ -54,24 +54,23 @@ require_once('resources/template-crud.php')
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="table-body">
                     <!-- Placeholder Row (Template for Dynamic Data) -->
                     <tr>
                         <th scope="row"></th>
-                        <td id="nombre-crud-product">asdfgsdfg</td>
-                        <td id="proveedor-crud-product">a</td>
-                        <td id="referencia-crud-product">a</td>
-                        <td id="precio-crud-product">a</td>
-                        <td id="descuento-crud-product">a</td>
-                        <td id="talla-crud-product">a</td>
-                        <td id="marca-crud-product">a</td>
-                        <td id="genero-crud-product">aa</td>
-                        <td id="color-crud-product">a</td>
+                        <td ></td>
+                        
+                        <td ></td>
+                        <td ></td>
+                        <td ></td>
+                        <td ></td>
+                        <td ></td>
+                        <td ></td>
+                        <td ></td>
+                        <td ></td>
                         <td>
                             <!-- Edit and Delete Buttons -->
-                            <button class="btn-view btn"><i class="f fa-solid fa-eye"></i></button>
-                            <a class="btn-edit btn" href="crud-edit-product.php" ><i class="f fa-solid fa-pen-to-square"></i></a>
-                            <button class="btn-delete btn"><i class="f fa-solid fa-trash"></i></button>
+                            
                         </td>
                     </tr>
                 </tbody>
@@ -87,6 +86,7 @@ require_once('resources/footer.php')
 
 <script src="../js/sliders.js"></script>
 <script src="../js/fetch.js"></script>
+<script src="../js/fetchs/crud-product.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>

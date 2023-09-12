@@ -1,7 +1,8 @@
 $(document).ready(function () {
     var apiKey = "EXaR0JoKIirohPwbRPIHc3s73Oygi0XV";
     var apiUrl = "http://localhost/api/public/api/users/";
-    var tablam = $("#tablam"); 
+    var urlParams = "http://localhost/api/public/api/params/";
+    var tablam = $("#tablam");
 
     function tablas() {
         tablam.DataTable({
@@ -15,8 +16,9 @@ $(document).ready(function () {
             }
         });
     }
+    
 
-    let fetchDataPromise = fetchDataFromAPI(apiUrl, apiKey)
+   fetchDataFromAPI(apiUrl, apiKey)
         .then(data => {
             let contenido = '';
             for (let i = 0; i < data.data.length; i++) {
@@ -40,7 +42,8 @@ $(document).ready(function () {
                         </td>
                     </tr>`;
             }
-            tablam.find('tbody').html(contenido); 
+            tablam.find('tbody').html(contenido);
+            tablas();
 
             console.log('Ya cargué la info');
 
@@ -49,7 +52,6 @@ $(document).ready(function () {
         .catch(error => {
             console.error('Error al obtener datos de la API:', error);
         });
-
 
     function fetchDataFromAPI(apiUrl, apiKey) {
         return new Promise((resolve, reject) => {

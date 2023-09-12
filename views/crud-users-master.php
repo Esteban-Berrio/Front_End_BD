@@ -1,7 +1,6 @@
 <?php
-require_once('resources/initiator.php')
+require_once('resources/initiator.php');
 ?>
-
 
 <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
 <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
@@ -11,24 +10,24 @@ require_once('resources/initiator.php')
 <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
 
 <?php
-require_once('resources/template-crud.php')
+require_once('resources/template-crud.php');
 ?>
 
 <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10 pt-2 con-izq">
     <div class="card-header p-3">
         <div class="card-title">
-            <!-- Title -->
-            <h1>MASTER DE USUARIOS </h1>
+
+            <h1>MASTER DE USUARIOS</h1>
         </div>
         <div class="content d-flex pt-4 gap-3">
-            <!-- New Button and Select -->
+
             <a class="btn-new btn" href="Register-master.php">Nuevo</a>
         </div>
         <div class="container pt-4">
-            <!-- Table for Invoice Details -->
+
             <table id="tablam" class="table display responsive wrap table-hover">
                 <thead class="text-center">
-                    <!-- Table Headers -->
+
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
@@ -45,26 +44,6 @@ require_once('resources/template-crud.php')
                     </tr>
                 </thead>
                 <tbody id="body-user-mater-crud">
-                    
-                    <!-- <tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                        
-                            <button class="btn-view btn"><i class="f fa-solid fa-eye"></i></button>
-                            <a class="btn-edit btn" href="edit-user-master.php" ><i class="f fa-solid fa-pen-to-square"></i></a>
-                            <button class="btn-delete btn"><i class="f fa-solid fa-trash"></i></button>
-                        </td>
-                    </tr> -->
 
                 </tbody>
             </table>
@@ -74,16 +53,16 @@ require_once('resources/template-crud.php')
 </div>
 </div>
 <?php
-require_once('resources/footer.php')
+require_once('resources/footer.php');
 ?>
 
-<script src="../js/sliders.js"></script>
+
 <script src="../js/fetch.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
 <script src="../js/fetchs/crud-user-m.js"></script>
-<script src="../js/data-table.js"></script>
+
 </body>
 
 </html>

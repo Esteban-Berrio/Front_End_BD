@@ -7,9 +7,8 @@
 }
 
 
-/*  Estilo Input  */
-
 .form-control {
+    width: 100% !important;
     height: 30px;
     border: 1px solid rgba(239, 143, 0, 1);
     padding: 5px;
@@ -17,6 +16,7 @@
 }
 
 .form-select {
+    width: 100% !important;
     height: 30px;
     border: 1px solid rgba(239, 143, 0, 1);
     padding: 5px;
@@ -32,6 +32,7 @@
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
   }
+  
 .btn {
     /* width: 130px;
     height: 30px;

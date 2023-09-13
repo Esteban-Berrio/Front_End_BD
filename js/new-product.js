@@ -1,3 +1,9 @@
+// const defaultFile = '../img/person-circle.svg';
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('productForm'); 
 

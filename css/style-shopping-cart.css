@@ -1,62 +1,66 @@
-.card-title{
-    height: 55px;
+/* Establecer estilos globales para resetear padding y margen en todos los elementos */
+* {
+    padding: 0;
+    margin: 0;
 }
 
-/* Define the gap between child elements within the 'container-titles' container */
+/* Definir el espacio entre elementos secundarios dentro del contenedor 'container-titles' */
 .container-titles {
     gap: 6.3rem;
 }
 
-.card-title-2{
-    margin-top: 1.15em;
-}
-
-/* Set dimensions for product images */
+/* Establecer dimensiones para las imágenes de productos */
 .img-product {
     width: 96px;
     height: 96px;
 }
 
-/* Apply styles to an icon when it's hovered over */
+/* Cambiar la apariencia de los enlaces cuando se pasa el cursor sobre ellos */
+.info-products > a{
+    color: black;
+}
+
+/* Cambiar la apariencia de los enlaces cuando se pasa el cursor sobre ellos */
+.info-products > a:hover {
+    font-size: 20px;
+    color: black;
+}
+
+/* Aplicar estilos a un ícono cuando se pasa el cursor sobre él */
 .icon-hover-danger:hover {
     border-color: #000000 !important;
     background-color: white !important;
     color: black;
 }
 
-/* Define styles for a calculation input field */
+/* Definir estilos para un campo de entrada de cálculo */
 .input-calculo {
     width: 100px;
 }
 
-/* Change the color of an icon inside an element with the 'icon-hover-danger' class when hovered over */
+/* Cambiar el color de un ícono dentro de un elemento con la clase 'icon-hover-danger' cuando se pasa el cursor sobre él */
 .icon-hover-danger:hover i {
     color: #000000 !important;
 }
 
-/* Apply styles to buttons when hovered over */
+/* Aplicar estilos a los botones cuando se pasa el cursor sobre ellos */
 .btn:hover {
     border-color: black;
 }
 
-/* Apply specific background color to a type of button */
+/* Aplicar un color de fondo específico a un tipo de botón */
 .btn-1 {
     background-color: #f59300;
 }
 
-/* Apply styles to a specific button when hovered over */
+/* Aplicar estilos a un botón específico cuando se pasa el cursor sobre él */
 .btn-2:hover {
     border-color: black;
 }
 
-.product-link{
-    text-decoration: none;
-    color: #000000;
-    font-size: large;
-    font-weight: 500;
-}
-
-.product-link:hover{
-    font-size: x-large;
-    text-shadow: 0px 0px 5px #000000;
+/* Estilos para pantallas pequeñas (sm) */
+@media (max-width: 768px) {
+    .sm-mt-2 {
+        margin-top: 1rem;
+    }
 }

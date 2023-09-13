@@ -12,6 +12,8 @@ require_once('resources/header-1.php')
 ?>
 
 
+
+
 <div class="collection">
     <div class="autoplayes-up  slider2mar" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
         <img class="img-slider-up" src="../img/ban5.png" alt="">

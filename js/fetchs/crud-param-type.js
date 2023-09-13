@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var apiKey = "EXaR0JoKIirohPwbRPIHc3s73Oygi0XV";
-    var apiUrl = "http://localhost/api/public/api/users";
-    var tabla = $("#tablam");
+    var apiUrl = "http://localhost/api/public/api/paramTypes";
+    var tabla = $("#tabletpr");
 
 
     function tablas() {
@@ -32,19 +32,10 @@ $(document).ready(function () {
                 contenido += `
                     <tr>    
                         <td>${data.data[i].id}</td>
-                        <td>${data.data[i].first_name}</td>
-                        <td>${data.data[i].last_name}</td>
-                        <td>${data.data[i].birthday}</td>
-                        <td>${data.data[i].address}</td>
-                        <td>${data.data[i].param_city}</td>
-                        <td>${data.data[i].type_user}</td>
-                        <td>${data.data[i].param_gender}</td>
-                        <td>${data.data[i].email}</td>
-                        <td>${data.data[i].param_rol}</td>
-                        <td>${data.data[i].param_state}</td>
+                        <td>${data.data[i].name}</td>
+                        <td>${data.data[i].range_min}</td>
+                        <td>${data.data[i].range_max}</td>
                         <td>
-                            <button class="btn-view btn"><i class="f fa-solid fa-eye"></i></button>
-                            <a class="btn-edit btn" href="edit-user-master.php?id=${data.data[i].id}" ><i class="f fa-solid fa-pen-to-square"></i></a>
                             <button class="btn-delete btn"><i class="f fa-solid fa-trash"></i></button>
                         </td>
                     </tr>`;

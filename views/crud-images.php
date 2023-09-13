@@ -18,7 +18,7 @@ require_once('resources/template-crud.php')
     <div class="card-header p-3">
         <div class="card-title">
             <!-- Title -->
-            <h1>PRODUCTOS</h1>
+            <h1>IMAGENES</h1>
         </div>
         <div class="content d-flex pt-4 gap-3">
             <!-- New Button and Select -->

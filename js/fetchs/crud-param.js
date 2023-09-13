@@ -1,18 +1,18 @@
 $(document).ready(function () {
     var apiKey = "EXaR0JoKIirohPwbRPIHc3s73Oygi0XV";
-    var apiUrl = "http://localhost/api/public/api/users";
-    var tabla = $("#tablam");
+    var apiUrl = "http://localhost/api/public/api/params/";
+    var tabla = $("#tablapr");
 
+    
+    
 
     function tablas() {
-
 
         if ($.fn.DataTable.isDataTable(tabla)) {
             tabla.DataTable().destroy();
         }
-
+        
         tabla.DataTable({
-            
             language: {
                 url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-CO.json',
                 lengthMenu: "Mostrar _MENU_ registros por página",
@@ -27,20 +27,18 @@ $(document).ready(function () {
 
     fetchDataFromAPI(apiUrl, apiKey)
         .then(data => {
+            if (data.length>0){console.log("data length")}
             let contenido = '';
+            console.log(data)
+
+
+
             for (let i = 0; i < data.data.length; i++) {
                 contenido += `
                     <tr>    
                         <td>${data.data[i].id}</td>
-                        <td>${data.data[i].first_name}</td>
-                        <td>${data.data[i].last_name}</td>
-                        <td>${data.data[i].birthday}</td>
-                        <td>${data.data[i].address}</td>
-                        <td>${data.data[i].param_city}</td>
-                        <td>${data.data[i].type_user}</td>
-                        <td>${data.data[i].param_gender}</td>
-                        <td>${data.data[i].email}</td>
-                        <td>${data.data[i].param_rol}</td>
+                        <td>${data.data[i].paramtype_id}</td>
+                        <td>${data.data[i].name}</td>
                         <td>${data.data[i].param_state}</td>
                         <td>
                             <button class="btn-view btn"><i class="f fa-solid fa-eye"></i></button>
@@ -57,7 +55,7 @@ $(document).ready(function () {
             return data;
         })
         .catch(error => {
-            console.error('Error al obtener datos de la API:', error);
+            console.log("hola");
         });
 
     

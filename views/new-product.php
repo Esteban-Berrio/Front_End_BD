@@ -56,27 +56,39 @@ require_once('resources/template-crud.php')
                         <!-- Botón de agregar imágenes abajo -->
 
                         <input type="file" id="foto" accept="image/*">
-                        <button class="btn  botones-crud" id="agregar-img-produc">Agregar Imagen</button>
+                        <!-- <button class="btn  botones-crud" id="agregar-img-produc">Agregar Imagen</button> -->
+                        <label class="btn botones-crud mt-3" type="button" id="agregar-img-produc" for="foto">Nueva Imagen</label>
+
 
 
                         <br>
 
                         <div class="col-8">
-                            <label for="EditReference" class="form-label"> Referencia</label>
-                            <input type="text" class="form-control" id="EditReference" name="reference">
+                            <label for="Reference" class="form-label"> Referencia</label>
+                            <input type="text" class="form-control" id="Reference" name="reference">
                             <div class="error-message" id="reference-error"></div>
 
                         </div>
 
                         <div class="col-8">
-                            <label for="EditName" class="form-label">Nombre del Producto</label>
-                            <input type="text" class="form-control" id="EditName" name="name">
+                            <label for="Provider" class="form-label">Proveedores</label>
+                            <select class="form-select" id="Provider" name="Provider">
+                               
+
+                            </select>
+                            <div class="error-message" id="state-error"></div>
+
+                        </div>
+
+                        <div class="col-8">
+                            <label for="Name" class="form-label">Nombre del Producto</label>
+                            <input type="text" class="form-control" id="Name" name="name">
                             <div class="error-message" id="name-error"></div>
                         </div>
 
                         <div class="col-8">
-                            <label for="EditDescription" class="form-label "> Descripción</label>
-                            <input type="text" class="form-control descripcion-product" id="EditDescription" name="description">
+                            <label for="Description" class="form-label "> Descripción</label>
+                            <input type="text" class="form-control descripcion-product" id="Description" name="description">
                             <div class="error-message" id="description-error"></div>
                         </div>
 
@@ -94,49 +106,44 @@ require_once('resources/template-crud.php')
 
 
                         <div class="col-8">
-                            <label for="EditStock" class="form-label"> Existencias</label>
-                            <input type="text" class="form-control" id="EditStock" name="stock">
+                            <label for="Stock" class="form-label"> Existencias</label>
+                            <input type="text" class="form-control" id="Stock" name="stock">
                             <div class="error-message" id="stock-error"></div>
                         </div>
 
                         <div class="col-8">
-                            <label for="EditPrice" class="form-label"> Precio</label>
-                            <input type="text" class="form-control" id="EditPrice" name="price">
+                            <label for="Price" class="form-label"> Precio</label>
+                            <input type="text" class="form-control" id="Price" name="price">
                             <div class="error-message" id="price-error"></div>
                         </div>
 
 
 
                         <div class="col-8">
-                            <label for="EditDiscount" class="form-label"> Descuento</label>
-                            <input type="text" class="form-control" id="EditDiscount" name="discount">
+                            <label for="Discount" class="form-label"> Descuento</label>
+                            <input type="text" class="form-control" id="Discount" name="discount">
                             <div class="error-message" id="discount-error"></div>
                         </div>
 
                         <div class="col-8">
-                            <label for="EditTax" class="form-label"> Impuesto</label>
-                            <input type="text" class="form-control" id="EditTax" name="tax">
+                            <label for="Tax" class="form-label"> Impuesto</label>
+                            <input type="text" class="form-control" id="Tax" name="tax">
                             <div class="error-message" id="tax-error"></div>
                         </div>
 
                         <div class="col-8">
-                            <label for="EditSize" class="form-label">Talla</label>
-                            <select class="form-select " id="EditSize" name="param_size">
-                                <option selected></option>
-                                <option value="1">Talla 1</option>
-                                <option value="2">Talla 2</option>
-                                <option value="2">Talla 3</option>
+                            <label for="Size" class="form-label">Talla</label>
+                            <select class="form-select " id="Size" name="param_size">
+                               
                             </select>
                             <div class="error-message" id="size-error"></div>
                         </div>
 
 
                         <div class="col-8">
-                            <label for="EditGender" class="form-label">Genero</label>
-                            <select class="form-select " id="EditGender" name="param_gender">
-                                <option selected></option>
-                                <option value="1">Masculino</option>
-                                <option value="2">Femenino</option>
+                            <label for="Gender" class="form-label">Genero</label>
+                            <select class="form-select " id="Gender" name="param_gender">
+                                
 
                             </select>
                             <div class="error-message" id="gender-error"></div>
@@ -144,11 +151,9 @@ require_once('resources/template-crud.php')
                         </div>
 
                         <div class="col-8">
-                            <label for="EditSubcategory" class="form-label">Subcategoria</label>
-                            <select class="form-select" id="EditSubcategory" name="param_subcategory">
-                                <option selected></option>
-                                <option value="1">---</option>
-                                <option value="2">---</option>
+                            <label for="Subcategory" class="form-label">Subcategoria</label>
+                            <select class="form-select" id="Subcategory" name="param_subcategory">
+                               
 
                             </select>
                             <div class="error-message" id="subcategory-error"></div>
@@ -156,11 +161,9 @@ require_once('resources/template-crud.php')
                         </div>
 
                         <div class="col-8">
-                            <label for="EditMark" class="form-label">Marca</label>
-                            <select class="form-select" id="EditMark" name="param_mark">
-                                <option selected></option>
-                                <option value="1">---</option>
-                                <option value="2">---</option>
+                            <label for="Mark" class="form-label">Marca</label>
+                            <select class="form-select" id="Mark" name="param_mark">
+                             
 
                             </select>
                             <div class="error-message" id="mark-error"></div>
@@ -168,11 +171,8 @@ require_once('resources/template-crud.php')
                         </div>
 
                         <div class="col-8">
-                            <label for="EditColor" class="form-label">Color</label>
-                            <select class="form-select" id="EditColor" name="param_color">
-                                <option selected></option>
-                                <option value="1">---</option>
-                                <option value="2">---</option>
+                            <label for="Color" class="form-label">Color</label>
+                            <select class="form-select" id="Color" name="param_color">
 
                             </select>
                             <div class="error-message" id="color-error"></div>
@@ -180,11 +180,9 @@ require_once('resources/template-crud.php')
                         </div>
 
                         <div class="col-8">
-                            <label for="EditState" class="form-label">Estado</label>
-                            <select class="form-select" id="EditState" name="param_state">
-                                <option selected></option>
-                                <option value="1">Activo</option>
-                                <option value="2">Inactivo</option>
+                            <label for="State" class="form-label">Estado</label>
+                            <select class="form-select" id="State" name="param_state">
+                                
 
                             </select>
                             <div class="error-message" id="state-error"></div>
@@ -211,6 +209,7 @@ require_once('resources/footer.php')
 
 <script src="../js/sliders.js"></script>
 <script src="../js/fetch.js"></script>
+<script src="../js/fetchs/new-product.js"></script>
 <script src="../js/new-product.js"></script>
 </body>
 

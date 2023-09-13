@@ -18,15 +18,15 @@ require_once('resources/template-crud.php')
         </div>
         <div class="content d-flex pt-4 gap-3">
 
-            <a class="btn-new btn" href="Register-master.php">Nuevo</a>
+            <a class="btn-new btn" href="new-product.php">Nuevo</a>
         </div>
         <div class="container pt-4">
 
-            <table id="tablap" class="table display responsive wrap table-hover">
+            <table id="tablam" class="table display responsive wrap table-hover">
                 <thead class="text-center">
 
                     <tr>
-                        <th scope="col">ID</th>
+                    <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Proveedor</th>
                         <th scope="col">Referencia</th>
@@ -39,8 +39,8 @@ require_once('resources/template-crud.php')
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
-
-                <tbody id="body-user-mater-crud">
+                
+                <tbody id="table-body">
 
                 </tbody>
             </table>
@@ -60,7 +60,6 @@ require_once('resources/footer.php')
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
-<script src="../js/fetchs/crud-product.js"></script>
 
 </body>
 

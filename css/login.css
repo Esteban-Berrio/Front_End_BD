@@ -107,6 +107,14 @@ a:hover {
     background-color: #f0b379;
 }
 
+.error {
+    color: rgb(209, 206, 206);
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+
 @media(max-width: 800px) {
     .title {
         font-size: 5em !important;

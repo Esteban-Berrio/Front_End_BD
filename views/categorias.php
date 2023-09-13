@@ -30,7 +30,7 @@ require_once('resources/header-1.php')
             <!-- Menú Acordeón (Lado Izquierdo) -->
             <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
                 <div class="accordion mt-4" id="accordionPanelsStayOpenExample">
-                    <h2 class="text-center texto ">Mujeres</h2>
+                    <h2 class="text-center texto mt-5 ">Mujeres</h2>
 
 
                     <!-- Estructura Acordeon -->
@@ -212,7 +212,7 @@ require_once('resources/header-1.php')
 
             <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9 mt-4 ">
                 <br>
-                <h2 class="text-center texto-titulo">PRODUCTOS</h2>
+                <h2 class="text-center texto-titulo mt-4">PRODUCTOS</h2>
                 <div class="row">
                     <!-- Producto 1 -->
 

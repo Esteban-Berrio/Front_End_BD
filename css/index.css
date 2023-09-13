@@ -2,12 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 350px;
-  min-width: 100vh;
 }
 
 .img-slider-up{
 box-shadow: 0px 0px 20px #000000;
+overflow: hidden;
 }
 .conten-index {
   display: flex;
@@ -25,6 +24,7 @@ box-shadow: 0px 0px 20px #000000;
   padding: 30px;
   min-width: 100vw;
 }
+
 .center {
   display: flex;
   justify-content: center;

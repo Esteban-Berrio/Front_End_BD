@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', function () {
         let isValid = true; 
 
         
-        const referenceInput = document.getElementById('EditReference');
-        const nameInput = document.getElementById('EditName');
-        const descriptionInput = document.getElementById('EditDescription');
-        const stockInput = document.getElementById('EditStock');
-        const priceInput = document.getElementById('EditPrice');
-        const discountInput = document.getElementById('EditDiscount');
-        const taxInput = document.getElementById('EditTax');
+        const referenceInput = document.getElementById('Reference');
+        const nameInput = document.getElementById('Name');
+        const descriptionInput = document.getElementById('Description');
+        const stockInput = document.getElementById('Stock');
+        const priceInput = document.getElementById('Price');
+        const discountInput = document.getElementById('Discount');
+        const taxInput = document.getElementById('Tax');
 
         if (!validarCampo(referenceInput, 3, 45, 'reference-error')) {
             isValid = false;
@@ -36,12 +36,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Validar campos select
-        const sizeSelect = document.getElementById('EditSize');
-        const genderSelect = document.getElementById('EditGender');
-        const subcategorySelect = document.getElementById('EditSubcategory');
-        const markSelect = document.getElementById('EditMark');
-        const colorSelect = document.getElementById('EditColor');
-        const stateSelect = document.getElementById('EditState');
+        const sizeSelect = document.getElementById('Size');
+        const genderSelect = document.getElementById('Gender');
+        const subcategorySelect = document.getElementById('Subcategory');
+        const markSelect = document.getElementById('Mark');
+        const colorSelect = document.getElementById('Color');
+        const stateSelect = document.getElementById('State');
 
         if (!validarSelect(sizeSelect, 'size-error')) {
             isValid = false;

@@ -39,6 +39,7 @@ require_once('resources/template-crud.php')
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
+                
                 <tbody id="body-user-mater-crud">
 
                 </tbody>

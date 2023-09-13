@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var apiKey = "EXaR0JoKIirohPwbRPIHc3s73Oygi0XV";
-    var apiUrl = "http://localhost/api/public/api/orders";
-    var tabla = $("#tablao");
+    var apiUrl = "http://localhost/api/public/api/ratings";
+    var tabla = $("#tablar");
 
     
     
@@ -32,17 +32,13 @@ $(document).ready(function () {
                 contenido += `
                     <tr>    
                         <td>${data.data[i].id}</td>
+                        <td>${data.data[i].product_id}</td>
                         <td>${data.data[i].user_id}</td>
-                        <td>${data.data[i].code}</td>
-                        <td>${data.data[i].date}</td>
-                        <td>${data.data[i].total}</td>
-                        <td>${data.data[i].param_paymethod}</td>
-                        <td>${data.data[i].param_status}</td>
+                        <td>${data.data[i].comments}</td>
+                        <td>${data.data[i].starts}</td>
                         <td>${data.data[i].param_state}</td>
 
                         <td>
-                            <button class="btn-view btn"><i class="f fa-solid fa-eye"></i></button>
-                            <a class="btn-edit btn" href="edit-user-master.php?id=${data.data[i].id}" ><i class="f fa-solid fa-pen-to-square"></i></a>
                             <button class="btn-delete btn"><i class="f fa-solid fa-trash"></i></button>
                         </td>
                     </tr>`;

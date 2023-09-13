@@ -19,7 +19,7 @@ require_once('resources/template-crud.php')
     <div class="card-header p-3">
         <div class="card-title">
 
-            <h1>facturas</h1>
+            <h1>FACTURAS</h1>
         </div>
         <div class="content d-flex pt-4 gap-3">
 
@@ -27,7 +27,7 @@ require_once('resources/template-crud.php')
         </div>
         <div class="container pt-4">
 
-            <table id="tablam" class="table display responsive wrap table-hover">
+            <table id="tablao" class="table display responsive wrap table-hover">
                 <thead class="text-center">
 
                     <tr>

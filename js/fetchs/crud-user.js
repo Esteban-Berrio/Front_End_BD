@@ -1,18 +1,18 @@
 $(document).ready(function () {
     var apiKey = "EXaR0JoKIirohPwbRPIHc3s73Oygi0XV";
-    var apiUrl = "http://localhost/api/public/api/orders";
-    var tabla = $("#tablao");
+    var apiUrl = "http://localhost/api/public/api/users";
+    var tabla = $("#tablam");
 
-    
-    
 
     function tablas() {
+
 
         if ($.fn.DataTable.isDataTable(tabla)) {
             tabla.DataTable().destroy();
         }
-        
+
         tabla.DataTable({
+            
             language: {
                 url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-CO.json',
                 lengthMenu: "Mostrar _MENU_ registros por página",
@@ -32,14 +32,16 @@ $(document).ready(function () {
                 contenido += `
                     <tr>    
                         <td>${data.data[i].id}</td>
-                        <td>${data.data[i].user_id}</td>
-                        <td>${data.data[i].code}</td>
-                        <td>${data.data[i].date}</td>
-                        <td>${data.data[i].total}</td>
-                        <td>${data.data[i].param_paymethod}</td>
-                        <td>${data.data[i].param_status}</td>
+                        <td>${data.data[i].first_name}</td>
+                        <td>${data.data[i].last_name}</td>
+                        <td>${data.data[i].birthday}</td>
+                        <td>${data.data[i].address}</td>
+                        <td>${data.data[i].param_city}</td>
+                        <td>${data.data[i].type_user}</td>
+                        <td>${data.data[i].param_gender}</td>
+                        <td>${data.data[i].email}</td>
+                        <td>${data.data[i].param_rol}</td>
                         <td>${data.data[i].param_state}</td>
-
                         <td>
                             <button class="btn-view btn"><i class="f fa-solid fa-eye"></i></button>
                             <a class="btn-edit btn" href="edit-user-master.php?id=${data.data[i].id}" ><i class="f fa-solid fa-pen-to-square"></i></a>

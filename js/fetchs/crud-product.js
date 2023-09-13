@@ -1,11 +1,18 @@
 $(document).ready(function () {
     var apiKey = "EXaR0JoKIirohPwbRPIHc3s73Oygi0XV";
     var apiUrl = "http://localhost/api/public/api/products/";
-    var tablam = $("#tablam");
+    var tabla = $("#tablap");
 
+    
+    
 
     function tablas() {
-        tablam.DataTable({
+
+        if ($.fn.DataTable.isDataTable(tabla)) {
+            tabla.DataTable().destroy();
+        }
+        
+        tabla.DataTable({
             language: {
                 url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-CO.json',
                 lengthMenu: "Mostrar _MENU_ registros por página",
@@ -46,7 +53,7 @@ $(document).ready(function () {
                         </td>
                     </tr>`;
             }
-            tablam.find('tbody').html(contenido);
+            tabla.find('tbody').html(contenido);
             tablas();
 
             console.log('Ya cargué la info');
@@ -57,21 +64,5 @@ $(document).ready(function () {
             console.log("hola");
         });
 
-    function fetchDataFromAPI(apiUrl, apiKey) {
-        return new Promise((resolve, reject) => {
-            $.ajax({
-                url: apiUrl,
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${apiKey}`,
-                },
-                success: data => {
-                    resolve(data);
-                },
-                error: error => {
-                    reject(error);
-                },
-            });
-        });
-    }
+    
 });

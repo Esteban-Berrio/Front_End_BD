@@ -22,11 +22,11 @@ require_once('resources/template-crud.php')
         </div>
         <div class="container pt-4">
 
-            <table id="tablam" class="table display responsive wrap table-hover">
+            <table id="tablap" class="table display responsive wrap table-hover">
                 <thead class="text-center">
 
                     <tr>
-                    <th scope="col">ID</th>
+                        <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Proveedor</th>
                         <th scope="col">Referencia</th>
@@ -39,7 +39,7 @@ require_once('resources/template-crud.php')
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
-                
+
                 <tbody id="body-user-mater-crud">
 
                 </tbody>

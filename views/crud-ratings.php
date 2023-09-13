@@ -19,12 +19,16 @@ require_once('resources/template-crud.php')
         <div class="card-title">
             <!-- Title -->
             <h1>COMENTARIOS</h1>
+            </div>
+        <div class="content d-flex pt-4 gap-3">
+
+            <a class="btn-new btn" href="Register-master.php">Nuevo</a>
         </div>
-        <div class="container-fluid pt-4">
-            <!-- Table for Invoice Details -->
-            <table id="table-responsive" class="table display responsive wrap table-hover">
+        <div class="container pt-4">
+
+            <table id="tablar" class="table display responsive wrap table-hover">
                 <thead class="text-center">
-                    <!-- Table Headers -->
+
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Producto ID</th>
@@ -33,22 +37,9 @@ require_once('resources/template-crud.php')
                         <th scope="col">Puntuación</th>
                         <th scope="col">Estado</th>
                         <th class="text-center" scope="col">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Placeholder Row (Template for Dynamic Data) -->
-                    <tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="d-flex justify-content-center">
-                            <!-- Edit and Delete Buttons -->
-                            <button class="btn-delete btn"><i class="fa-solid fa-trash"></i></button>
-                        </td>
-                    </tr>
+                    </tr></thead>
+                <tbody id="body-user-mater-crud">
+
                 </tbody>
             </table>
         </div>
@@ -60,12 +51,11 @@ require_once('resources/template-crud.php')
 require_once('resources/footer.php')
 ?>
 
-<script src="../js/sliders.js"></script>
 <script src="../js/fetch.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
-<script src="../js/data-table.js"></script>
+<script src="../js/fetchs/crud-ratings.js"></script>
 
 </body>
 

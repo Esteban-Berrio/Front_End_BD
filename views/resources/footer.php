@@ -9,44 +9,49 @@
            
             <!-- Footer con imagen (LOGO/MEDIOS DE PAGO) -->
             <!--COLUMNAS DE Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4">CONTACTOS</h5>
-                <h5 class="text-uppercase mb-4">---------------------------</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <a href="#!" class="text-white">*ADSI-209@gmail.com</a>
-                    </li>
-                    <li class="mb-2">
-                        <a href="#!" class="text-white">Wsp +573182362245</a>
-                    </li>
-                </ul>
-            </div>
+            
             <!--COLUMNAS DE Grid column-->
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h5 class="text-uppercase mb-4">ENLACES UTILES</h5>
-                <h5 class="text-uppercase mb-4">---------------------------</h5>
+                <h5 class="text-uppercase mb-3">---------------------------</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <a href="#!" class="text-white">* Politica de privacidad</a>
+                   
+                    <li class="mb-5">
+                        <a href="#!" class="text-white link-foot">Terminos y condiciones</a>
+                    </li>
+                     <li class="mb-2 ">
+                    
+                    <h5 class="text-uppercase mb-4">COPYRIGHT</h5>
+                    <h5 class="text-uppercase mb-3">---------------------------</h5>
                     </li>
                     <li class="mb-2">
-                        <a href="#!" class="text-white">* Terminos y condiciones</a>
+                        <p class="text-white">© ADSI-209 </p>
                     </li>
             </div>
             <!--COLUMNAS DE Grid column-->
-
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">CONTACTOS</h5>
+                <h5 class="text-uppercase mb-3">---------------------------</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="#!" class="text-white link-foot">ADSI-209@gmail.com</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#!" class="text-white link-foot">WhatsApp: +57 31X XXX XXXX</a>
+                    </li>
+                    
+                </ul>
+            </div>
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h5 class="text-uppercase mb-4">AYUDA</h5>
-                <h5 class="text-uppercase mb-4"></h5>
+                <h5 class="text-uppercase mb-3">---------------------------</h5>
                 <ul class="list-unstyled">
                     <li class="mb-2">
                     
-                    <h5 class="text-uppercase mb-4">COPYRIGTH</h5>
+                    <a href="#" class="text-white link-foot" >Manual de usuario</a>
                     </li>
-                    <li class="mb-2">
-                        <a href="#!" class="text-white">*  © ADSI-209 </a>
-                    </li>
+                   
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">

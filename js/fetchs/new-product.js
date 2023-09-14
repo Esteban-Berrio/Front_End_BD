@@ -71,7 +71,7 @@ fetchDataFromAPI(urlParams, apiKey)
     });
 
     let form = document.getElementById("productForm")
-    form.setAttribute('action', `crud-product.php?key=${apiKey}`);
+    form.setAttribute('action', `crud-product.php`);
 
     form.addEventListener("submit", (e) => {
         

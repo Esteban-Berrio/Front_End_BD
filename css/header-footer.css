@@ -171,9 +171,12 @@ a .bi-person-circle, a .bi-cart {
 }
 .text-white{
   text-decoration: none;
+  
 }
 
-.decoration:hover{
+
+.link-foot:hover{
+  text-shadow: 0px 0px 5px #ffffff;
   text-decoration: underline;
 }
 

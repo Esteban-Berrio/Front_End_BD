@@ -1,11 +1,34 @@
 <?php
-require_once('resources/initiator.php')
+require_once('resources/initiator.php');
+
+// Iniciar la sesión si aún no está iniciada
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Recibir la cadena JSON enviada desde JavaScript
+    $jsonString = file_get_contents('php://input');
+
+    // Decodificar la cadena JSON en un arreglo asociativo en PHP
+    $jsonData = json_decode($jsonString, true);
+
+    // Almacenar los datos en una variable de sesión
+    $_SESSION['data'] = $jsonData;
+
+    // Respuesta de éxito
+    echo 'Datos JSON almacenados en la variable de sesión correctamente.';
+} else {
+    // Si se accede al archivo directamente sin una solicitud POST
+    echo 'Acceso no autorizado.';
+}
 ?>
 
 <link rel="stylesheet" href="../css/login.css">
 
 <?php
 require_once('resources/header-basico.php')
+
+
+
 ?>
 
 <div class="container1">
@@ -44,8 +67,9 @@ require_once('resources/header-basico.php')
         </form>
     </div>
 </div>
+<script src="../js/fetch.js"></script>
+<script src="../js/fetchs/login.js"></script>
 <script src="../js/login.js"></script>
-
 <?php
 require_once('resources/footer.php')
 ?>

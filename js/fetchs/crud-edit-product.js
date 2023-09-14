@@ -35,7 +35,7 @@ const valores = window.location.search;
 const urlData = new URLSearchParams(valores);
 var id = urlData.get('id');
 
-// Función para llenar un select
+
 function fillSelect(selectElement, data, paramtype_id) {
     const paramsOfType = data.filter(param => param.paramtype_id === paramtype_id);
 
@@ -55,7 +55,7 @@ let productData;
 fetchDataFromAPI(urlProvider, apiKey)
     .then(data => {
         providersData = data.data;
-        // Llena los select de proveedores con los datos correspondientes
+        
         providersData.forEach(provider => {
             let option = document.createElement('option');
             option.value = provider.id;

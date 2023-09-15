@@ -10,7 +10,7 @@ body {
     background-color: #e6e6e6;
   }
 
-/* Set a default width for the logo image */
+
 img {
     width: 200px;
 }
@@ -18,26 +18,26 @@ img {
     background-color: #b46c00;
     box-shadow: 0 0 10px #000000;
 }
-/* Styles for the logout button */
+
 .btn-logout {
     background-color: #F16464;
     font-weight: bold;
     color: black;
 }
 
-/* Styles for the logout button when hovered */
+
 .btn-logout:hover {
     background-color: #F16464;
     color: black;
 }
 
-/* Styles for the navigation menu icon (burger) */
+
 .nav-burger {
     color: #ffffff;
     display: none;
 }
 
-/* Styles for the aside container */
+
 .aside-container {
     background-color: #a1a1a1;
     margin: 0;
@@ -52,7 +52,7 @@ img {
     color: #ffffff;
     
 }
-/* Ensure the <ul> fills the container vertically */
+
 .aside-item {
     height: 100%;
     list-style: none; 

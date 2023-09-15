@@ -6,7 +6,7 @@
 <body>
     <?php
 
-    if (!isset($_SESSION['type_user']) || $_SESSION['type_user'] == 700000000000) {
+    if (!isset($_SESSION['type_user']) && $_SESSION['type_user'] == 700000000000) {
         header("Location: index.php");
         exit;
     }
@@ -28,12 +28,10 @@
                     <li class="nav-item">
                         <a class="nav-burger link nav-link" href="crud-ratings.php">Comentarios</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-burger link nav-link" href="crud-product.php">Productos</a>
-                    </li>
 
                     <?php
-                    if ($_SESSION['type_user'] != 235 || $_SESSION['type_user'] != 99999999) {
+
+                    if ($_SESSION['type_user'] != 235 && $_SESSION['type_user'] != 99999999) {
                         echo '<li class="nav-item">
                         <a class="nav-burger link nav-link" href="crud-product-ver.php">Productos</a>
                     </li>';
@@ -78,7 +76,7 @@
                     </li>
 
                     <?php
-                    if ($_SESSION['type_user'] == 235 || $_SESSION['type_user'] == 333333333333) { //ventasss
+                    if ($_SESSION['type_user'] == 235 && $_SESSION['type_user'] == 333333333333) { //ventasss
                         echo '<li class="nav-item">
                                 <a class="nav-burger link nav-link" href="grafica.php">Graficos</a>
                             </li>';
@@ -89,14 +87,14 @@
                 <!-- Logout and Question Button -->
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link" href="log-out.php"><button type="button" class="btn-logout btn logout-crud">Cerrar Sesión</button></a>
-                    <a class="nav-link mt-2" href="#"><i class="fa-solid fa-question-circle fa-xl" style="color: #000000;"></i></a>
+                    <a class="nav-link mt-2" href="#"><i class="fa-solid fa-question-circle fa-xl" style="color: #000000;"></i></a> || 
                 </div>
             </div>
         </div>
     </nav>
     <!-- Main Content Container -->
     <div class="container-fluid">
-        <div class="row">
+        <div class="row fondo-home">
             <!-- Left Sidebar (Navigation Menu) -->
             <div class="aside-container col-sm-12 col-md-2 col-lg-2 col-xl-2">
                 <ul class="aside-item nav flex-column pt-3 l-left2">
@@ -105,9 +103,9 @@
                         <a class="nav-aside link nav-link" href="crud-ratings.php">Comentarios</a>
                     </li>
 
-                    
+
                     <?php
-                        if ($_SESSION['type_user'] != 235 || $_SESSION['type_user'] != 99999999) {
+                        if ($_SESSION['type_user'] != 235 && $_SESSION['type_user'] != 99999999) {
                             echo '<li class="nav-item">
                                 <a class="nav-aside link nav-link" href="crud-product-ver.php">Productos</a>
                             </li>';

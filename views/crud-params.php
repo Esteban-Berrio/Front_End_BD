@@ -1,5 +1,11 @@
 <?php
-require_once('resources/initiator.php')
+require_once('resources/initiator.php');
+
+require_once('resources/footer.php');
+if ($_SESSION['type_user'] != 235 && $_SESSION['type_user'] != 99999999) {
+    header("Location: home.php");
+}
+
 ?>
 
 
@@ -47,12 +53,7 @@ require_once('resources/template-crud.php')
 </div>
 </div>
 
-<?php
-require_once('resources/footer.php');
-if ($_SESSION['type_user'] != 235 || $_SESSION['type_user'] != 99999999) {
-    header("Location: home.php");
-}
-?>
+
 
 <script src="../js/sliders.js"></script>
 <script src="../js/fetch.js"></script>

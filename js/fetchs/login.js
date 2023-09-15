@@ -30,7 +30,7 @@ form.addEventListener('submit', function (e) {
     }).then((response) => {
         if (!response.ok) {
             Swal.fire({
-                position: 'top-end',
+                
                 icon: 'error',
                 title: 'Usuario no autorizado/Credenciales erroneas',
                 showConfirmButton: false,
@@ -61,7 +61,7 @@ form.addEventListener('submit', function (e) {
 
     }).catch((error) => {
         Swal.fire({
-            position: 'top-end',
+            
             icon: 'error',
             title: 'Usuario no autorizado/Credenciales erroneas',
             showConfirmButton: false,

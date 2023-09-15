@@ -11,6 +11,7 @@
 }
 .contener-home{
     min-height: 90vh;
+    
 
 }
 .welcome{
@@ -22,4 +23,9 @@
 .name-admin{
     font-size: x-large;
     font-weight: 500;
+}
+.fondo-home{
+    background-image: url('../img/fondoBDBLACk.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }

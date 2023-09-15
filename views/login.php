@@ -1,25 +1,32 @@
 <?php
 require_once('resources/initiator.php');
 
-// Iniciar la sesión si aún no está iniciada
-session_start();
+if (!isset($_SESSION['type_user'])) {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Recibir la cadena JSON enviada desde JavaScript
-    $jsonString = file_get_contents('php://input');
-
-    // Decodificar la cadena JSON en un arreglo asociativo en PHP
-    $jsonData = json_decode($jsonString, true);
-
-    // Almacenar los datos en una variable de sesión
-    $_SESSION['data'] = $jsonData;
-
-    // Respuesta de éxito
-    echo 'Datos JSON almacenados en la variable de sesión correctamente.';
-} else {
-    // Si se accede al archivo directamente sin una solicitud POST
-    echo 'Acceso no autorizado.';
-}
+            $jsonString = file_get_contents('php://input');
+            $jsonData = json_decode($jsonString, true);
+            $user = $jsonData['user'];
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['first_name'] = $user['first_name'];
+            $_SESSION['last_name'] = $user['last_name'];
+            $_SESSION['birthday'] = $user['birthday'];
+            $_SESSION['address'] = $user['address'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['image'] = $user['image'];
+            $_SESSION['param_city'] = $user['param_city'];
+            $_SESSION['param_gender'] = $user['param_gender'];
+            $_SESSION['param_rol'] = $user['param_rol'];
+            $_SESSION['param_state'] = $user['param_state'];
+            $_SESSION['type_user'] = $user['type_user'];
+        } else {}
+    }else{
+        if($_SESSION['type_user']!=70000000000){
+            header("Location: home.php");
+        }else{
+            header("Location: index.php");
+        }
+    }
 ?>
 
 <link rel="stylesheet" href="../css/login.css">
@@ -27,14 +34,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php
 require_once('resources/header-basico.php')
 
-
-
 ?>
 
 <div class="container1">
-    <div class="row justify-content-center mt-3">
+    <div class="row justify-content-center mt-3 mb-3">
 
-        <form id="miFormulario"class="formulario" method="POST">
+        <form id="miFormulario" class="formulario" method="POST">
             <div class="title text-center">
                 Bienvenido
             </div>
@@ -53,7 +58,7 @@ require_once('resources/header-basico.php')
 
                 <label class="word" name="password">Contraseña</label>
 
-                <input class="form-control" id="inputPassword"type="password" name="password">
+                <input class="form-control" id="inputPassword" type="password" name="password">
                 <div id="passwordError" class="error"></div>
 
             </div>

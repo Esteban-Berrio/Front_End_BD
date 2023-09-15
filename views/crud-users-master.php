@@ -1,5 +1,8 @@
 <?php
-require_once('resources/initiator.php');
+require_once('resources/initiator.php');;
+if ($_SESSION['type_user'] != 235 ) {
+    header("Location: home.php");
+}
 ?>
 
 <link rel="stylesheet" href="../CSS/styles-extend-crud.css">

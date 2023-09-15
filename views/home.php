@@ -1,5 +1,5 @@
 <?php
-require_once('resources/initiator.php')
+require_once('resources/initiator.php');
 ?>
 
 
@@ -13,14 +13,14 @@ require_once('resources/template-crud.php')
 ?>
 
 <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10 pt-2 d-flex justify-content-center align-items-center contener-home">
-    
+
     <div class="justify-content-center align-items-center home-welcome">
         <p class="welcome">Bienvenido</p>
         <div class="d-flex justify-content-center">
-        <p class="name-admin">NOMBRE USUARIO</p>
+            <p class="name-admin"> <?php echo $_SESSION['first_name'] . ' ' . $_SESSION['last_name']; ?> </p>
         </div>
     </div>
-    
+
 
 
 </div>

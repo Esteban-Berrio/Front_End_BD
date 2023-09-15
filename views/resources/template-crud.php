@@ -4,7 +4,13 @@
 </head>
 
 <body>
+    <?php
 
+    if (!isset($_SESSION['type_user']) || $_SESSION['type_user'] == 700000000000) {
+        header("Location: index.php");
+        exit;
+    }
+    ?>
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg  header-admin">
@@ -25,33 +31,64 @@
                     <li class="nav-item">
                         <a class="nav-burger link nav-link" href="crud-product.php">Productos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-burger link nav-link" href="crud-order.php">Factura</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-burger link nav-link" href="crud-users.php">Usuarios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-burger link nav-link" href="crud-users-master.php">Usuarios M</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-burger link nav-link" href="crud-params.php">Parámetros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-burger link nav-link" href="crud-param-types.php">Tipos de
-                            Parámetros</a>
-                    </li>
+
+                    <?php
+                    if ($_SESSION['type_user'] != 235 || $_SESSION['type_user'] != 99999999) {
+                        echo '<li class="nav-item">
+                        <a class="nav-burger link nav-link" href="crud-product-ver.php">Productos</a>
+                    </li>';
+                    } else {
+                        echo '<li class="nav-item">
+                        <a class="nav-burger link nav-link" href="crud-product.php">Productos</a>
+                    </li>';
+                    }
+
+                    ?>
+
+
+                    <?php
+                    if ($_SESSION['type_user'] == 235) {
+                        echo '<li class="nav-item">
+                                    <a class="nav-burger link nav-link" href="crud-users-master.php">Usuarios</a>
+                            </li>';
+                    } elseif ($_SESSION['type_user'] == 99999999999999) { //cod usernormal
+                        echo '<li class="nav-item">
+                                <a class="nav-burger link nav-link" href="crud-order.php">Factura</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-burger link nav-link" href="crud-users.php">Usuarios</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-burger link nav-link" href="crud-params.php">Parámetros</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-burger link nav-link" href="crud-param-types.php">Tipos de Parámetros</a>
+                            </li>';
+                    }
+
+                    ?>
+
+
+
                     <li class="nav-item">
                         <a class="nav-burger link nav-link" href="crud-images.php">Imagenes</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-burger link nav-link" href="grafica.php">Graficos</a>
-                    </li>
+
+                    <?php
+                    if ($_SESSION['type_user'] == 235 || $_SESSION['type_user'] == 333333333333) { //ventasss
+                        echo '<li class="nav-item">
+                                <a class="nav-burger link nav-link" href="grafica.php">Graficos</a>
+                            </li>';
+                    }
+                    ?>
 
                 </ul>
                 <!-- Logout and Question Button -->
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link" href="#"><button type="button" class="btn-logout btn logout-crud">Cerrar Sesión</button></a>
+                    <a class="nav-link" href="log-out.php"><button type="button" class="btn-logout btn logout-crud">Cerrar Sesión</button></a>
                     <a class="nav-link mt-2" href="#"><i class="fa-solid fa-question-circle fa-xl" style="color: #000000;"></i></a>
                 </div>
             </div>
@@ -67,31 +104,61 @@
                     <li class="nav-item">
                         <a class="nav-aside link nav-link" href="crud-ratings.php">Comentarios</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-aside link nav-link" href="crud-product.php">Productos</a>
-                    </li>
+
+                    
+                    <?php
+                        if ($_SESSION['type_user'] != 235 || $_SESSION['type_user'] != 99999999) {
+                            echo '<li class="nav-item">
+                                <a class="nav-aside link nav-link" href="crud-product-ver.php">Productos</a>
+                            </li>';
+                        } else {
+                            echo '<li class="nav-item">
+                                <a class="nav-aside link nav-link" href="crud-product.php">Productos</a>
+                            </li>';
+                        }
+                    ?>
+
+
+                
                     <li class="nav-item">
                         <a class="nav-aside link nav-link" href="crud-order.php">Factura</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-aside link nav-link" href="crud-users.php">Usuarios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-aside link nav-link" href="crud-users-master.php">Usuarios M</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-aside link nav-link" href="crud-params.php">Parámetros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-aside link nav-link" href="crud-param-types.php">Tipos de
-                            Parámetros</a>
-                    </li>
+
+
+                    <?php
+
+                    if ($_SESSION['type_user'] == 235) {
+                        echo '<li class="nav-item">
+                                <a class="nav-aside link nav-link" href="crud-users-master.php">Usuarios</a>
+                            </li>';
+                    } elseif ($_SESSION['type_user'] == 99999999999999) { // cod usernormal
+
+                        echo '<li class="nav-item">
+                                <a class="nav-aside link nav-link" href="crud-users.php">Usuarios</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-aside link nav-link" href="crud-params.php">Parámetros</a>
+                            </li>
+
+                            <li class="nav-item">
+                            <a class="nav-aside link nav-link" href="crud-param-types.php">Tipos de Parámetros</a>
+                            </li>';
+                    }
+
+                    ?>
+
+
                     <li class="nav-item">
                         <a class="nav-aside link nav-link" href="crud-images.php">Imagenes</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-aside link nav-link" href="grafica.php">Graficos</a>
-                    </li>
+
+                    <?php
+                    if ($_SESSION['type_user'] == 235 || $_SESSION['type_user'] == 333333333333) { //ventasss
+                        echo '<li class="nav-item">
+                            <a class="nav-aside link nav-link" href="grafica.php">Graficos</a>
+                        </li>';
+                    }
+                    ?>
                 </ul>
             </div>
-     

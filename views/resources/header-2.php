@@ -1,6 +1,4 @@
-<?php
-require_once('initiator.php');
-?>
+
 <link rel="icon" type="image/ico" href="../img/iconoBD.ico">
 <title>Black Diamond</title>
 <link rel="stylesheet" href="../css/header-footer.css" />

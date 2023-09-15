@@ -15,7 +15,7 @@ let urlParams = "http://localhost/api/public/api/params/";
 let urlProvider = "http://localhost/api/public/api/providers/";
 let urlProducts = "http://localhost/api/public/api/products/";
 let providerSelect = document.getElementById("Provider");
-// Define los elementos select
+
 let reference = document.getElementById("Reference");
 let namee = document.getElementById("Name");
 let description = document.getElementById("Description");
@@ -47,7 +47,7 @@ function fillSelect(selectElement, data, paramtype_id) {
     });
 }
 
-// Obtén los datos de los parámetros
+
 let paramsData;
 let providersData;
 let productData;
@@ -64,12 +64,12 @@ fetchDataFromAPI(urlProvider, apiKey)
         });
     })
     .then(() => {
-        // Después de obtener los proveedores, obtén los datos de los parámetros
+
         return fetchDataFromAPI(urlParams, apiKey);
     })
     .then(data => {
         paramsData = data.data;
-        // Llena los selects con los datos correspondientes
+
         fillSelect(color, paramsData, 8);
         fillSelect(state, paramsData, 9);
         fillSelect(size, paramsData, 6);
@@ -78,7 +78,7 @@ fetchDataFromAPI(urlProvider, apiKey)
         fillSelect(mark, paramsData, 4);
     })
     .then(() => {
-        // Después de obtener los datos de los parámetros, obtén los datos del producto
+
         return fetchDataFromAPI(urlProducts, apiKey, id);
     })
     .then(data => {
@@ -129,14 +129,14 @@ form.addEventListener("submit", (e) => {
 
     console.log(data);
     console.log(urlProducts);
-    // Llama a la función para enviar datos a la API aquí
+
     updateDataToAPI(urlProducts, id, apiKey, data)
         .then(responseData => {
-            // Aquí puedes manejar la respuesta del servidor si es necesario
+
             console.log('Respuesta del servidor:', responseData);
         })
         .catch(error => {
-            // Aquí puedes manejar errores de la solicitud
+
             console.error('Error al enviar datos:', error);
         });
 });

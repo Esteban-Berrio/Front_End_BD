@@ -1,5 +1,13 @@
 <?php
-require_once('resources/initiator.php')
+require_once('resources/initiator.php');
+if (!isset($_SESSION['type_user'])) {
+    header("Location: login.php");
+} else {
+    if ($_SESSION['type_user'] != 700000000000) {
+        header("Location: home.php");
+    } else {
+    }
+}
 ?>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -77,4 +85,5 @@ require_once('resources/footer.php')
 <script src="../js/shopping-cart.js"></script>
 
 </body>
+
 </html>

@@ -1,6 +1,17 @@
 var form = document.getElementById("miFormulario");
 var urlLogin = "http://localhost/api/public/api/login";
 var apiKey = "EXaR0JoKIirohPwbRPIHc3s73Oygi0XV";
+var user=undefined;
+function redireccion() {
+    if(user["type_user"]!=700000000){
+        window.location.href = "home.php";
+    }else{
+        window.location.href = "index.php"
+    }
+}
+
+
+
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -29,29 +40,24 @@ form.addEventListener('submit', function (e) {
         }
         return response.json();
     }).then((responseData) => {
-        let user = responseData.user;
-        console.log(user);
+        user = responseData.user;
 
-        // Ahora, después de obtener el usuario, puedes enviarlo al servidor PHP
-        var jsonData = { user: user };
-
-        // Convierte el objeto JSON en una cadena JSON
-        var jsonString = JSON.stringify(jsonData);
-
-        // Envia la cadena JSON al servidor PHP a través de una solicitud AJAX (ejemplo usando Fetch API)
         fetch('login.php', {
             method: 'POST',
-            body: jsonString
+            body: JSON.stringify({ user: user }), // Envia el user al servidor
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
             .then(response => {
-                // Manejar la respuesta del servidor si es necesario
-                console.log('Datos JSON enviados al servidor');
-                console.log(data)
-
+                return response.text();
             })
+            
             .catch(error => {
-                console.error('Error:', error);
+                console.error('Error en la solicitud AJAX:', error);
             });
+
+    redireccion();
 
     }).catch((error) => {
         Swal.fire({
@@ -62,4 +68,7 @@ form.addEventListener('submit', function (e) {
             timer: 1500
         });
     });
+    
+
+  
 });

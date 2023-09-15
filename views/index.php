@@ -1,5 +1,9 @@
 <?php
-require_once('resources/initiator.php')
+require_once('resources/initiator.php');
+if (isset($_SESSION['type_user'] ) && $_SESSION['type_user'] != 99999999 ) {
+    header("Location: home.php");
+}
+
 ?>
 
 

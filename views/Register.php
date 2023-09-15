@@ -1,5 +1,8 @@
 <?php
-require_once('resources/initiator.php')
+require_once('resources/initiator.php');
+if (isset ($_SESSION['type_user'])) {
+    header("Location: login.php");
+}
 ?>
 <link rel="stylesheet" href="../css/register.css" />
 <?php

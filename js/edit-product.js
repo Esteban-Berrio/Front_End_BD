@@ -1,37 +1,37 @@
 
 const formulario = document.getElementById("productForm");
 const Reference = document.getElementById("Reference");
-const referenceError = document.getElementById("referenceError");
+const referenceError = document.getElementById("reference-error");
 const Provider = document.getElementById("Provider");
-const ProviderError = document.getElementById("ProviderError");
-const nameError = document.getElementById("nameError");
+const ProviderError = document.getElementById("provider-error");
+const nameError = document.getElementById("name-error");
 const Name = document.getElementById("Name");
 const Description = document.getElementById("Description");
-const descriptionError = document.getElementById("descriptionError");
+const descriptionError = document.getElementById("description-error");
 
 
 const img = document.getElementById("foto");
 const imgError = document.getElementById("img-error");
 
 const Stock = document.getElementById("Stock");
-const stockError = document.getElementById("stockError");
+const stockError = document.getElementById("stock-error");
 
 const Price = document.getElementById("Price");
-const priceError = document.getElementById("priceError");
+const priceError = document.getElementById("price-error");
 const Discount = document.getElementById("Discount");
-const discountError = document.getElementById("discountError");
+const discountError = document.getElementById("discount-error");
 const Tax = document.getElementById("Tax");
-const TaxError = document.getElementById("taxE");
+const TaxError = document.getElementById("tax-error");
 
 const Size = document.getElementById("Size");
-const sizeError = document.getElementById("sizeError");
+const sizeError = document.getElementById("size-error");
 
 
 const longitudMinima = 3;
 const longitudMaxima = 45;
 
 
-formulario.addEventListener("submit", function (event) {
+formulario.addEventListener("submit", function (e) {
     // let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     let valid = true;
     var regex = /^[0-9-%]+$/;
@@ -137,11 +137,22 @@ formulario.addEventListener("submit", function (event) {
 
     // }
     
-    if (!valid) {
-        event.preventDefault(); // Previene la recarga de la página en caso de error
-    }
+    // if (!valid) {
+    //     e.preventDefault(); // Previene la recarga de la página en caso de error
+    // }else{
+    //     Swal.fire({
+                
+    //         icon: 'success',
+    //         title: 'Producto actualizado!',
+    //         showConfirmButton: false,
+    //         timer: 1900
+    //     }).then(() => {
+    //         window.location.href = "crud-product.php";
+    //          // Redireccionar
+    //     });
+    // }
 
-
+  
 
 
 // document.addEventListener('DOMContentLoaded', function () {

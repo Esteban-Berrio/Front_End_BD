@@ -44,7 +44,6 @@ $(document).ready(function () {
                         <td>${data.data[i].param_state}</td>
                         <td>
                             <button class="btn-view btn"><i class="f fa-solid fa-eye"></i></button>
-                            <a class="btn-edit btn" href="edit-user-master.php?id=${data.data[i].id}" ><i class="f fa-solid fa-pen-to-square"></i></a>
                             <button class="btn-delete btn"><i class="f fa-solid fa-trash"></i></button>
                         </td>
                     </tr>`;

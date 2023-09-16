@@ -22,47 +22,62 @@ async function fetchDataFromAPI(url, apiKey, id  ) {
 
 // Function for POST request
 function sendDataToAPI(url, apiKey, data) {
-    return fetch(url + '?key=' + apiKey, {
+    fetch(url + '?key=' + apiKey, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json'
         },
-    })
-    .then((response) => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
+    }).then((response) => {
         return response.json();
+    }).then((data) => {
+        console.log(data);
+    }).catch((error) => {
+        console.log(error);
     })
-    .catch((error) => {
-        console.error('Error:', error);
-        throw error; // Propagar el error para manejarlo en el código de llamada
-    });
 }
-
 
 // Function to UPDATE request
-function updateDataToAPI(url, id, apiKey, data) {
-    return fetch(url + id + '?key=' + apiKey, {
-        method: 'PUT',
-        body: JSON.stringify(data),
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    }).then((response) => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-        return Promise.reject(error); // Devuelve una promesa rechazada en caso de error
-    });
-}
+    // function updateDataToAPI(url, id, apiKey, data,) {
+    //     fetch(url + id + '?key=' + apiKey, {
+    //         method: 'PUT',
+    //         body: JSON.stringify(data),
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //     }).then((response) => {
+    //         return response.json();
+    //     }).then((data) => {
+    //         console.log(data);
+    //     }).catch((error) => {
+    //         console.log(error);
+    //     })
+    // }   
 
-   
+    function updateDataToAPI(url, id, apiKey, data) {
+        return fetch(url + id + '?key=' + apiKey, {
+            method: 'PUT',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Error en la solicitud PUT');
+            }
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data);
+            return data; // Devuelve los datos si es necesario
+        })
+        .catch((error) => {
+            console.error('Error al realizar la solicitud PUT:', error);
+            throw error; // Re-lanza el error para que se maneje más arriba si es necesario
+        });
+    }
+
 
 //  Function for DELETE request
 function deleteDataFromAPI(url, id, apiKey ) {
@@ -70,21 +85,20 @@ function deleteDataFromAPI(url, id, apiKey ) {
     return fetch(url + id + '?key=' + apiKey, {
         method: 'DELETE',
     })
-    
     .then(response => {
         if (!response.ok) {
             throw new Error('La solicitud DELETE no se completó con éxito.');
         }
         return response.json();
     })
-    // .then(data => {
-    //     console.log(data);
-    //     return data;
-    // })
-    // .catch(error => {
-    //     console.error('Error al eliminar datos:', error);
-    //     throw error;
-    // });
+    .then(data => {
+        console.log(data);
+        return data;
+    })
+    .catch(error => {
+        console.error('Error al eliminar datos:', error);
+        throw error;
+    });
 }
 
     /* try {

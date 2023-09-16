@@ -139,9 +139,19 @@ formulario.addEventListener("submit", function (event) {
 
     // }
     
-    if (!valid) {
-        event.preventDefault(); // Previene la recarga de la página en caso de error
-    }
+    // if (!valid) {
+    //     event.preventDefault(); // Previene la recarga de la página en caso de error
+    // }else{
+    //     Swal.fire({
+                    
+    //         icon: 'success',
+    //         title: 'Producto creado!',
+    //         showConfirmButton: false,
+    //         timer: 1900
+    //     }).then(() => {
+    //         window.location.href = "crud-product.php"; // Redireccionar
+    //     });
+    // }
 
 
 

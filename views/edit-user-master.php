@@ -1,6 +1,9 @@
 <?php
 require_once('resources/initiator.php');
+if ($_SESSION['param_rol'] != 3403) {
+  header("Location: home.php");
 
+}
 ?>
 
 

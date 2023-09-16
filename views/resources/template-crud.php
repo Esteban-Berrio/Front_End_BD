@@ -5,7 +5,8 @@
 
 <body>
     <?php
-    if (!isset($_SESSION['type_user'])) {
+
+    if (!isset($_SESSION['param_rol'])) {
         header("Location: login.php");
     } else {
         if ($_SESSION['type_user'] == 236) {
@@ -50,7 +51,7 @@
                     <?php
                     if ($_SESSION['param_rol'] == 3403) {
                         echo '<li class="nav-item">
-                                    <a class="nav-burger link nav-link" href="crud-users-master.php">Usuarios</a>
+                                    <a class="nav-burger link nav-link" href="crud-users-master.php"> m Usuarios</a>
                             </li>
                             
                             <li class="nav-item">
@@ -73,14 +74,7 @@
                                 <a class="nav-burger link nav-link" href="crud-order.php">Factura</a>
                             </li>
 
-                            
-                            <li class="nav-item">
-                                <a class="nav-burger link nav-link" href="crud-params.php">Parámetros</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-burger link nav-link" href="crud-param-types.php">Tipos de Parámetros</a>
-                            </li>';
+                            ';
                     }
 
                     ?>
@@ -119,8 +113,8 @@
                         <a class="nav-aside link nav-link" href="crud-ratings.php">Comentarios</a>
                     </li>
 
-
                     <?php
+                    
                     if ($_SESSION['param_rol'] != 3403 && $_SESSION['param_rol'] != 3404) {
                         echo '<li class="nav-item">
                                 <a class="nav-aside link nav-link" href="crud-product-ver.php">Productos</a>
@@ -140,12 +134,13 @@
                     <?php
 
                     if ($_SESSION['param_rol'] == 3403) {
+                        
                         echo '<li class="nav-item">
-                                <a class="nav-aside link nav-link" href="crud-users-master.php">Usuarios</a>
+                                <a class="nav-aside link nav-link" href="crud-users-master.php"> m Usuarios</a>
                             </li>
                             
                             <li class="nav-item">
-                                <a class="nav-aside link nav-link" href="crud-order.php">Factura</a>
+                                <a class="nav-aside link nav-link" href="crud-users.php">Factura</a>
                             </li>
 
                             <li class="nav-item">
@@ -156,22 +151,16 @@
                             <a class="nav-aside link nav-link" href="crud-param-types.php">Tipos de Parámetros</a>
                             </li>';
                     } elseif ($_SESSION['param_rol'] == 3404) { 
-
+                        
                         echo '<li class="nav-item">
                                 <a class="nav-aside link nav-link" href="crud-order.php">Factura</a>
                             </li>
                         
                             <li class="nav-item">
-                                <a class="nav-aside link nav-link" href="crud-users.php">Usuarios</a>
+                                <a class="nav-aside link nav-link" href="crud-users.php"> Usuarios</a>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-aside link nav-link" href="crud-params.php">Parámetros</a>
-                            </li>
-
-                            <li class="nav-item">
-                            <a class="nav-aside link nav-link" href="crud-param-types.php">Tipos de Parámetros</a>
-                            </li>';
+                        ';
                     }
 
                     ?>

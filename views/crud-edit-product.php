@@ -26,7 +26,7 @@ require_once('resources/template-crud.php')
     </div>
     <div class="container-crud">
 
-        <form id="productForm" method="POST" class="br container p-4 mb-5">
+        <form id="productForm" method="POST" class="br container p-4 mb-5 " enctype="multipart/form-data">
 
             <div class="row">
                 <div class="col-md-6">

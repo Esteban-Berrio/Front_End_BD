@@ -1,14 +1,14 @@
 const file = document.getElementById('foto');
-const foto = document.getElementById('agregar-img-produc');
-file.addEventListener('change', e => {
-  if (e.target.files[0]) {
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      foto.src = e.target.result;
-    }
-    reader.readAsDataURL(e.target.files[0])
-  }
-});
+// const foto = document.getElementById('agregar-img-produc');
+// file.addEventListener('change', e => {
+//   if (e.target.files[0]) {
+//     const reader = new FileReader();
+//     reader.onload = function (e) {
+//       foto.src = e.target.result;
+//     }
+//     reader.readAsDataURL(e.target.files[0])
+//   }
+// });
 
 let apiKey = "EXaR0JoKIirohPwbRPIHc3s73Oygi0XV";
 let urlParams = "http://localhost/api/public/api/params/";
@@ -71,9 +71,10 @@ fetchDataFromAPI(urlParams, apiKey)
     });
 
     let form = document.getElementById("productForm")
-    form.setAttribute('action', `crud-product.php`);
+    
 
     form.addEventListener("submit", (e) => {
+        e.preventDefault()
         
         let selectedFile = document.getElementById("foto").files[0];
         let filename = selectedFile.name;
@@ -87,7 +88,7 @@ fetchDataFromAPI(urlParams, apiKey)
             price: document.getElementById("Price").value,
             discount: document.getElementById("Discount").value,
             tax: document.getElementById("Tax").value,
-            images: filename,
+            image: file.value,
             param_size: size.value,
             param_gender:gender.value,
             param_subcategory: subcategory.value,
@@ -101,6 +102,7 @@ fetchDataFromAPI(urlParams, apiKey)
             .then(responseData => {
                 // Aquí puedes manejar la respuesta del servidor si es necesario
                 console.log('Respuesta del servidor:', responseData);
+
             })
             .catch(error => {
                 // Aquí puedes manejar errores de la solicitud

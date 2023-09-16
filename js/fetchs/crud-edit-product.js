@@ -1,14 +1,4 @@
-const file = document.getElementById('foto');
-const foto = document.getElementById('agregar-img-produc');
-file.addEventListener('change', e => {
-    if (e.target.files[0]) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            foto.src = e.target.result;
-        }
-        reader.readAsDataURL(e.target.files[0])
-    }
-});
+
 
 let apiKey = "EXaR0JoKIirohPwbRPIHc3s73Oygi0XV";
 let urlParams = "http://localhost/api/public/api/params/";
@@ -47,6 +37,17 @@ function fillSelect(selectElement, data, paramtype_id) {
     });
 }
 
+const file = document.getElementById('foto');
+const foto = document.getElementById('agregar-img-produc');
+file.addEventListener('change', e => {
+    if (e.target.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            foto.src = e.target.result;
+        }
+        reader.readAsDataURL(e.target.files[0])
+    }
+});
 
 let paramsData;
 let providersData;
@@ -101,14 +102,35 @@ fetchDataFromAPI(urlProvider, apiKey)
     .catch(error => {
         console.error('Error:', error);
     });
+    let formu = document.getElementById("productForm");
+// formu.setAttribute('action', `crud-product.php`);
 
-let form = document.getElementById("productForm");
-form.setAttribute('action', `crud-product.php`);
-
-form.addEventListener("submit", (e) => {
+formu.addEventListener("submit", async (e) => {
     e.preventDefault();
+
     let selectedFile = document.getElementById("foto").files[0];
-    let filename = selectedFile.name;
+    let formData = new FormData(formu);
+
+    formData.append('provider_id', provider.value);
+formData.append('reference', reference.value);
+formData.append('name', namee.value);
+formData.append('description', description.value);
+formData.append('stock', stock.value);
+formData.append('price', price.value);
+formData.append('discount', discount.value);
+formData.append('tax', tax.value);
+formData.append('images', selectedFile);
+formData.append('param_size', size.value);
+formData.append('param_gender', gender.value);
+formData.append('param_subcategory', subcategory.value);
+formData.append('param_mark', mark.value);
+formData.append('param_color', color.value);
+formData.append('param_state', state.value);
+    console.log(formData);
+
+    
+
+    
     let data = {
         provider_id: provider.value,
         reference: reference.value,
@@ -118,7 +140,7 @@ form.addEventListener("submit", (e) => {
         price: price.value,
         discount: discount.value,
         tax: tax.value,
-        images: filename,
+        images: selectedFile,
         param_size: size.value,
         param_gender: gender.value,
         param_subcategory: subcategory.value,
@@ -127,16 +149,13 @@ form.addEventListener("submit", (e) => {
         param_state: state.value,
     };
 
-    console.log(data);
-    console.log(urlProducts);
+    
+    
 
     updateDataToAPI(urlProducts, id, apiKey, data)
-        .then(responseData => {
-
-            console.log('Respuesta del servidor:', responseData);
-        })
-        .catch(error => {
-
-            console.error('Error al enviar datos:', error);
-        });
+    .then(responseData => {
+        console.log('Respuesta del servidor:', responseData);
+    }).catch((error) => { 
+        console.error('Error:', error);
+    });
 });

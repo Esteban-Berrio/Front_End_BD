@@ -1,6 +1,6 @@
 var apiKey = "EXaR0JoKIirohPwbRPIHc3s73Oygi0XV";
 var apiUrl = "http://localhost/api/public/api/users/";
-let userr;
+var userr;
 
 let namee = document.getElementById("namee");
 let email = document.getElementById("email");
@@ -17,6 +17,7 @@ var id = urlData.get('id');
 
 fetchDataFromAPI(apiUrl, apiKey, id)
     .then(data => {
+        console.log('hola');
         userr = data.data[0];
 
         namee.innerHTML = userr.first_name + " " + userr.last_name;

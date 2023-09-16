@@ -1,11 +1,5 @@
 <?php
 require_once('resources/initiator.php');
-
-if ($_SESSION['param_rol'] != 3403 && $_SESSION['param_rol'] != 3404) {
-    header("Location: home.php");
-
-}
-
 ?>
 
 <link rel="stylesheet" href="../CSS/styles-extend-crud.css">
@@ -14,18 +8,17 @@ if ($_SESSION['param_rol'] != 3403 && $_SESSION['param_rol'] != 3404) {
 <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
 
 <?php
-require_once('resources/template-crud.php');
+require_once('resources/template-crud.php')
 ?>
-
 <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10 pt-2 con-izq">
     <div class="card-header p-3">
         <div class="card-title">
 
-            <h1>USUARIOS</h1>
+            <h1>PROVEEDORES</h1>
         </div>
         <div class="content d-flex pt-4 gap-3">
 
-            <a class="btn-new btn" href="Register-master.php">Nuevo</a>
+            <a class="btn-new btn" href="new-provider.php">Nuevo</a>
         </div>
         <div class="container pt-4">
 
@@ -33,21 +26,23 @@ require_once('resources/template-crud.php');
                 <thead class="text-center">
 
                     <tr>
-                        <th scope="col">ID</th>
+                    <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Apellido</th>
-                        <th scope="col">F. nacimiento</th>
+                        <th scope="col">Nombre comercial</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Teléfono</th>
                         <th scope="col">Dirección</th>
                         <th scope="col">Ciudad</th>
-                        <th scope="col">Tipo usuario</th>
-                        <th scope="col">Género</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Rol</th>
+                        <th scope="col">Contacto</th>
+                        <th scope="col">Banco</th>
+                        <th scope="col">Tipo de cuenta</th>
+                        <th scope="col">Cuenta</th>
                         <th scope="col">Estado</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
-                <tbody id="body-user-mater-crud">
+                
+                <tbody id="table-body">
 
                 </tbody>
             </table>
@@ -56,16 +51,16 @@ require_once('resources/template-crud.php');
 </div>
 </div>
 </div>
+
 <?php
-require_once('resources/footer.php');
+require_once('resources/footer.php')
 ?>
 
-
 <script src="../js/fetch.js"></script>
+<script src="../js/fetchs/crud-providers.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
-<script src="../js/fetchs/crud-user.js"></script>
 
 </body>
 

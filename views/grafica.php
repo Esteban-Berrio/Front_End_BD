@@ -1,6 +1,5 @@
 <?php
-require_once('resources/initiator.php');
-if ($_SESSION['type_user'] != 235 && $_SESSION['type_user'] != 99999999) {
+if ($_SESSION['param_rol'] != 3403 && $_SESSION['param_rol'] != 3405) {
     header("Location: home.php");
 }
 ?>

@@ -35,9 +35,7 @@ $(document).ready(function () {
                         <td>${data.data[i].name}</td>
                         <td>${data.data[i].range_min}</td>
                         <td>${data.data[i].range_max}</td>
-                        <td>
-                            <button class="btn-delete btn"><i class="f fa-solid fa-trash"></i></button>
-                        </td>
+                
                     </tr>`;
             }
             tabla.find('tbody').html(contenido);

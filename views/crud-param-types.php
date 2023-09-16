@@ -1,6 +1,6 @@
 <?php
 require_once('resources/initiator.php');
-if ($_SESSION['type_user'] != 235 && $_SESSION['type_user'] != 99999999) {
+if ($_SESSION['param_rol'] != 3403) {
     header("Location: home.php");
 }
 ?>
@@ -37,7 +37,7 @@ require_once('resources/template-crud.php')
                         <th scope="col">Nombre</th>
                         <th scope="col">Rango max</th>
                         <th scope="col">Rango min</th>
-                        <th class="text-center" scope="col">Acciones</th>
+                        
                     </tr>
                 </thead>
                 <tbody>

@@ -1,6 +1,6 @@
 <?php
 require_once('resources/initiator.php');
-if ($_SESSION['type_user'] != 235 && $_SESSION['type_user'] != 99999999) {
+if ($_SESSION['param_rol'] != 3403 && $_SESSION['param_rol'] != 3404) {
     header("Location: home.php");
 }
 ?>
@@ -25,8 +25,6 @@ require_once('resources/template-crud.php')
             <h1>FACTURAS</h1>
         </div>
         <div class="content d-flex pt-4 gap-3">
-
-            <a class="btn-new btn" href="Register-master.php">Nuevo</a>
         </div>
         <div class="container pt-4">
 

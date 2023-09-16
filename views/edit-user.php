@@ -1,8 +1,9 @@
 <?php
 require_once('resources/initiator.php');
-if ($_SESSION['type_user'] != 7000000000) { 
+if ($_SESSION['type_user'] != 236) { 
     header("Location: home.php");
 }
+
 ?>
 <link rel="stylesheet" href="../css/edit-user.css">
 <?php

@@ -1,11 +1,8 @@
 <?php
 require_once('resources/initiator.php');
-
-require_once('resources/footer.php');
-if ($_SESSION['type_user'] != 235 && $_SESSION['type_user'] != 99999999) {
+if ($_SESSION['param_rol'] != 3403) {
     header("Location: home.php");
 }
-
 ?>
 
 
@@ -25,16 +22,16 @@ require_once('resources/template-crud.php')
         <div class="card-title">
             <!-- Title -->
             <h1>PARAMETROS</h1>
-            </div>
-        <div class="content d-flex pt-4 gap-3">
-
-            <a class="btn-new btn" href="Register-master.php">Nuevo</a>
         </div>
-        <div class="container pt-4">
-
-            <table id="tablapr" class="table display responsive wrap table-hover">
+        <div class="content d-flex pt-4 gap-3">
+            <!-- New Button and Select -->
+            <a class="btn-new btn" href="#">Nuevo</a>
+        </div>
+        <div class="container-fluid pt-4">
+            <!-- Table for Invoice Details -->
+            <table id="tabletpr" class="table display responsive wrap table-hover">
                 <thead class="text-center">
- <tr>
+                    <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Tipo parametro</th>
                         <th scope="col">Nombre</th>
@@ -42,8 +39,7 @@ require_once('resources/template-crud.php')
                         <th class="text-center" scope="col">Acciones</th>
                     </tr>
                 </thead>
-
-                <tbody id="body-user-mater-crud">
+                <tbody>
 
                 </tbody>
             </table>
@@ -52,12 +48,12 @@ require_once('resources/template-crud.php')
 </div>
 </div>
 </div>
-
-
+<?php
+require_once('resources/footer.php')
+?>
 
 <script src="../js/sliders.js"></script>
 <script src="../js/fetch.js"></script>
-<script src="../js/fetchs/crud-product.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>

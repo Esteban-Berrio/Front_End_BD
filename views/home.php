@@ -32,7 +32,7 @@ require_once('resources/footer.php')
 
 <script src="../js/sliders.js"></script>
 <script src="../js/fetch.js"></script>
-<script src="../js/edit-product.js"></script>
+
 </body>
 
 </html>

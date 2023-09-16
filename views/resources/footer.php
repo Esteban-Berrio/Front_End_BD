@@ -18,7 +18,7 @@
                 <ul class="list-unstyled">
                    
                     <li class="mb-5">
-                        <a href="#!" class="text-white link-foot">Terminos y condiciones</a>
+                        <a href="terms.php" class="text-white link-foot">Terminos y condiciones</a>
                     </li>
                      <li class="mb-2 ">
                     

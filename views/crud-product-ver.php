@@ -1,5 +1,8 @@
 <?php
-require_once('resources/initiator.php')
+require_once('resources/initiator.php');
+if ($_SESSION['type_user'] != 235) {
+    header("Location: home.php");
+}
 ?>
 
 <link rel="stylesheet" href="../CSS/styles-extend-crud.css">
@@ -18,7 +21,7 @@ require_once('resources/template-crud.php')
         </div>
         <div class="content d-flex pt-4 gap-3">
 
-            <a class="btn-new btn" href="new-product.php">Nuevo</a>
+            
         </div>
         <div class="container pt-4">
 

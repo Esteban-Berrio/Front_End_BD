@@ -16,7 +16,19 @@ a {
     color: white;
     text-decoration: none;
 }
-
+#eye {
+    position: absolute;
+    right: 10px; /* Ajusta la posición horizontal según tus preferencias */
+    top: 50%; /* Ajusta la posición vertical según tus preferencias */
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    font-size: 20px; 
+}
+.password-input-wrapper {
+    position: relative;
+}
 a:hover {
     color: white;
 }

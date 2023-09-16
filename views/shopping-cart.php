@@ -3,7 +3,7 @@ require_once('resources/initiator.php');
 if (!isset($_SESSION['type_user'])) {
     header("Location: login.php");
 } else {
-    if ($_SESSION['type_user'] != 700000000000) {
+    if ($_SESSION['type_user'] != 236) {
         header("Location: home.php");
     } else {
     }

@@ -1,5 +1,8 @@
 <?php
-require_once('resources/initiator.php')
+require_once('resources/initiator.php');
+if ($_SESSION['type_user'] != 235) {
+    header("Location: home.php");
+}
 ?>
 
 
@@ -22,7 +25,7 @@ require_once('resources/template-crud.php')
             </div>
         <div class="content d-flex pt-4 gap-3">
 
-            <a class="btn-new btn" href="Register-master.php">Nuevo</a>
+    
         </div>
         <div class="container pt-4">
 

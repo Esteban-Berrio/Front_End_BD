@@ -234,6 +234,7 @@ require_once('resources/header-1.php')
                             <img src="../img/carru3.jpg " class="card-img-top" alt="Producto 3">
                         </a>
                         <div class="card-body ">
+                            <input type="hidden">
                             <a class="card-title hov">Producto awawawa wawa asdasdasdasd2</a>
                             <p class="precio-antes">$ 400.000</p>
                             <p class="descuento">DESCUENTO 50%</p>

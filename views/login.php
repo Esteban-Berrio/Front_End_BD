@@ -21,11 +21,12 @@ if (!isset($_SESSION['type_user'])) {
             $_SESSION['type_user'] = $user['type_user'];
         } else {}
     }else{
-        if($_SESSION['type_user']!=70000000000){
+        if($_SESSION['type_user']!=236){
             header("Location: home.php");
         }else{
-            header("Location: index.php");
+            header("Location: profile.php");
         }
+
     }
 ?>
 
@@ -39,7 +40,7 @@ require_once('resources/header-basico.php')
 <div class="container1">
     <div class="row justify-content-center mt-3 mb-3">
 
-        <form id="miFormulario" class="formulario" method="POST">
+    <form id="miFormulario" class="formulario" method="POST">
             <div class="title text-center">
                 Bienvenido
             </div>
@@ -54,14 +55,44 @@ require_once('resources/header-basico.php')
                 <input class="form-control" id="inputEmail" type="email" name="email">
                 <div id="emailError" class="error"></div>
             </div>
+
+
+            <!--            
             <div class="col-md-7 mx-auto mb-5 d-grid gap-2">
 
                 <label class="word" name="password">Contraseña</label>
 
                 <input class="form-control" id="inputPassword" type="password" name="password">
+                <i class="fa-solid fa-eye"  id="eye"></i>
                 <div id="passwordError" class="error"></div>
 
+            </div> -->
+
+
+            <!-- <div class="input-wrapper col-8 col-md-7 mx-auto mb-5 d-grid gap-2    " id="grupo_password">
+                        <label for="inputPassword" class="word">Contraseña</label>
+                       
+
+                            <input type="password" class="form-control" id="inputPassword" name="inputPassword">
+                            <i class="fa-solid fa-eye"  id="eye"></i>
+                        
+                        <div id="inputEmailError" class="error"></div>
+                    </div> -->
+
+
+            <div class="input-wrapper col-8 col-md-7 mx-auto mb-5 d-grid gap-2" id="grupo_password">
+                <label for="inputPassword" class="word">Contraseña</label>
+                <div class="password-input-wrapper">
+                    <input type="password" class="form-control" id="inputPassword" name="password">
+                    <i class="fa-solid fa-eye" id="eye"></i>
+
+                </div>
+                <div id="passwordError" class="error"></div>
+     
             </div>
+
+
+
 
             <div class="col-md-5 mx-auto mb-4 text-center">
                 <button type="submit" class="btn btn-light">Iniciar Sesión</button>

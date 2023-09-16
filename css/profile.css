@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-.first{ 
+.first{
     width: 900px !important;
 }
 .containerimg{
     width: 300px !important;
-    /* height: 200px; */
+    height: 300px !important;
     display:flex;
     justify-content: center;
     align-items: center;
-    /* background: red; */
+    background-image: url('../img/perfil.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
     border-radius: 50%;
  
     overflow:hidden;
@@ -28,6 +31,10 @@
 }
 
 #buttons{
+    background: #EF8F00 !important;
+}
+
+#editProfileLink{
     background: #EF8F00 !important;
 }
 

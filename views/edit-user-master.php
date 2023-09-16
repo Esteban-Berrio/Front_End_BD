@@ -1,7 +1,6 @@
 <?php
-if ($_SESSION['param_rol'] != 3403) {
-  header("Location: home.php");
-}
+require_once('resources/initiator.php');
+
 ?>
 
 
@@ -42,9 +41,7 @@ require_once('resources/template-crud.php')
             <div class="City col-8">
               <label for="EditCity" class="form-label">Ciudad</label>
               <select class="form-select" id="EditCity" aria-label="Default select example" autocomplete="address-level2">
-                <option selected></option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
+
               </select>
               <div id="cityError" class="error"></div>
             </div>
@@ -58,9 +55,7 @@ require_once('resources/template-crud.php')
             <div class="state col-8">
               <label for="EditState" class="form-label">Estado</label>
               <select class="form-select" aria-label="Default select example" id="EditState" autocomplete="address-level1">
-                <option selected></option>
-                <option value="1">Activo</option>
-                <option value="2">Inactivo</option>
+
               </select>
               <div id="stateError" class="error"></div>
             </div>
@@ -85,9 +80,7 @@ require_once('resources/template-crud.php')
             <div class="TypeUser col-8">
               <label for="EditTypeUser" class="form-label">Tipo de usuario</label>
               <select class="form-select" id="EditTypeUser" autocomplete="user-type">
-                <option selected></option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
+
               </select>
               <div id="TypeUserError" class="error"></div>
             </div>
@@ -95,18 +88,24 @@ require_once('resources/template-crud.php')
             <div class="Rol col-8">
               <label for="EditRol" class="form-label">Rol</label>
               <select class="form-select" id="EditRol" autocomplete="role">
-                <option selected></option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
+                <div id="RolError" class="error"></div>
               </select>
-              <div id="RolError" class="error"></div>
+            </div>
+
+            <div class="gender col-8">
+              <label for="genero" class="form-label">Genero</label>
+              <select class="form-select" id="EditGender" autocomplete="gender">
+
+              </select>
+              <div id="genderError" class="error"></div>
+
             </div>
           </div>
         </div>
       </div>
-      <div class="justify-content-center d-flex mt-4" style="padding: 10px;">
-        <button type="submit" id="validarBtn" class="btn btn  border rounded-pill me-4 mt-3">Registrar</button>
-        <button type="button" id="cancelarBtn" class="btn btn  border rounded-pill  mt-3">Cancelar</button>
+      <div class="d-flex justify-content-center d-flex mt-4 " ">
+        <button type=" submit" id="validarBtn" class="btn btn  btn-new  m-4">Guardar</button>
+        <button type="button" id="cancelarBtn" class="btn btn-new  m-4">Cancelar</button>
       </div>
     </form>
   </div>
@@ -117,9 +116,14 @@ require_once('resources/template-crud.php')
 require_once('resources/footer.php')
 ?>
 
-<!-- <script src="../js/sliders.js"></script>
-<script src="../js/fetch.js"></script> -->
+
+<script src="../js/fetch.js"></script>
+<script src="../js/fetchs/crud-edit-master.js"></script>
 <script src="../js/edit-user-master.js"></script>
+
+
+
+
 
 </body>
 

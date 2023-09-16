@@ -1,5 +1,9 @@
 <?php
-require_once('resources/initiator.php');
+
+if ($_SESSION['type_user'] != 235) {
+    header("Location: home.php");
+}
+
 ?>
 
 <link rel="stylesheet" href="../CSS/styles-extend-crud.css">
@@ -15,7 +19,7 @@ require_once('resources/template-crud.php');
     <div class="card-header p-3">
         <div class="card-title">
 
-            <h1>MASTER DE USUARIOS</h1>
+            <h1>USUARIOS</h1>
         </div>
         <div class="content d-flex pt-4 gap-3">
 
@@ -59,8 +63,7 @@ require_once('resources/footer.php');
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
-<script src="../js/fetchs/crud-user-m.js"></script>
-
+<script src="../js/fetchs/crud-user-ver.js"></script>
 
 </body>
 

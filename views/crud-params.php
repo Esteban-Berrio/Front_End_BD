@@ -25,7 +25,7 @@ require_once('resources/template-crud.php')
         </div>
         <div class="content d-flex pt-4 gap-3">
             <!-- New Button and Select -->
-            <a class="btn-new btn" href="#">Nuevo</a>
+            <a class="btn-new btn" href="new-params.php">Nuevo</a>
         </div>
         <div class="container-fluid pt-4">
             <!-- Table for Invoice Details -->

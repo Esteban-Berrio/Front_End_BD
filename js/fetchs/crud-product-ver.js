@@ -71,6 +71,7 @@ $(document).ready(function () {
                     console.log(data);
                     let body = '';
                     for (let i = 0; i < data.data.length; i++) {
+                    if(data.data[i].param_status == "Activo "){
                         body += `
                             <tr>    
                                 <td>${data.data[i].id}</td>
@@ -87,6 +88,7 @@ $(document).ready(function () {
                                     <button class="btn-view btn"><i class="f fa-solid fa-eye"></i></button>
                                 </td>
                             </tr>`;
+                        }else{console.log(data.data[i].param_status);}
                     }
 
                     document.getElementById('table-body').innerHTML = body;

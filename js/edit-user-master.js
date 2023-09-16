@@ -20,7 +20,8 @@ const RolError = document.getElementById("RolError");
 const longitudMinima = 3;
 const longitudMaxima = 45;
 
-
+// var regexCorreo = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+// let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 formulario.addEventListener("submit", function (event) {
     let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     let valid = true;

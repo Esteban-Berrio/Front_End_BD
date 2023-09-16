@@ -35,8 +35,7 @@ require_once('resources/template-crud.php')
                         <div class=" image-container">
                             <div class=" space-slider2marc">
 
-                                <div class="single-item  slider3mar"
-                                    data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
+                                <div class="single-item  slider3mar" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
 
                                     <div class="card-slider-mar" href="#">
                                         <div class="d-flex justify-content-center">
@@ -96,7 +95,7 @@ require_once('resources/template-crud.php')
                         <div class="col-8">
                             <label for="Provider" class="form-label">Proveedores</label>
                             <select class="form-select" id="Provider" name="Provider">
-                               
+
 
                             </select>
                             <div class="error-message" id="state-error"></div>
@@ -111,8 +110,7 @@ require_once('resources/template-crud.php')
 
                         <div class="col-8">
                             <label for="Description" class="form-label "> Descripción</label>
-                            <input type="text" class="form-control descripcion-product" id="Description"
-                                name="description">
+                            <input type="text" class="form-control descripcion-product" id="Description" name="description">
                             <div class="error-message" id="description-error"></div>
                         </div>
 
@@ -158,7 +156,7 @@ require_once('resources/template-crud.php')
                         <div class="col-8">
                             <label for="Size" class="form-label">Talla</label>
                             <select class="form-select " id="Size" name="param_size">
-                                
+
                             </select>
                             <div class="error-message" id="size-error"></div>
                         </div>
@@ -167,7 +165,7 @@ require_once('resources/template-crud.php')
                         <div class="col-8">
                             <label for="Gender" class="form-label">Genero</label>
                             <select class="form-select " id="Gender" name="param_gender">
-                               
+
 
                             </select>
                             <div class="error-message" id="gender-error"></div>
@@ -177,7 +175,7 @@ require_once('resources/template-crud.php')
                         <div class="col-8">
                             <label for="Subcategory" class="form-label">Subcategoria</label>
                             <select class="form-select" id="Subcategory" name="param_subcategory">
-                              
+
 
                             </select>
                             <div class="error-message" id="subcategory-error"></div>
@@ -187,7 +185,7 @@ require_once('resources/template-crud.php')
                         <div class="col-8">
                             <label for="Mark" class="form-label">Marca</label>
                             <select class="form-select" id="Mark" name="param_mark">
-                                
+
 
                             </select>
                             <div class="error-message" id="mark-error"></div>
@@ -197,7 +195,7 @@ require_once('resources/template-crud.php')
                         <div class="col-8">
                             <label for="Color" class="form-label">Color</label>
                             <select class="form-select" id="Color" name="param_color">
-                           
+
 
                             </select>
                             <div class="error-message" id="color-error"></div>
@@ -207,7 +205,7 @@ require_once('resources/template-crud.php')
                         <div class="col-8">
                             <label for="State" class="form-label">Estado</label>
                             <select class="form-select" id="State" name="param_state">
-                               
+
 
                             </select>
                             <div class="error-message" id="state-error"></div>
@@ -232,7 +230,7 @@ require_once('resources/template-crud.php')
 require_once('resources/footer.php')
 ?>
 
-<script src="../js/sliders.js"></script>
+
 <script src="../js/fetch.js"></script>
 <script src="../js/fetchs/crud-edit-product.js"></script>
 <script src="../js/edit-product.js"></script>

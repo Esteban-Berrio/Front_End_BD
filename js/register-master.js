@@ -5,15 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
   const contra2Error = document.getElementById("passwordError2");
   let valid = true;
 
-  if (contra1.value !== contra2.value) {
+  // if (contra1.value !== contra2.value) {
 
-    contra2Error.textContent = "La contraseña no coinciden";
-    contra2Error.style.display = "block";
-    valid = false;
-    event.preventDefault();
-  } else {
-    contra2Error.style.display = "none";
-  }
+  //   contra2Error.textContent = "La contraseña no coinciden";
+  //   contra2Error.style.display = "block";
+  //   valid = false;
+  //   event.preventDefault();
+  // } else {
+  //   contra2Error.style.display = "none";
+  // }
 
   
   });
@@ -41,9 +41,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const contra2Error = document.getElementById("passwordError2");
   const rol = document.getElementById("inputRole");
   const rolError = document.getElementById("rolError")
+  const gender = document.getElementById("inputGender");
+  const genderError = document.getElementById("genderError")
 
-
-
+  
   const lMaxima = 45;
   formu.addEventListener('submit', function (event) {
     // let regexDireccion = /^A-Za-z0-9\s#\-,.ÁÉÍÓÚáéíóúÑñ+$/;
@@ -126,12 +127,16 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       tipoError.style.display = "none";
     }
-    if (contra1.value === "" || contra2.value === ""  ) {
-      contra2Error.textContent = "campos vacios";
+    if (contra1.value === "" || contra2.value === ""  && contra1.value !== contra2.value ) {
+      contra2Error.textContent = "campos vacios o no coinciden ";
       contra2Error.style.display = "block";
               valid = false;
               // event.preventDefault();
           } 
+          else{
+            contra2Error.style.display = "none";
+          }
+          
 
 
   
@@ -144,10 +149,42 @@ document.addEventListener('DOMContentLoaded', function () {
       rolError.style.display = "none";
 
     }
+
+    
+    if (inputGender.value === "") {
+      genderError.textContent = "Este campo es obligatorio";
+      genderError.style.display = "block";
+      valid = false;
+
+    } else {
+      genderError.style.display = "none";
+
+    }
     if (!valid) {
       event.preventDefault(); // Previene la recarga de la página en caso de error
+
+    }else{
+      Swal.fire({
+                    
+        icon: 'success',
+        title: 'Usuario Registrado!',
+        showConfirmButton: false,
+        timer: 1900
+    }).then(() => {
+      
+        window.location.href = "crud-users-master.php"; // Redireccionar
+    });
+
     }
+
+
+
   });
+
+
+
+
+  
 
   ojo.addEventListener('click', function () {
     if (contra1.type == "password") {

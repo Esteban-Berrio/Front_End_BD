@@ -1,8 +1,5 @@
 <?php
-require_once('resources/initiator.php');
-if ($_SESSION['param_rol'] != 3403 ) {
-    header("Location: home.php");
-}
+require_once('resources/initiator.php')
 ?>
 
 
@@ -69,15 +66,22 @@ require_once('resources/template-crud.php')
                     <label for="inputState" class="form-label">Estado</label>
                     <select class="form-select " aria-label="Default select example" id="inputState">
                         <option selected></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="2">Three</option>
+                        
 
 
                     </select>
                     <div id="stateError" class="error"></div>
                 </div>
+                <div class="gender col-8">
+                    <label for="inputGender" class="form-label">genero</label>
+                    <select class="form-select " aria-label="Default select example" id="inputGender">
+                        <option selected></option>
+                        
 
+
+                    </select>
+                    <div id="genderError" class="error"></div>
+                </div>
 
             </div>
         </div>
@@ -215,6 +219,11 @@ require_once('resources/template-crud.php')
 <br class="mt-5"> -->
 
 <script src="../js/register-master.js"></script>
+
+
+<script src="../js/fetch.js"></script>
+<script src="../js/fetchs/crud-new-user.js"></script>
+<!-- <script src="../js/edit-user-master.js"></script> -->
 
 <!-- <script src="../js/sliders.js"></script>
 <script src="../js/fetch.js"></script> -->

@@ -23,6 +23,7 @@
     -o-border-radius: 30px;
   }
 
+
 .form-label{
     padding: 5px;
 
@@ -45,10 +46,6 @@
     border-radius: 15px;
 
 }
-/* .gender{
-width: 100%!important;
-
-} */
 .form-select{
     width: 100% !important;
 

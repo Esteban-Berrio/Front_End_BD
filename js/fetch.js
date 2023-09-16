@@ -38,21 +38,46 @@ function sendDataToAPI(url, apiKey, data) {
 }
 
 // Function to UPDATE request
-    function updateDataToAPI(url, id, apiKey, data,) {
-        fetch(url + id + '?key=' + apiKey, {
+    // function updateDataToAPI(url, id, apiKey, data,) {
+    //     fetch(url + id + '?key=' + apiKey, {
+    //         method: 'PUT',
+    //         body: JSON.stringify(data),
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //     }).then((response) => {
+    //         return response.json();
+    //     }).then((data) => {
+    //         console.log(data);
+    //     }).catch((error) => {
+    //         console.log(error);
+    //     })
+    // }   
+
+    function updateDataToAPI(url, id, apiKey, data) {
+        return fetch(url + id + '?key=' + apiKey, {
             method: 'PUT',
             body: JSON.stringify(data),
             headers: {
                 'Content-Type': 'application/json'
             },
-        }).then((response) => {
-            return response.json();
-        }).then((data) => {
-            console.log(data);
-        }).catch((error) => {
-            console.log(error);
         })
-    }   
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Error en la solicitud PUT');
+            }
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data);
+            return data; // Devuelve los datos si es necesario
+        })
+        .catch((error) => {
+            console.error('Error al realizar la solicitud PUT:', error);
+            throw error; // Re-lanza el error para que se maneje más arriba si es necesario
+        });
+    }
+
 
 //  Function for DELETE request
 function deleteDataFromAPI(url, id, apiKey ) {

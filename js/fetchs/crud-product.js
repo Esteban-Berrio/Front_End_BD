@@ -68,9 +68,10 @@ $(document).ready(function () {
         .then(() => {
             fetchDataFromAPI(urlProducts, apiKey)
                 .then(data => {
-                    console.log(data);
+                    
                     let body = '';
                     for (let i = 0; i < data.data.length; i++) {
+                        if(data.data[i].param_state == "Activo "){
                         body += `
                             <tr>    
                                 <td>${data.data[i].id}</td>
@@ -89,6 +90,7 @@ $(document).ready(function () {
                                     <button class="btn-delete btn" onclick="deleteProduct(urlProducts, ${data.data[i].id}, apiKey)"><i class="f fa-solid fa-trash"></i></button>
                                 </td>
                             </tr>`;
+                        }
                     }
 
                     document.getElementById('table-body').innerHTML = body;

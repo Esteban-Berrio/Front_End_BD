@@ -234,7 +234,16 @@ require_once('resources/header-1.php')
                             <img src="../img/carru3.jpg " class="card-img-top" alt="Producto 3">
                         </a>
                         <div class="card-body ">
-                            <input type="hidden">
+                            <input type="hidden" id="id-product-cart"  value="Valor Oculto">
+                            <input type="hidden" id="reference-cart"  value="Valor Oculto">
+                            <input type="hidden" id="stock-cart"  value="Valor Oculto">
+                            <input type="hidden" id="discont-cart"  value="Valor Oculto">
+                            <input type="hidden" id="param-size-cart"  value="Valor Oculto">
+                            <input type="hidden" id="param-gender-cart" value="Valor Oculto">
+                            <input type="hidden" id="param-subcategory-cart"  value="Valor Oculto">
+                            <input type="hidden" id="param-mark-cart"  value="Valor Oculto">
+                            <input type="hidden" id="param-color-cart"  value="Valor Oculto">
+                            <input type="hidden" id="param-state-cart"  value="Valor Oculto">
                             <a class="card-title hov">Producto awawawa wawa asdasdasdasd2</a>
                             <p class="precio-antes">$ 400.000</p>
                             <p class="descuento">DESCUENTO 50%</p>

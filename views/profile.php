@@ -1,22 +1,14 @@
-
-<?php
-require_once('resources/initiator.php');
-    if (!isset($_SESSION['type_user'] )) {
-        
-    }elseif( $_SESSION['type_user'] != 236 ){
-        header("Location: home.php");
-    }
-?>
-
 <link rel="stylesheet" href="../css/profile.css">
-
+<?php
+require_once('resources/initiator.php')
+?>
 <?php
 require_once('resources/header-1.php')
 ?>
 
 
 <body>
-    <div class="container">
+    <div class="container mb-4">
         <!-- div contenedor borde naranja -->
         <div class="d-flex flex-wrap justify-content-center border border-3 border-warning mt-3 mb-3 rounded-4">
             
@@ -24,23 +16,23 @@ require_once('resources/header-1.php')
             <div class="first row justify-content-center mt-3 mb-3">
 
                 <div class="containerimg" >
-                    <img src="../img/perfil.png" id="imgperfil" alt="Foto Perfil">
+                    
                 </div>
             
                 <!-- <div class="row justify-content-center mt-3 mb-3"> -->
-                <div class="name mt-3 text-center fw-bold fs-3 ">
-                    Nombre Apellido
+                <div id="namee" class="name mt-3 text-center fw-bold fs-3 ">
+                    
                 </div>
 
-                <div class="email mt-2 text-center fs-5 p-1">
-                    correo@gmail.com
+                <div id="email" class="email mt-2 text-center fs-5 p-1">
+                    
                 </div>
             </div>
             
             <div class="col-md-4 mt-4 mb-3">
                 <div class="mb-3">
                     <div class="fw-bold text-center fs-5 p-2">Género</div>
-                    <div class="text-center text-body-secondary fw-bold p-2 fs-5">Masculino</div>
+                    <div id="gender" class="text-center text-body-secondary fw-bold p-2 fs-5"></div>
                 </div>
             </div>
 
@@ -48,7 +40,7 @@ require_once('resources/header-1.php')
             <div class="col-md-4 mt-4 mb-3" >
                 <div class="mb-3">
                     <div class="fw-bold text-center fs-5 p-2">Ciudad</div>
-                    <div class="text-center text-body-secondary fw-bold p-2 fs-5">Cali</div>
+                    <div id="city" class="text-center text-body-secondary fw-bold p-2 fs-5"></div>
                 </div>
             </div>
 
@@ -56,22 +48,22 @@ require_once('resources/header-1.php')
             <div class="col-md-4 mt-4 mb-3">
                 <div class="mb-3">
                     <div class="fw-bold text-center fs-5 p-2">Dirección de Envío</div>
-                    <div class="text-center text-body-secondary fw-bold p-2 fs-5">Cra. 25N #1-1</div>
+                    <div id="address" class="text-center text-body-secondary fw-bold p-2 fs-5"></div>
                 </div>
             </div>
 
             <div class="col-md-4 mt-4 mb-3">
                 <div class="mb-3">
-                    <div class="fw-bold text-center fs-5 p-2">País</div>
-                    <div class="text-center text-body-secondary fw-bold p-2 fs-5">Colombia</div>
+                    <div class="fw-bold text-center fs-5 p-2">Tipo Usuario</div>
+                    <div id="country" class="text-center text-body-secondary fw-bold p-2 fs-5"></div>
                 </div>
             </div>
 
             <!-- Segunda columna -->
             <div class="col-md-4 mt-4 mb-3" >
                 <div class="mb-3">
-                    <div class="fw-bold text-center fs-5 p-2">Departamento</div>
-                    <div class="text-center text-body-secondary fw-bold p-2 fs-5">Valle del Cauca</div>
+                    <div class="fw-bold text-center fs-5 p-2">Rol:</div>
+                    <div id="rol" class="text-center text-body-secondary fw-bold p-2 fs-5"></div>
                 </div>
             </div>
 
@@ -79,22 +71,27 @@ require_once('resources/header-1.php')
             <div class="col-md-4 mt-4 mb-3">
                 <div class="mb-3">
                     <div class="fw-bold text-center fs-5 p-2">Fecha de Nacimiento</div>
-                    <div class="text-center text-body-secondary fw-bold p-2 fs-5">25/07/2000</div>
+                    <div id="birthday" class="text-center text-body-secondary fw-bold p-2 fs-5"></div>
                 </div>
             </div>
         </div>
-        <div class="row mb-3 text-center">
-            <div class="col-md-4 p-2">
+        <div class="row mb-3 text-center ">
+            <div class="col-md-3 p-2">
                 <a href="shopping-cart.php" class="btn btn-lg fw-bold border rounded-pill" id="buttons">Ver Compras</a>
             </div>
-            <div class="col-md-4 p-2">
-                <a href="edit-user.php" class="btn btn-lg fw-bold border rounded-pill" id="buttons">Editar Perfil</a>
+            <div class="col-md-3 p-2">
+                <a id="editProfileLink" class="btn btn-lg fw-bold border rounded-pill" id="buttons">Editar Perfil</a>
             </div>
-            <div class="col-md-4 p-2">
+            <div class="col-md-3 p-2">
                 <a href="#" class="btn btn-lg fw-bold border rounded-pill" id="buttons">Cambiar Contraseña</a>
+            </div>
+            <div class="col-md-3 p-2">
+                <a href="log-out.php" class="btn btn-lg fw-bold border rounded-pill" id="buttons">Cerrar Sesión</a>
             </div>
         </div>
     </div>
+    <script src="../js/fetch.js"></script>
+    <script src="../js/fetchs/profile.js"></script>
 </body>
 
 

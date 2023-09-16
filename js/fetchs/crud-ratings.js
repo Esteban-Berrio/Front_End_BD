@@ -28,7 +28,9 @@ $(document).ready(function () {
     fetchDataFromAPI(apiUrl, apiKey)
         .then(data => {
             let contenido = '';
+            
             for (let i = 0; i < data.data.length; i++) {
+                if(data.data[i].param_state == 1651){
                 contenido += `
                     <tr>    
                         <td>${data.data[i].id}</td>
@@ -41,7 +43,7 @@ $(document).ready(function () {
                         <td>
                             <button class="btn-delete btn"><i class="f fa-solid fa-trash"></i></button>
                         </td>
-                    </tr>`;
+                    </tr>`;}
             }
             tabla.find('tbody').html(contenido);
             tablas();

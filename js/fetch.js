@@ -44,6 +44,8 @@ function sendDataToAPI(url, apiKey, data) {
 
 // Function to UPDATE request
 function updateDataToAPI(url, id, apiKey, data) {
+    
+
     return fetch(url + id + '?key=' + apiKey, {
         method: 'PUT',
         body: JSON.stringify(data),
@@ -56,13 +58,16 @@ function updateDataToAPI(url, id, apiKey, data) {
         }
         return response.json();
     })
+    .then((data) => {
+        console.log("Imagen actualizada exitosamente:", data);
+        // Puedes realizar cualquier acción adicional aquí después de actualizar la imagen
+    })
     .catch((error) => {
         console.error('Error:', error);
         return Promise.reject(error); // Devuelve una promesa rechazada en caso de error
     });
 }
 
-   
 
 //  Function for DELETE request
 function deleteDataFromAPI(url, id, apiKey ) {

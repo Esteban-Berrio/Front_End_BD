@@ -17,7 +17,7 @@ var id = urlData.get('id');
 
 fetchDataFromAPI(apiUrl, apiKey, id)
     .then(data => {
-        console.log('hola');
+       
         userr = data.data[0];
 
         namee.innerHTML = userr.first_name + " " + userr.last_name;

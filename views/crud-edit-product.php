@@ -1,7 +1,8 @@
 <?php
 require_once('resources/initiator.php');
+
 if ($_SESSION['param_rol'] != 3403 && $_SESSION['param_rol'] != 3404) {
-    header("Location: home.php");
+    header("Location: .php");
 }
 ?>
 
@@ -26,7 +27,7 @@ require_once('resources/template-crud.php')
     </div>
     <div class="container-crud">
 
-        <form id="productForm" method="POST" class="br container p-4 mb-5 " enctype="multipart/form-data">
+    <form  id="productForm"   method="POST"  enctype="multipart/form-data m-4">
 
             <div class="row">
                 <div class="col-md-6">
@@ -35,42 +36,16 @@ require_once('resources/template-crud.php')
                         <div class=" image-container">
                             <div class=" space-slider2marc">
 
-                                <div class="single-item  slider3mar" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
+                               
 
-                                    <div class="card-slider-mar" href="#">
+                                    <div class="card-slider-mar" >
                                         <div class="d-flex justify-content-center">
-                                            <img class="img-slider-cat" src="../img/carru3.jpg" alt="">
+                                            <img id="fotoProduct" class="img-slider-cat" src="" alt="">
                                         </div>
-                                        <div class="d-flex justify-content-center btn-elim-img">
-                                            <a href="" class="btn botones-crud">Eliminar</a>
-                                        </div>
+                                        
                                     </div>
 
-                                    <div class="card-slider-mar" href="#">
-                                        <div class="d-flex justify-content-center">
-                                            <img class="img-slider-cat" src="../img/carru3.jpg" alt="">
-                                        </div>
-                                        <div class="d-flex justify-content-center btn-elim-img">
-                                            <a href="" class="btn botones-crud">Eliminar</a>
-                                        </div>
-                                    </div>
-                                    <div class="card-slider-mar" href="#">
-                                        <div class="d-flex justify-content-center">
-                                            <img class="img-slider-cat" src="../img/carru3.jpg" alt="">
-                                        </div>
-                                        <div class="d-flex justify-content-center btn-elim-img">
-                                            <a href="" class="btn botones-crud">Eliminar</a>
-                                        </div>
-                                    </div>
-                                    <div class="card-slider-mar" href="#">
-                                        <div class="d-flex justify-content-center">
-                                            <img class="img-slider-cat" src="../img/carru3.jpg" alt="">
-                                        </div>
-                                        <div class="d-flex justify-content-center btn-elim-img">
-                                            <a href="" class="btn botones-crud">Eliminar</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
 
                         </div>
@@ -78,27 +53,27 @@ require_once('resources/template-crud.php')
                         <br>
                         <!-- Botón de agregar imágenes abajo -->
 
-                        <input type="file" id="foto" accept="image/*">
+                        <input type="file" id="foto" name="images"  accept="image/*" ">
                         <!-- <button class="btn  botones-crud" id="agregar-img-produc">Agregar Imagen</button> -->
-                        <label class="btn botones-crud mt-3" type="button" id="agregar-img-produc" for="foto">Nueva Imagen</label>
-
+                        <label class="btn botones-crud mt-3" type="button" name="images" id="agregar-img-produc" for="foto">Nueva Imagen</label>
+                        <div class="error-message" id="img-error"></div>
 
                         <br>
 
                         <div class="col-8">
                             <label for="Reference" class="form-label"> Referencia</label>
-                            <input type="text" class="form-control" id="Reference" name="reference">
+                            <input type="text" class="form-control" id="Reference" name="reference" value="none" >
                             <div class="error-message" id="reference-error"></div>
 
                         </div>
 
                         <div class="col-8">
                             <label for="Provider" class="form-label">Proveedores</label>
-                            <select class="form-select" id="Provider" name="Provider">
+                            <select class="form-select" id="Provider" name="Provider_id">
 
 
                             </select>
-                            <div class="error-message" id="state-error"></div>
+                            <div class="error-message" id="provider-error"></div>
 
                         </div>
 
@@ -216,7 +191,7 @@ require_once('resources/template-crud.php')
 
 
                         <div class="container d-flex flex-column align-items-center mt-4">
-                            <button type="submit" class="btn botones-crud">Guardar</button>
+                            <button type="submit" class="btn botones-crud" id="guardarButton">Guardar</button>
                         </div>
                     </div>
                 </div>
@@ -226,14 +201,18 @@ require_once('resources/template-crud.php')
 </div>
 </div>
 </div>
+
+
+
 <?php
 require_once('resources/footer.php')
 ?>
 
-
+<script src="../js/sliders.js"></script>
 <script src="../js/fetch.js"></script>
 <script src="../js/fetchs/crud-edit-product.js"></script>
 <script src="../js/edit-product.js"></script>
+
 </body>
 
 </html>

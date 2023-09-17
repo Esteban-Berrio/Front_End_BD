@@ -86,7 +86,6 @@ fetchDataFromAPI(urlProvider, apiKey)
     })
     .then(data => {
         productData = data.data[0];
-        console.log(data);
         reference.value = productData.reference;
         namee.value = productData.name;
         description.value = productData.description;
@@ -101,7 +100,7 @@ fetchDataFromAPI(urlProvider, apiKey)
         mark.value = productData.param_mark;
         color.value = productData.param_color;
         state.value = productData.param_state;
-        fotoProduct.src = ("../img/productos/"+productData.reference+".png");
+        fotoProduct.src = fotoProduct.src;
 
     })
     .catch(error => {
@@ -169,7 +168,7 @@ function aquiestoy() {
 formu.addEventListener("submit", async (e) => {
     e.preventDefault();
     aquiestoy();
-    let selectedFile = document.getElementById("foto").files[0];
+
     let formData = new FormData(formu);
 
     formData.append('provider_id', provider.value);
@@ -180,7 +179,7 @@ formu.addEventListener("submit", async (e) => {
     formData.append('price', price.value);
     formData.append('discount', discount.value);
     formData.append('tax', tax.value);
-    formData.append('images',("../img/productos/"+reference.value+".png"));
+    formData.append('images',fotoProduct.src);
     formData.append('param_size', size.value);
     formData.append('param_gender', gender.value);
     formData.append('param_subcategory', subcategory.value);
@@ -201,7 +200,7 @@ formu.addEventListener("submit", async (e) => {
         price: price.value,
         discount: discount.value,
         tax: tax.value,
-        images:"../img/productos/"+reference.value+".png",
+        images:fotoProduct.src,
         param_size: size.value,
         param_gender: gender.value,
         param_subcategory: subcategory.value,
@@ -218,7 +217,10 @@ formu.addEventListener("submit", async (e) => {
 
         .then(responseData => {
             console.log('Respuesta del servidor:', responseData);
-            location.reload();
+            setTimeout(function() {
+
+                window.location.href = 'crud-product.php';
+            }, 3000);
         }).catch((error) => {
             console.error('Error:', error);
 

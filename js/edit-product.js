@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (img && img.files.length === 0) {
-                imgError.textContent = "Este campo es obligatorio";
+              
                 
             } else {
                 imgError.style.display = "none";

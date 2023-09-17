@@ -38,13 +38,21 @@
 .image-container {
 
   height: 20%;
-  width: 100%;
+  width: 80%;
   border: solid 2px #ef8f00;
   border-radius: 30px;
   background-color: #ffffffaa;
-  padding: 50px 15px ;
+  padding: 15px 15px ;
+  margin-top: 10%;
 }
 
+.cargando-img{
+  z-index: 1;
+  background-image: url('../img/pato-caminando.gif');
+  
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .container-crud {
   margin: 20px;
   border: solid 2px #ef8f00;

@@ -359,3 +359,9 @@ template {
   color: #000000;
 }
 
+.cargando-img{
+  z-index: 5;
+  background-image: url('../img/pato-caminando.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}

@@ -27,23 +27,23 @@ require_once('resources/template-crud.php')
     </div>
     <div class="container-crud">
 
-    <form  id="productForm"   method="POST"  enctype="multipart/form-data m-4">
+    <form  id="productForm"   method="POST"  enctype="multipart/form-data m-4 ">
 
-            <div class="row">
+            <div class="row p-4 m-4 mb-5">
                 <div class="col-md-6">
                     <div class="container d-flex flex-column align-items-center  ">
 
                         <div class=" image-container">
-                            <div class=" space-slider2marc">
+                           
 
                                
 
-                                    <div class="card-slider-mar" >
+                                    <div class="card-slider-mar  " >
                                         <div class="d-flex justify-content-center">
-                                            <img id="fotoProduct" class="img-slider-cat" src="" alt="">
+                                            <img id="fotoProduct" class=" cargando-img img-slider-cat" src="" alt="">
                                         </div>
                                         
-                                    </div>
+                          
 
                                 
                             </div>
@@ -62,7 +62,7 @@ require_once('resources/template-crud.php')
 
                         <div class="col-8">
                             <label for="Reference" class="form-label"> Referencia</label>
-                            <input type="text" class="form-control" id="Reference" name="reference" value="none" >
+                            <input type="text" class="form-control" id="Reference" name="reference" value="0" >
                             <div class="error-message" id="reference-error"></div>
 
                         </div>

@@ -136,7 +136,7 @@
                     if ($_SESSION['param_rol'] == 3403) {
                         
                         echo '<li class="nav-item">
-                                <a class="nav-aside link nav-link" href="crud-users-master.php"> m Usuarios</a>
+                                <a class="nav-aside link nav-link" href="crud-users-master.php"> Usuarios</a>
                             </li>
                             
                             <li class="nav-item">

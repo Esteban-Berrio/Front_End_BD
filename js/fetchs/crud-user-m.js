@@ -1,7 +1,48 @@
+var apiKey = "EXaR0JoKIirohPwbRPIHc3s73Oygi0XV";
+var apiUrl = "http://localhost/api/public/api/users/";
+var tabla = $("#tablam");
+
+function deleteUsers(apiUrl, id, apiKey) {
+    Swal.fire({
+        title: 'Estás seguro?',
+        text: "Deseas desactivar este usuario?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, eliminar.',
+        cancelButtonText: 'Cancelar.'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            deleteDataFromAPI(apiUrl, id, apiKey)
+                .then(data => {
+                    if (data.type == 'error') {
+                        // Si el producto ya está desactivado
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Algo salió mal!',
+                        })
+                        return Promise.reject('El usuario ya ha sido desactivado!');
+                    }
+                    Swal.fire(
+                        'ELIMINADO!',
+                        'El usuario ha sido ELIMINADO correctamente',
+                        'success'
+                    );
+                })
+                .catch(error => {
+                    console.log(error);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: error,
+                    });
+                });
+        }
+    });
+}
 $(document).ready(function () {
-    var apiKey = "EXaR0JoKIirohPwbRPIHc3s73Oygi0XV";
-    var apiUrl = "http://localhost/api/public/api/users";
-    var tabla = $("#tablam");
 
     
 
@@ -24,44 +65,7 @@ $(document).ready(function () {
             }
         });
     }
-    function deleteUsers(apiUrl, id, apiKey) {
-        Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                deleteDataFromAPI(apiUrl, id, apiKey)
-                    .then(data => {
-                        if (data.type == 'error') {
-                            // Si el producto ya está desactivado
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Oops...',
-                                text: 'Something went wrong!',
-                            })
-                            return Promise.reject('The product is already deactivated.');
-                        }
-                        Swal.fire(
-                            'Deleted!',
-                            'Your file has been deleted.',
-                            'success'
-                        );
-                    })
-                    .catch(error => {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Oops...',
-                            text: error,
-                        });
-                    });
-            }
-        });
-    }
+    
 
     fetchDataFromAPI(apiUrl, apiKey)
         .then(data => {
@@ -81,9 +85,8 @@ $(document).ready(function () {
                         <td>${data.data[i].param_rol}</td>
                         <td>${data.data[i].param_state}</td>
                         <td>
-                            <button class="btn-view btn"><i class="f fa-solid fa-eye"></i></button>
+                            <a href="profile.php?id=${data.data[i].id}" class="btn-view btn"><i class="f fa-solid fa-eye"></i></a>
                             <a class="btn-edit btn" href="edit-user-master.php?id=${data.data[i].id}" ><i class="f fa-solid fa-pen-to-square"></i></a>
-                            <button class="btn-delete btn"><i class="f fa-solid fa-trash"></i></button>
                              <button class="btn-delete btn" onclick="deleteUsers(apiUrl, ${data.data[i].id}, apiKey)"><i class="f fa-solid fa-trash"></i></button>
                         </td>
                     </tr>`;

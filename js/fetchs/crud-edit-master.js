@@ -18,6 +18,7 @@ let Gender = document.getElementById("EditGender");
 
 
 
+
 const valores = window.location.search;
 const urlData = new URLSearchParams(valores);
 var id = urlData.get('id');
@@ -50,20 +51,20 @@ fetchDataFromAPI(urlParams, apiKey)
 
     })
     .then(() => {
-        return fetchDataFromAPI(urlUsers, apiKey, id);
+        return fetchDataFromAPI(urlUsers, apiKey, id)
     })
     .then(data => {
-        let productData = data.data[0];
-        Name.value = productData.first_name;
-        Birthday.value = productData.birthday;
-        City.value = productData.param_city;
-        email.value = productData.email;
-        State.value = productData.param_state;
-        Lastname.value = productData.last_name;
-        Address.value = productData.address;
-        TypeUser.value = productData.type_user;
-        Rol.value = productData.param_rol;
-        Gender.value = productData.param_gender;
+        let userData = data.data[0];
+        Name.value = userData.first_name;
+        Birthday.value = userData.birthday;
+        City.value = userData.param_city;
+        email.value = userData.email;
+        State.value = userData.param_state;
+        Lastname.value = userData.last_name;
+        Address.value = userData.address;
+        TypeUser.value = userData.type_user;
+        Rol.value = userData.param_rol;
+        Gender.value = userData.param_gender;
 
     });
 
@@ -83,7 +84,6 @@ form.addEventListener("submit", (e) => {
         param_state: State.value,
         type_user: TypeUser.value,
         param_rol: Rol.value,
-
         param_gender: Gender.value,
 
 
@@ -93,18 +93,7 @@ form.addEventListener("submit", (e) => {
     .then(responseData => {
         console.log('Respuesta del servidor:', responseData);
 
-        Swal.fire({
-            icon: 'success',
-            title: 'Usuario actualizado!',
-            showConfirmButton: false,
-            timer: 1900
-        }).then((result) => {
-            // Verificar si el usuario cerró la alerta
-            if (result.dismiss === Swal.DismissReason.timer) {
-                // Realizar la redirección aquí
-                window.location.href = "crud-users-master.php"; 
-            }
-        });
+        
     })
     .catch(error => {
         console.error('Error al enviar datos:', error);

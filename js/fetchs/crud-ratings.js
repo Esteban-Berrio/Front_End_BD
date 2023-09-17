@@ -43,7 +43,7 @@ $(document).ready(function () {
                         <td>
                             <button class="btn-delete btn"><i class="f fa-solid fa-trash"></i></button>
                         </td>
-                    </tr>`;}
+                    </tr>`;} 
             }
             tabla.find('tbody').html(contenido);
             tablas();

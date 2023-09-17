@@ -115,8 +115,22 @@ formulario.addEventListener("submit", function (event) {
         RolError.style.display = "none";
 
     }
+    console.log(valid)
     if (!valid) {
         event.preventDefault(); // Previene la recarga de la página en caso de error
+    }else{
+        Swal.fire({
+            icon: 'success',
+            title: 'Usuario actualizado!',
+            showConfirmButton: false,
+            timer: 1900
+        }).then((result) => {
+            // Verificar si el usuario cerró la alerta
+            if (result.dismiss === Swal.DismissReason.timer) {
+                // Realizar la redirección aquí
+                window.location.href = "crud-users-master.php"; 
+            }
+        });
     }
 });
 

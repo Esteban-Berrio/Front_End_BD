@@ -53,39 +53,34 @@ require_once('resources/template-crud.php')
                         <br>
                         <!-- Botón de agregar imágenes abajo -->
 
-                        <input type="file" id="foto" name="images"  accept="image/*" ">
-                        <!-- <button class="btn  botones-crud" id="agregar-img-produc">Agregar Imagen</button> -->
-                        <label class="btn botones-crud mt-3" type="button" name="images" id="agregar-img-produc" for="foto">Nueva Imagen</label>
-                        <div class="error-message" id="img-error"></div>
+                        
+                        
 
                         <br>
 
                         <div class="col-8">
                             <label for="Reference" class="form-label" maxlength="44"> Referencia</label>
+                            <div class="error-message" id="reference-error" disabled ></div>
                             <input type="text" class="form-control" id="Reference" name="reference" value="0" >
-                            <div class="error-message" id="reference-error"></div>
 
                         </div>
 
                         <div class="col-8">
                             <label for="Provider" class="form-label">Proveedores</label>
-                            <select class="form-select" id="Provider" name="Provider_id">
-
-
-                            </select>
+                            <input class="form-select" id="Provider" name="Provider_id" disabled></input>
                             <div class="error-message" id="provider-error"></div>
 
                         </div>
 
                         <div class="col-8">
                             <label for="Name" class="form-label" maxlength="44">Nombre del Producto</label>
-                            <input type="text" class="form-control" id="Name" name="name">
+                            <input type="text" class="form-control" id="Name" name="name" disabled >
                             <div class="error-message" id="name-error"></div>
                         </div>
 
                         <div class="col-8">
                             <label for="Description" class="form-label " maxlength="44"> Descripción</label>
-                            <input type="text" class="form-control descripcion-product" id="Description" name="description">
+                            <input disabled type="text" class="form-control descripcion-product" id="Description" name="description">
                             <div class="error-message" id="description-error"></div>
                         </div>
 
@@ -103,14 +98,14 @@ require_once('resources/template-crud.php')
 
 
                         <div class="col-8">
-                            <label for="Stock" class="form-label"> Existencias</label>
-                            <input type="text" class="form-control" id="Stock" name="stock">
+                            <label for="Stock" class="form-label"> Existencias </label>
+                            <input type="text" class="form-control" id="Stock" disabled name="stock">
                             <div class="error-message" id="stock-error"></div>
                         </div>
 
                         <div class="col-8">
                             <label for="Price" class="form-label"> Precio</label>
-                            <input type="text" class="form-control" id="Price" name="price">
+                            <input type="text" class="form-control" id="Price" disabled name="price">
                             <div class="error-message" id="price-error"></div>
                         </div>
 
@@ -118,71 +113,64 @@ require_once('resources/template-crud.php')
 
                         <div class="col-8">
                             <label for="Discount" class="form-label"> Descuento</label>
-                            <input type="text" class="form-control" id="Discount" name="discount">
+                            <input type="text" class="form-control" id="Discount" disabled name="discount">
                             <div class="error-message" id="discount-error"></div>
                         </div>
 
                         <div class="col-8">
                             <label for="Tax" class="form-label"> Impuesto</label>
-                            <input type="text" class="form-control" id="Tax" name="tax">
+                            <input type="text" class="form-control" id="Tax" disabled name="tax">
                             <div class="error-message" id="tax-error"></div>
                         </div>
 
                         <div class="col-8">
                             <label for="Size" class="form-label">Talla</label>
-                            <select class="form-select " id="Size" name="param_size">
+                            <input class="form-select " id="Size" name="param_size" disabled>
 
-                            </select>
                             <div class="error-message" id="size-error"></div>
                         </div>
 
 
                         <div class="col-8">
                             <label for="Gender" class="form-label">Genero</label>
-                            <select class="form-select " id="Gender" name="param_gender">
+                            <input class="form-select " id="Gender" name="param_gender" disabled >
 
 
-                            </select>
+                       
                             <div class="error-message" id="gender-error"></div>
 
                         </div>
 
                         <div class="col-8">
                             <label for="Subcategory" class="form-label">Subcategoria</label>
-                            <select class="form-select" id="Subcategory" name="param_subcategory">
+                            <input class="form-select" id="Subcategory" name="param_subcategory">
 
-
-                            </select>
-                            <div class="error-message" id="subcategory-error"></div>
+                            <input input class="error-message" id="subcategory-error"></disabledinput>
 
                         </div>
 
                         <div class="col-8">
                             <label for="Mark" class="form-label">Marca</label>
-                            <select class="form-select" id="Mark" name="param_mark">
+                            <input disabled class="form-select" id="Mark" name="param_mark">
 
-
-                            </select>
                             <div class="error-message" id="mark-error"></div>
 
                         </div>
 
                         <div class="col-8">
                             <label for="Color" class="form-label">Color</label>
-                            <select class="form-select" id="Color" name="param_color">
+                            <input disabled class="form-select" id="Color" name="param_color">
 
 
-                            </select>
+                    
                             <div class="error-message" id="color-error"></div>
 
                         </div>
 
                         <div class="col-8">
                             <label for="State" class="form-label">Estado</label>
-                            <select class="form-select" id="State" name="param_state">
+                            <input class="form-select" id="State" name="param_state">
 
-
-                            </select>
                             <div class="error-message" id="state-error"></div>
 
                         </div>
@@ -191,7 +179,15 @@ require_once('resources/template-crud.php')
 
 
                         <div class="container d-flex flex-column align-items-center mt-4">
-                            <button type="submit" class="btn botones-crud" id="guardarButton">Guardar</button>
+                            <button type="submit" class="btn botones-crud" id="guardarButton">Volver</button>
+                            <button onclick="redireccionar()">Ir a la página de destino</button>
+
+
+function redireccionar() {
+  // Cambia la URL a la que deseas redireccionar
+  window.location.href = "https://www.ejemplo.com/pagina-de-destino.html";
+}
+
                         </div>
                     </div>
                 </div>
@@ -210,8 +206,8 @@ require_once('resources/footer.php')
 
 <script src="../js/sliders.js"></script>
 <script src="../js/fetch.js"></script>
-<script src="../js/fetchs/crud-edit-product.js"></script>
-<script src="../js/edit-product.js"></script>
+<script src="../js/fetchs/crud-views-product.js"></script>
+
 
 </body>
 

@@ -226,5 +226,9 @@ formu.addEventListener("submit", async (e) => {
 
         });
 
-
+        function redireccionar() {
+            // Cambia la URL a la que deseas redireccionar
+            window.location.href = "crut";
+          }
 }); 
+

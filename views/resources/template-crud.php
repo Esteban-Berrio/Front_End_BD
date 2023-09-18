@@ -56,7 +56,11 @@
                             
                             <li class="nav-item">
                             <a class="nav-burger link nav-link" href="crud-order.php">Factura</a>
-                        </li>
+                            </li>
+
+                            <li class="nav-item">
+                            <a class="nav-burger link nav-link" href="crud-providers.php">Proveedores</a>
+                            </li>
                         
                         <li class="nav-item">
                             <a class="nav-burger link nav-link" href="crud-params.php">Parámetros</a>
@@ -72,6 +76,10 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-burger link nav-link" href="crud-order.php">Factura</a>
+                            </li>
+
+                            <li class="nav-item">
+                            <a class="nav-burger link nav-link" href="crud-providers.php">Proveedores</a>
                             </li>
 
                             ';
@@ -114,7 +122,7 @@
                     </li>
 
                     <?php
-                    
+
                     if ($_SESSION['param_rol'] != 3403 && $_SESSION['param_rol'] != 3404) {
                         echo '<li class="nav-item">
                                 <a class="nav-aside link nav-link" href="crud-product-ver.php">Productos</a>
@@ -134,7 +142,7 @@
                     <?php
 
                     if ($_SESSION['param_rol'] == 3403) {
-                        
+
                         echo '<li class="nav-item">
                                 <a class="nav-aside link nav-link" href="crud-users-master.php"> Usuarios</a>
                             </li>
@@ -144,20 +152,29 @@
                             </li>
 
                             <li class="nav-item">
+                                <a class="nav-aside link nav-link" href="edit-provider.php">Proveedores</a>
+                            </li>
+
+                            <li class="nav-item">
                                 <a class="nav-aside link nav-link" href="crud-params.php">Parámetros</a>
                             </li>
 
                             <li class="nav-item">
                             <a class="nav-aside link nav-link" href="crud-param-types.php">Tipos de Parámetros</a>
                             </li>';
-                    } elseif ($_SESSION['param_rol'] == 3404) { 
-                        
+                    } elseif ($_SESSION['param_rol'] == 3404) {
+
                         echo '<li class="nav-item">
-                                <a class="nav-aside link nav-link" href="crud-order.php">Factura</a>
+                                <a class="nav-aside link nav-link" href="crud-users.php"> Usuarios</a>
                             </li>
                         
                             <li class="nav-item">
-                                <a class="nav-aside link nav-link" href="crud-users.php"> Usuarios</a>
+                                <a class="nav-aside link nav-link" href="crud-order.php">Factura</a>
+                            </li>
+                        
+                            
+                            <li class="nav-item">
+                                <a class="nav-aside link nav-link" href="edit-provider.php">Proveedores</a>
                             </li>
 
                         ';

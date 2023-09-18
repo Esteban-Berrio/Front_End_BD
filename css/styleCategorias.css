@@ -213,6 +213,15 @@ overflow: hidden;
     border-radius: 5px;
   }
 
+
+.card-img-top{
+  width: 100%;
+}
+
+
+
+
+
 @media (min-width: 300px) and (max-width: 900px) {
   .card {
     width: 90%;
@@ -264,3 +273,5 @@ overflow: hidden;
 .lista-product li:nth-child(3n) {
   margin-right: 0;
 }
+
+

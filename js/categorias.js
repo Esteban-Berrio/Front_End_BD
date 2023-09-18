@@ -19,6 +19,7 @@ fetchDataFromAPI(urlProvider, apiKey)
                     if (data.data[i].param_state == "Activo ") {
                         let price = data.data[i].price;
                         let discount = data.data[i].discount;
+                        console.log(data);
 
                         if (discount != 0 && discount !== "0") {
 
@@ -32,8 +33,8 @@ fetchDataFromAPI(urlProvider, apiKey)
                         listItem.innerHTML = `
                                     
                                     <div class="col-md-4 mb-4 card">
-                                        <a href="#" class="">
-                                            <img src="${data.data[i].images}" class="card-img-top" alt="${data.data[i].name}">
+                                        <a href="#" class="cargando-img2" >
+                                            <img src="${data.data[i].images}" class="card-img-top  " alt="">
                                         </a>
                                         <div class="card-body">
                                             <input type="hidden" class="id-product-cart" value="${data.data[i].id}">

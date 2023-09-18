@@ -4,7 +4,7 @@ let downloadbutton = document.getElementById('downloads');
 downloadbutton.addEventListener('click', function(){
   Swal.fire({
         
-        imageUrl: '../img/downloads-qr.png',
+        imageUrl: '../img/downloads-qre.png',
         
         html:
           '<img src="../img/pngwing.com.png" height="90px" width="300px" /> ' ,

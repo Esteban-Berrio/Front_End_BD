@@ -1,0 +1,43 @@
+.container {
+    border-radius: 100px;
+}
+
+.form-label {
+    padding: 5px;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    font-size: 17px;
+    margin-top: 5px;
+    display: none;
+}
+
+.br {
+    border-radius: 25px;
+}
+
+.form-control,
+.form-select {
+    height: 30px;
+    border: 1px solid rgba(239, 143, 0, 1);
+    padding: 5px;
+    border-radius: 15px;
+    width: 100% !important;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.container-crud {
+    margin: 20px;
+    border: solid 2px #ef8f00;
+    background-color: #ffffff74;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}

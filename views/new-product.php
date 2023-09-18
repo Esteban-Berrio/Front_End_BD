@@ -1,7 +1,8 @@
 <?php
+require_once('resources/initiator.php');
 if ($_SESSION['param_rol'] != 3403 && $_SESSION['param_rol'] != 3404) {
     header("Location: home.php");
-  }
+}
 ?>
 
 
@@ -32,24 +33,18 @@ require_once('resources/template-crud.php')
                     <div class="container d-flex flex-column align-items-center  ">
 
                         <div class=" image-container">
-                            <div class=" space-slider2marc">
-
-                                <div class="single-item  slider3mar" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
-
-                                    <!-- MUESTRA DE TARGETA -->
-
-                                    <!-- <div class="card-slider-mar" href="#">
-                                        <div class="d-flex justify-content-center">
-                                            <img class="img-slider-cat" src="../img/carru3.jpg" alt="">
-                                        </div>
-                                        <div class="d-flex justify-content-center btn-elim-img">
-                                            <a href="" class="btn botones-crud">Eliminar</a>
-                                        </div>
-                                    </div> -->
 
 
 
+
+                            <div class="card-slider-mar  ">
+                                <div class="d-flex justify-content-center">
+                                    <img id="fotoProduct" class=" cargando-img img-slider-cat" src="" alt="">
                                 </div>
+
+
+
+
                             </div>
 
                         </div>
@@ -57,11 +52,10 @@ require_once('resources/template-crud.php')
                         <br>
                         <!-- Botón de agregar imágenes abajo -->
 
-                        <input type="file" id="foto" accept="image/*">
-                        <!-- <button class="btn  botones-crud" id="agregar-img-produc">Agregar Imagen</button> -->
-                        <label class="btn botones-crud mt-3" type="button" id="agregar-img-produc" for="foto">Nueva Imagen</label>
-
-
+                        <input type="file" id="foto" name="images" accept="image/*" ">
+                        <!-- <button class=" btn botones-crud" id="agregar-img-produc">Agregar Imagen</button> -->
+                        <label class="btn botones-crud mt-3" type="button" name="images" id="agregar-img-produc" for="foto">Nueva Imagen</label>
+                        <div class="error-message" id="img-error"></div>
 
                         <br>
 
@@ -75,7 +69,7 @@ require_once('resources/template-crud.php')
                         <div class="col-8">
                             <label for="Provider" class="form-label">Proveedores</label>
                             <select class="form-select" id="Provider" name="Provider">
-                               
+
 
                             </select>
                             <div class="error-message" id="state-error"></div>
@@ -89,7 +83,7 @@ require_once('resources/template-crud.php')
                         </div>
 
                         <div class="col-8">
-                            <label for="Description" class="form-label "> Descripción</label>
+                            <label for="Description" class="form-label " maxlength="44"> Descripción</label>
                             <input type="text" class="form-control descripcion-product" id="Description" name="description">
                             <div class="error-message" id="description-error"></div>
                         </div>
@@ -136,7 +130,7 @@ require_once('resources/template-crud.php')
                         <div class="col-8">
                             <label for="Size" class="form-label">Talla</label>
                             <select class="form-select " id="Size" name="param_size">
-                               
+
                             </select>
                             <div class="error-message" id="size-error"></div>
                         </div>
@@ -145,7 +139,7 @@ require_once('resources/template-crud.php')
                         <div class="col-8">
                             <label for="Gender" class="form-label">Genero</label>
                             <select class="form-select " id="Gender" name="param_gender">
-                                
+
 
                             </select>
                             <div class="error-message" id="gender-error"></div>
@@ -155,7 +149,7 @@ require_once('resources/template-crud.php')
                         <div class="col-8">
                             <label for="Subcategory" class="form-label">Subcategoria</label>
                             <select class="form-select" id="Subcategory" name="param_subcategory">
-                               
+
 
                             </select>
                             <div class="error-message" id="subcategory-error"></div>
@@ -165,7 +159,7 @@ require_once('resources/template-crud.php')
                         <div class="col-8">
                             <label for="Mark" class="form-label">Marca</label>
                             <select class="form-select" id="Mark" name="param_mark">
-                             
+
 
                             </select>
                             <div class="error-message" id="mark-error"></div>
@@ -184,7 +178,7 @@ require_once('resources/template-crud.php')
                         <div class="col-8">
                             <label for="State" class="form-label">Estado</label>
                             <select class="form-select" id="State" name="param_state">
-                                
+
 
                             </select>
                             <div class="error-message" id="state-error"></div>
@@ -211,7 +205,7 @@ require_once('resources/footer.php')
 
 <script src="../js/sliders.js"></script>
 <script src="../js/fetch.js"></script>
-<script src="../js/fetchs/new-product.js"></script>
+<script src="../js/fetchs/crud-new-product.js"></script>
 <script src="../js/new-product.js"></script>
 </body>
 

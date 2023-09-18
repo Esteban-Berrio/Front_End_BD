@@ -32,6 +32,16 @@ require_once('resources/template-crud.php')
                 </div>
                 <div class="container d-flex flex-column align-items-center">
                     <div class="col-6 pt-5 mb-4">
+                        <label for="ParamTypeID" class="form-label">Parámetro Perteneciente</label>
+                        <select class="form-select" id="ParamForeign" name="paramForeign">
+                            <!-- Agrega opciones según sea necesario -->
+                            <option value="">Ninguno</option>
+                        </select>
+                        <div class="error" id="paramForeign-error"></div>
+                    </div>
+                </div>
+                <div class="container d-flex flex-column align-items-center">
+                    <div class="col-6 pt-5 mb-4">
                         <label for="ParamName" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="ParamName" name="paramName">
                         <div class="error" id="paramName-error"></div>
@@ -63,7 +73,7 @@ require_once('resources/footer.php')
 ?>
 
 <script src="../js/fetch.js"></script>
-<script src="../js/new-params.js"></script>
+<script src="../js/fetchs/new-param.js"></script>
 
 </body>
 

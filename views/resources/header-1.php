@@ -32,7 +32,7 @@
                     </li>
                 </ul>
                 <form id="search-form" class="d-flex" role="search">
-                    <input class="form-control me-1" type="search" placeholder="Buscar" />
+                    <input class="form-control me-1" type="search" placeholder="Buscar" id="barra-de-busqueda" />
                     <a>
                         <img class="searchImg" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1" />
                     </a>

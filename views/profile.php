@@ -78,7 +78,7 @@ require_once('resources/header-1.php')
         </div>
         <div class="row mb-3 text-center ">
             <div class="col-md-4 p-2">
-                <a href="shopping-cart.php" class="btn btn-lg fw-bold border rounded-pill" id="buttons">Ver Compras</a>
+                <a id="viewShopping" class="btn btn-lg fw-bold border rounded-pill" id="buttons">Ver Compras</a>
             </div>
             <div class="col-md-4 p-2">
                 <a id="editProfileLink" class="btn btn-lg fw-bold border rounded-pill" id="buttons">Editar Perfil</a>

@@ -37,11 +37,12 @@ require_once('resources/template-crud.php')
                 <div class="container d-flex justify-content-center">
                     <div class="col-md-4 text-center mb-5">
                         <div class="state">
-                            <label for="EditState" class="form-label">Estado</label>
-                            <select class="form-select select-lg" id="EditState" name="paramState">
+                            <label for="EditState" class="form-label">Parametro Perteneciente</label>
+                            <select class="form-select select-lg" id="EditParamForeign" name="paramState">
                                 <!-- Agrega aquí más opciones de estados según sea necesario -->
+                                <option value="">Ninguno</option>
                             </select>
-                            <div id="stateError" class="error"></div>
+                            <div id="foreignError" class="error"></div>
                         </div>
                     </div>
                 </div>
@@ -57,8 +58,9 @@ require_once('resources/template-crud.php')
 require_once('resources/footer.php')
 ?>
 
-<script src="../js/fetch.js"></script>
 <script src="../js/edit-params.js"></script>
+<script src="../js/fetch.js"></script>
+<script src="../js/fetchs/edit-param.js"></script>
 </body>
 
 </html>

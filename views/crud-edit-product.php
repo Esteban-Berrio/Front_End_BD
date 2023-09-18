@@ -2,7 +2,7 @@
 require_once('resources/initiator.php');
 
 if ($_SESSION['param_rol'] != 3403 && $_SESSION['param_rol'] != 3404) {
-    header("Location: .php");
+    header("Location: home.php");
 }
 ?>
 
@@ -27,25 +27,25 @@ require_once('resources/template-crud.php')
     </div>
     <div class="container-crud">
 
-    <form  id="productForm"   method="POST"  enctype="multipart/form-data m-4 ">
+        <form id="productForm" method="POST" enctype="multipart/form-data m-4 ">
 
             <div class="row p-4 m-4 mb-5">
                 <div class="col-md-6">
                     <div class="container d-flex flex-column align-items-center  ">
 
                         <div class=" image-container">
-                           
 
-                               
 
-                                    <div class="card-slider-mar  " >
-                                        <div class="d-flex justify-content-center">
-                                            <img id="fotoProduct" class=" cargando-img img-slider-cat" src="" alt="">
-                                        </div>
-                                        
-                          
 
-                                
+
+                            <div class="card-slider-mar  ">
+                                <div class="d-flex justify-content-center">
+                                    <img id="fotoProduct" class=" cargando-img img-slider-cat" src="" alt="">
+                                </div>
+
+
+
+
                             </div>
 
                         </div>
@@ -53,16 +53,16 @@ require_once('resources/template-crud.php')
                         <br>
                         <!-- Botón de agregar imágenes abajo -->
 
-                        <input type="file" id="foto" name="images"  accept="image/*" ">
-                        <!-- <button class="btn  botones-crud" id="agregar-img-produc">Agregar Imagen</button> -->
+                        <input type="file" id="foto" name="images" accept="image/*" ">
+                        <!-- <button class=" btn botones-crud" id="agregar-img-produc">Agregar Imagen</button> -->
                         <label class="btn botones-crud mt-3" type="button" name="images" id="agregar-img-produc" for="foto">Nueva Imagen</label>
-                        <div class="error-message" id="img-error"></div>
+
 
                         <br>
 
                         <div class="col-8">
                             <label for="Reference" class="form-label" maxlength="44"> Referencia</label>
-                            <input type="text" class="form-control" id="Reference" name="reference" value="0" >
+                            <input type="text" class="form-control" id="Reference" name="reference" value="0">
                             <div class="error-message" id="reference-error"></div>
 
                         </div>

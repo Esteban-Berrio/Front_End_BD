@@ -1,8 +1,8 @@
 const formulario = document.getElementById("paramForm");
 const EditName = document.getElementById("EditName");
 const nombreError = document.getElementById("nombreError");
-const EditState = document.getElementById("EditState");
-const stateError = document.getElementById("stateError");
+const EditParamForeign = document.getElementById("EditParamForeign");
+const foreignError = document.getElementById("foreignError");
 
 const longitudMinima = 3;
 const longitudMaxima = 45;
@@ -18,15 +18,25 @@ formulario.addEventListener("submit", function (event) {
         nombreError.style.display = "none";
     }
 
-    if (EditState.value.trim() === "") {
-        stateError.textContent = "Este campo es obligatorio";
-        stateError.style.display = "block";
+    if (EditParamForeign.value.trim() === "") {
+        foreignError.textContent = "Este campo es obligatorio";
+        foreignError.style.display = "block";
         valid = false;
     } else {
-        stateError.style.display = "none";
+        foreignError.style.display = "none";
     }
 
     if (!valid) {
         event.preventDefault(); // Previene la recarga de la página en caso de error
+    }else{
+        Swal.fire({
+                    
+            icon: 'success',
+            title: 'Parametro actualizado!',
+            showConfirmButton: false,
+            timer: 1900
+        }).then(() => {
+            // window.location.href = "crud-params.php"; // Redireccionar
+        });
     }
 });

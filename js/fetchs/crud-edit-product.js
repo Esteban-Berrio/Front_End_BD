@@ -15,7 +15,6 @@ let price = document.getElementById("Price");
 let discount = document.getElementById("Discount");
 let tax = document.getElementById("Tax");
 let provider = document.getElementById("Provider");
-console
 let size = document.getElementById("Size");
 let gender = document.getElementById("Gender");
 let subcategory = document.getElementById("Subcategory");
@@ -101,7 +100,7 @@ fetchDataFromAPI(urlProvider, apiKey)
         color.value = productData.param_color;
         state.value = productData.param_state;
         fotoProduct.src= ("../img/productos/"+reference.value+".png");
-        console.log(fotoProduct.src);
+        
     })
     .catch(error => {
         console.error('Error:', error);
@@ -208,7 +207,7 @@ formu.addEventListener("submit", async (e) => {
         param_color: color.value,
         param_state: state.value,
     };
-    console.log(data);
+
 
 
 
@@ -217,18 +216,12 @@ formu.addEventListener("submit", async (e) => {
 
         .then(responseData => {
             console.log('Respuesta del servidor:', responseData);
-            // setTimeout(function() {
-
-            //     window.location.href = 'crud-product.php';
-            // }, 3000);
+            
         }).catch((error) => {
             console.error('Error:', error);
 
         });
 
-        function redireccionar() {
-            // Cambia la URL a la que deseas redireccionar
-            window.location.href = "crut";
-          }
+
 }); 
 

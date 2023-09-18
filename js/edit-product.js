@@ -1,15 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     const formulario = document.getElementById("productForm");
-    const fileInputoor = document.getElementById('foto'); 
-    const previewImage = document.getElementById('fotoProduct'); 
-    fileInputoor.addEventListener('change', function() {
+    const fileInputoor = document.getElementById('foto');
+    const previewImage = document.getElementById('fotoProduct');
+
+
+    fileInputoor.addEventListener('change', function () {
         if (this.files && this.files[0]) {
             const reader = new FileReader();
-    
-            reader.onload = function(e) {
+
+            reader.onload = function (e) {
                 previewImage.src = e.target.result;
             };
-    
+
             reader.readAsDataURL(this.files[0]);
         } else {
             // Limpiar la vista previa si no se selecciona ningún archivo
@@ -92,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 stockError.style.display = "none";
             }
-            
+
             if (Price.value === "" || !regex.test(Price.value)) {
                 priceError.textContent = "Este campo es obligatorio (Solo se aceptan números)";
                 priceError.style.display = "block";
@@ -126,18 +128,28 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (img && img.files.length === 0) {
-              
-                
+
+
             } else {
                 imgError.style.display = "none";
             }
 
             if (!valid) {
                 e.preventDefault(); // Evita el envío del formulario si hay errores
+            } else {
+                Swal.fire({
+
+                    icon: 'success',
+                    title: 'Producto actualizado!',
+                    showConfirmButton: false,
+                    timer: 1900
+                }).then(() => {
+                    window.location.href = "crud-product.php"; // Redireccionar
+                });
             }
         });
     }
 
-    
+
 
 });

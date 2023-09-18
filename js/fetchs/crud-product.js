@@ -68,6 +68,7 @@ $(document).ready(function () {
         .then(() => {
             fetchDataFromAPI(urlProducts, apiKey)
                 .then(data => {
+                    console.log(data);
                     
                     let body = '';
                     for (let i = 0; i < data.data.length; i++) {

@@ -100,8 +100,8 @@ fetchDataFromAPI(urlProvider, apiKey)
         mark.value = productData.param_mark;
         color.value = productData.param_color;
         state.value = productData.param_state;
-        fotoProduct.src = fotoProduct.src;
-
+        fotoProduct.src= ("../img/productos/"+reference.value+".png");
+        console.log(fotoProduct.src);
     })
     .catch(error => {
         console.error('Error:', error);
@@ -208,7 +208,7 @@ formu.addEventListener("submit", async (e) => {
         param_color: color.value,
         param_state: state.value,
     };
-
+    console.log(data);
 
 
 
@@ -217,10 +217,10 @@ formu.addEventListener("submit", async (e) => {
 
         .then(responseData => {
             console.log('Respuesta del servidor:', responseData);
-            setTimeout(function() {
+            // setTimeout(function() {
 
-                window.location.href = 'crud-product.php';
-            }, 3000);
+            //     window.location.href = 'crud-product.php';
+            // }, 3000);
         }).catch((error) => {
             console.error('Error:', error);
 

@@ -179,7 +179,7 @@ overflow: hidden;
 
 .card {
   padding: 0%;
-  width: 30%;
+  width: 90%;
   margin: 1%;
 }
 
@@ -245,4 +245,22 @@ overflow: hidden;
   }
 
   
+}
+
+.lista-product {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.lista-product li {
+  width: calc(33.33% - 20px); /* Espacio para tres elementos por fila con 20px de espacio entre ellos */
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+/* Ajustar los márgenes del último elemento en cada fila */
+.lista-product li:nth-child(3n) {
+  margin-right: 0;
 }
